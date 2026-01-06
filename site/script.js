@@ -23,6 +23,14 @@ function isSafeAssetPath(value) {
   return isSafeUrl(trimmed) || trimmed.startsWith('./') || trimmed.startsWith('assets/');
 }
 
+function slugify(value) {
+  return String(value)
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+
 function setYear() {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
@@ -62,6 +70,12 @@ function enhanceNav() {
 function renderProjectCard(project) {
   const card = document.createElement('article');
   card.className = 'card project';
+
+  const projectId = String(project?.id ?? '').trim() || slugify(project?.title ?? '');
+  card.dataset.projectId = projectId;
+  card.tabIndex = 0;
+  card.setAttribute('role', 'button');
+  card.setAttribute('aria-label', `Open details for ${String(project?.title ?? 'project')}`);
 
   const titleText = String(project?.title ?? 'Project title');
   const roleText = String(project?.role ?? '');
@@ -146,10 +160,141 @@ function renderProjectCard(project) {
     overlay.appendChild(linksEl);
   }
 
+  const detailsHint = document.createElement('div');
+  detailsHint.className = 'project__hint';
+  detailsHint.textContent = 'Click for details';
+  overlay.appendChild(detailsHint);
+
   splash.appendChild(overlay);
   card.appendChild(splash);
 
   return card;
+}
+
+function renderProjectDetails(projects) {
+  const container = document.getElementById('project-details');
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  for (const project of projects) {
+    const projectId = String(project?.id ?? '').trim() || slugify(project?.title ?? '');
+    const titleText = String(project?.title ?? 'Project');
+    const roleText = String(project?.role ?? '').trim();
+    const platformText = String(project?.platform ?? '').trim();
+    const yearText = String(project?.year ?? '').trim();
+    const descriptionText = String(project?.description ?? '').trim();
+
+    const links = Array.isArray(project?.links) ? project.links : [];
+    const safeLinks = links
+      .map((link) => {
+        const label = String(link?.label ?? '').trim();
+        const href = String(link?.href ?? link?.url ?? '').trim();
+        return { label, href };
+      })
+      .filter((link) => link.label && isSafeUrl(link.href));
+
+    const section = document.createElement('section');
+    section.className = 'project-detail card';
+    section.id = `project-${projectId}`;
+    section.setAttribute('aria-label', `${titleText} details`);
+
+    const header = document.createElement('div');
+    header.className = 'project-detail__header';
+
+    const h3 = document.createElement('h3');
+    h3.className = 'project-detail__title';
+    h3.textContent = titleText;
+    header.appendChild(h3);
+
+    const badgesEl = document.createElement('div');
+    badgesEl.className = 'badges';
+    badgesEl.setAttribute('aria-label', 'Project metadata');
+    for (const text of [roleText, platformText, yearText].filter(Boolean)) {
+      const badge = document.createElement('span');
+      badge.className = 'badge';
+      badge.textContent = text;
+      badgesEl.appendChild(badge);
+    }
+    header.appendChild(badgesEl);
+
+    const imageSrcRaw = String(project?.image ?? '').trim();
+    const imageAltText = String(project?.imageAlt ?? titleText).trim() || titleText;
+    const img = document.createElement('img');
+    img.className = 'project-detail__img';
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.src = isSafeAssetPath(imageSrcRaw) ? imageSrcRaw : 'assets/projects/placeholder.svg';
+    img.alt = imageAltText;
+
+    const desc = document.createElement('p');
+    desc.className = 'project-detail__desc';
+    desc.textContent = descriptionText;
+
+    section.appendChild(header);
+    section.appendChild(img);
+    if (descriptionText) section.appendChild(desc);
+
+    if (safeLinks.length > 0) {
+      const linksEl = document.createElement('div');
+      linksEl.className = 'project-detail__links';
+      linksEl.setAttribute('aria-label', 'Project links');
+      for (const link of safeLinks) {
+        const a = document.createElement('a');
+        a.className = 'link';
+        a.href = link.href;
+        a.target = '_blank';
+        a.rel = 'noreferrer';
+        a.textContent = link.label;
+        linksEl.appendChild(a);
+      }
+      section.appendChild(linksEl);
+    }
+
+    container.appendChild(section);
+  }
+}
+
+function initProjectCardInteractions() {
+  const grid = document.getElementById('projects-grid');
+  if (!grid) return;
+
+  const openFromCard = (card) => {
+    const projectId = card?.dataset?.projectId;
+    if (!projectId) return;
+    const targetId = `project-${projectId}`;
+    const target = document.getElementById(targetId);
+    if (!(target instanceof HTMLElement)) return;
+
+    history.replaceState(null, '', `#${targetId}`);
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    const title = target.querySelector('h3');
+    if (title instanceof HTMLElement) {
+      const hadTabIndex = title.hasAttribute('tabindex');
+      if (!hadTabIndex) title.setAttribute('tabindex', '-1');
+      title.focus({ preventScroll: true });
+      if (!hadTabIndex) {
+        title.addEventListener('blur', () => title.removeAttribute('tabindex'), { once: true });
+      }
+    }
+  };
+
+  grid.addEventListener('click', (event) => {
+    const clickedLink = event.target instanceof Element ? event.target.closest('a') : null;
+    if (clickedLink) return;
+    const card = event.target instanceof Element ? event.target.closest('.project') : null;
+    if (!(card instanceof HTMLElement)) return;
+    openFromCard(card);
+  });
+
+  grid.addEventListener('keydown', (event) => {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    const card = event.target instanceof Element ? event.target.closest('.project') : null;
+    if (!(card instanceof HTMLElement)) return;
+    event.preventDefault();
+    openFromCard(card);
+  });
 }
 
 async function loadProjects() {
@@ -167,6 +312,15 @@ async function loadProjects() {
     gridEl.innerHTML = '';
     for (const project of data.projects) {
       gridEl.appendChild(renderProjectCard(project));
+    }
+
+    renderProjectDetails(data.projects);
+
+    if (location.hash && location.hash.startsWith('#project-')) {
+      const target = document.querySelector(location.hash);
+      if (target instanceof HTMLElement) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   } catch (error) {
     console.error('Failed to load projects.json', error);
@@ -279,6 +433,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setYear();
   enhanceNav();
   loadProjects();
+  initProjectCardInteractions();
   renderLanguageRatings();
   initLanguageRatingsAnimation();
 });

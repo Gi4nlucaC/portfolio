@@ -1,6 +1,7 @@
 {
   "projects": [
     {
+      "id": "mars-kitchen",
       "title": "Mars Kitchen",
       "image": "assets/projects/mars-kitchen.svg",
       "imageAlt": "Mars Kitchen splash image",
@@ -20,6 +21,7 @@
       ]
     },
     {
+      "id": "polyverse",
       "title": "Polyverse",
       "image": "assets/projects/polyverse.svg",
       "imageAlt": "Polyverse splash image",
@@ -32,6 +34,7 @@
       ]
     },
     {
+      "id": "acryptia",
       "title": "Acryptia",
       "image": "assets/projects/acryptia.svg",
       "imageAlt": "Acryptia splash image",

@@ -449,6 +449,52 @@ h3 {
   overflow: hidden;
 }
 
+.project__hint {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+}
+
+.project-details {
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.project-detail {
+  display: grid;
+  gap: 12px;
+}
+
+.project-detail__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.project-detail__title {
+  margin: 0;
+}
+
+.project-detail__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.project-detail__desc {
+  margin: 0;
+  color: var(--muted);
+}
+
+.project-detail__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 @media (hover: none) {
   .project__splash {
     height: auto;
