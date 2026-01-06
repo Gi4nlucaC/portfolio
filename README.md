@@ -1,4 +1,4 @@
-# Portfolio (GitHub Pages)
+# Portfolio
 
 Sito portfolio statico (HTML/CSS/JS) pronto per essere pubblicato su GitHub Pages.
 
