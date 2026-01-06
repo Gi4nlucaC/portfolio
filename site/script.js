@@ -3,7 +3,7 @@ async function loadProjects() {
   const gridEl = document.getElementById('projects-grid');
 
   try {
-    statusEl.textContent = 'Caricamento progetti…';
+    statusEl.textContent = 'Loading projects…';
     const response = await fetch('./data/projects.json', { cache: 'no-store' });
 
     if (!response.ok) {
@@ -14,7 +14,7 @@ async function loadProjects() {
     const data = await response.json();
 
     if (!data || !Array.isArray(data.projects)) {
-      throw new Error('Formato JSON non valido');
+      throw new Error('Invalid JSON format');
     }
 
     gridEl.innerHTML = '';
@@ -23,15 +23,15 @@ async function loadProjects() {
       gridEl.appendChild(renderProjectCard(project));
     }
 
-    statusEl.textContent = `${data.projects.length} progetti caricati.`;
+    statusEl.textContent = `${data.projects.length} projects loaded.`;
   } catch (error) {
-    statusEl.textContent = 'Impossibile caricare i progetti.';
+    statusEl.textContent = 'Unable to load projects.';
 
     const fallback = document.createElement('div');
     fallback.className = 'card';
     fallback.innerHTML = `
-      <h3>Errore caricamento</h3>
-      <p class="muted">Controlla <strong>site/data/projects.json</strong> e riprova.</p>
+      <h3>Loading error</h3>
+      <p class="muted">Check <strong>site/data/projects.json</strong> and try again.</p>
     `;
 
     gridEl.innerHTML = '';
@@ -43,9 +43,9 @@ function renderProjectCard(project) {
   const card = document.createElement('article');
   card.className = 'card project';
 
-  const title = escapeText(project.title ?? 'Titolo progetto');
-  const role = escapeText(project.role ?? 'Ruolo');
-  const platform = escapeText(project.platform ?? 'Piattaforme');
+  const title = escapeText(project.title ?? 'Project title');
+  const role = escapeText(project.role ?? 'Role');
+  const platform = escapeText(project.platform ?? 'Platforms');
   const year = escapeText(project.year ?? '');
   const description = escapeText(project.description ?? '');
 
@@ -59,14 +59,14 @@ function renderProjectCard(project) {
   card.innerHTML = `
     <div class="project__top">
       <div class="project__title">${title}</div>
-      <div class="badges" aria-label="Metadati progetto">
+      <div class="badges" aria-label="Project metadata">
         ${badges.map((b) => `<span class="badge">${b}</span>`).join('')}
       </div>
     </div>
 
     <p class="project__desc">${description}</p>
 
-    <div class="project__links" aria-label="Link progetto">
+    <div class="project__links" aria-label="Project links">
       ${links
         .map((l) => {
           const label = escapeText(l.label ?? 'Link');
