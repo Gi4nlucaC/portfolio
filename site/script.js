@@ -133,9 +133,9 @@ function renderLanguageRatings() {
   const languages = [
     { name: 'C#', rating: 5 },
     { name: 'C++', rating: 4 },
-    { name: 'Java', rating: 4 },
-    { name: 'PHP', rating: 4 },
-    { name: 'JavaScript', rating: 3.5 },
+    { name: 'Java', rating: 3 },
+    { name: 'PHP', rating: 3.5 },
+    { name: 'JavaScript', rating: 2 },
     { name: 'Python', rating: 1 },
   ];
 
