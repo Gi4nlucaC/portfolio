@@ -6,7 +6,7 @@
       "image": "assets/projects/mars-kitchen.jpg",
       "imageAlt": "Mars Kitchen splash image",
       "role": "Gameplay Programmer",
-      "platform": "VR (Meta Quest) / PlayStation 5",
+      "platform": "VR / PlayStation 5",
       "year": "",
       "description": "Published VR title on Meta Quest and PSVR. I designed some missions and implemented the quest system and dialogue system. I designed and programmed a Beat Saber-inspired hand-tracking mode (Meta Start Dev Competition), a multi-lightset baking solution for instant teleport between co-existing environments, and a system to virtualize alien customer behavior (simulation runs even off-screen). I also contributed to polishing (juice/feel) and handled the PlayStation port.",
       "links": [
