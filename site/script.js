@@ -147,7 +147,18 @@ function parseVimeoEmbed(value) {
 function renderMediaCarousel({ titleText, imageSrcRaw, imageAltText, youtubeUrl, vimeoUrl, tiktokUrl, gallery }) {
   const items = [];
   const tt = parseTikTokEmbed(tiktokUrl);
-  if (tt) items.push({ type: 'tiktok', src: tt.src, title: `${titleText} TikTok` });
+  const yt = parseYouTubeEmbed(youtubeUrl);
+  const vm = parseVimeoEmbed(vimeoUrl);
+
+  // Ordering rule:
+  // - If TikTok exists: keep it first (good for short social clips).
+  // - Otherwise: put the gameplay video first (YouTube/Vimeo), then screenshots.
+  if (tt) {
+    items.push({ type: 'tiktok', src: tt.src, title: `${titleText} TikTok` });
+  } else {
+    if (yt) items.push({ type: 'youtube', src: yt.src, title: `${titleText} video` });
+    if (vm) items.push({ type: 'vimeo', src: vm.src, title: `${titleText} video (Vimeo)` });
+  }
 
   const safeImageSrc = isSafeAssetPath(imageSrcRaw) ? imageSrcRaw : 'assets/projects/placeholder.svg';
   items.push({ type: 'image', src: safeImageSrc, alt: imageAltText || titleText });
@@ -170,11 +181,11 @@ function renderMediaCarousel({ titleText, imageSrcRaw, imageAltText, youtubeUrl,
     }
   }
 
-  const yt = parseYouTubeEmbed(youtubeUrl);
-  if (yt) items.push({ type: 'youtube', src: yt.src, title: `${titleText} video` });
-
-  const vm = parseVimeoEmbed(vimeoUrl);
-  if (vm) items.push({ type: 'vimeo', src: vm.src, title: `${titleText} video (Vimeo)` });
+  // If TikTok is first, keep longer-form videos after screenshots.
+  if (tt) {
+    if (yt) items.push({ type: 'youtube', src: yt.src, title: `${titleText} video` });
+    if (vm) items.push({ type: 'vimeo', src: vm.src, title: `${titleText} video (Vimeo)` });
+  }
 
   const carousel = document.createElement('div');
   carousel.className = 'carousel';
