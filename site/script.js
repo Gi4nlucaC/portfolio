@@ -194,18 +194,21 @@ function renderProjectDetails(projects) {
       })
       .filter((link) => link.label && isSafeUrl(link.href));
 
-    const section = document.createElement('section');
-    section.className = 'project-detail card';
-    section.id = `project-${projectId}`;
-    section.setAttribute('aria-label', `${titleText} details`);
+    const details = document.createElement('details');
+    details.className = 'project-detail';
+    details.id = `project-${projectId}`;
+    details.setAttribute('aria-label', `${titleText} details`);
 
-    const header = document.createElement('div');
-    header.className = 'project-detail__header';
+    const summary = document.createElement('summary');
+    summary.className = 'project-detail__summary';
+
+    const summaryInner = document.createElement('div');
+    summaryInner.className = 'project-detail__header';
 
     const h3 = document.createElement('h3');
     h3.className = 'project-detail__title';
     h3.textContent = titleText;
-    header.appendChild(h3);
+    summaryInner.appendChild(h3);
 
     const badgesEl = document.createElement('div');
     badgesEl.className = 'badges';
@@ -216,7 +219,11 @@ function renderProjectDetails(projects) {
       badge.textContent = text;
       badgesEl.appendChild(badge);
     }
-    header.appendChild(badgesEl);
+    summaryInner.appendChild(badgesEl);
+    summary.appendChild(summaryInner);
+
+    const body = document.createElement('div');
+    body.className = 'project-detail__body';
 
     const imageSrcRaw = String(project?.image ?? '').trim();
     const imageAltText = String(project?.imageAlt ?? titleText).trim() || titleText;
@@ -231,9 +238,8 @@ function renderProjectDetails(projects) {
     desc.className = 'project-detail__desc';
     desc.textContent = descriptionText;
 
-    section.appendChild(header);
-    section.appendChild(img);
-    if (descriptionText) section.appendChild(desc);
+    body.appendChild(img);
+    if (descriptionText) body.appendChild(desc);
 
     if (safeLinks.length > 0) {
       const linksEl = document.createElement('div');
@@ -248,10 +254,12 @@ function renderProjectDetails(projects) {
         a.textContent = link.label;
         linksEl.appendChild(a);
       }
-      section.appendChild(linksEl);
+      body.appendChild(linksEl);
     }
 
-    container.appendChild(section);
+    details.appendChild(summary);
+    details.appendChild(body);
+    container.appendChild(details);
   }
 }
 
@@ -264,20 +272,21 @@ function initProjectCardInteractions() {
     if (!projectId) return;
     const targetId = `project-${projectId}`;
     const target = document.getElementById(targetId);
-    if (!(target instanceof HTMLElement)) return;
+    if (!(target instanceof HTMLDetailsElement)) return;
 
+    const container = document.getElementById('project-details');
+    if (container) {
+      for (const other of container.querySelectorAll('details.project-detail[open]')) {
+        if (other !== target) other.open = false;
+      }
+    }
+
+    target.open = true;
     history.replaceState(null, '', `#${targetId}`);
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    const title = target.querySelector('h3');
-    if (title instanceof HTMLElement) {
-      const hadTabIndex = title.hasAttribute('tabindex');
-      if (!hadTabIndex) title.setAttribute('tabindex', '-1');
-      title.focus({ preventScroll: true });
-      if (!hadTabIndex) {
-        title.addEventListener('blur', () => title.removeAttribute('tabindex'), { once: true });
-      }
-    }
+    const summary = target.querySelector('summary');
+    if (summary instanceof HTMLElement) summary.focus({ preventScroll: true });
   };
 
   grid.addEventListener('click', (event) => {
@@ -318,7 +327,14 @@ async function loadProjects() {
 
     if (location.hash && location.hash.startsWith('#project-')) {
       const target = document.querySelector(location.hash);
-      if (target instanceof HTMLElement) {
+      if (target instanceof HTMLDetailsElement) {
+        const container = document.getElementById('project-details');
+        if (container) {
+          for (const other of container.querySelectorAll('details.project-detail[open]')) {
+            if (other !== target) other.open = false;
+          }
+        }
+        target.open = true;
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
