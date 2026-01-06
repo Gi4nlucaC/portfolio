@@ -273,20 +273,34 @@ h3 {
 }
 
 .rating-stars {
+  position: relative;
+  display: inline-block;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
     Arial, "Apple Color Emoji", "Segoe UI Emoji";
   letter-spacing: 2px;
   font-size: 14px;
   line-height: 1;
   white-space: nowrap;
-  color: transparent;
-  background: linear-gradient(
-    90deg,
-    var(--accent) var(--fill, 0%),
-    rgba(255, 255, 255, 0.16) var(--fill, 0%)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
+}
+
+.rating-stars .stars-base {
+  color: rgba(255, 255, 255, 0.20);
+}
+
+.rating-stars .stars-fill {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  width: 0%;
+  color: var(--accent);
+  transition: width 900ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: width;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rating-stars .stars-fill {
+    transition: none;
+  }
 }
 
 .rating-note {

@@ -129,7 +129,9 @@ function renderLanguageRatings() {
 
   container.innerHTML = '';
 
-  for (const language of languages) {
+  const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false;
+
+  languages.forEach((language, index) => {
     const row = document.createElement('div');
     row.className = 'rating-row';
 
@@ -139,18 +141,35 @@ function renderLanguageRatings() {
 
     const stars = document.createElement('div');
     stars.className = 'rating-stars';
-    stars.textContent = '★★★★★';
+    stars.innerHTML = `
+      <span class="stars-base" aria-hidden="true">★★★★★</span>
+      <span class="stars-fill" aria-hidden="true">★★★★★</span>
+    `;
 
     const clamped = Math.max(0, Math.min(5, Number(language.rating)));
-    const fill = `${(clamped / 5) * 100}%`;
-    stars.style.setProperty('--fill', fill);
+    const fillPercent = (clamped / 5) * 100;
+    const fill = stars.querySelector('.stars-fill');
+    if (fill instanceof HTMLElement) {
+      fill.style.width = '0%';
+      const apply = () => {
+        fill.style.width = `${fillPercent}%`;
+      };
+
+      if (reduceMotion) {
+        apply();
+      } else {
+        window.setTimeout(() => {
+          requestAnimationFrame(apply);
+        }, index * 90);
+      }
+    }
     stars.setAttribute('role', 'img');
     stars.setAttribute('aria-label', `${language.name}: ${clamped} out of 5`);
 
     row.appendChild(label);
     row.appendChild(stars);
     container.appendChild(row);
-  }
+  });
 }
 
 function enhanceNav() {
