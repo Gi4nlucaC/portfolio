@@ -31,6 +31,258 @@ function slugify(value) {
     .replace(/(^-|-$)/g, '');
 }
 
+function parseYouTubeEmbed(value) {
+  if (typeof value !== 'string') return null;
+  const raw = value.trim();
+  if (!raw) return null;
+  if (!isSafeUrl(raw)) return null;
+
+  let url;
+  try {
+    url = new URL(raw);
+  } catch {
+    return null;
+  }
+
+  const host = url.hostname.replace(/^www\./, '');
+  let videoId = '';
+
+  if (host === 'youtube.com' || host === 'm.youtube.com') {
+    if (url.pathname.startsWith('/embed/')) {
+      videoId = url.pathname.split('/embed/')[1]?.split('/')[0] ?? '';
+    } else if (url.pathname === '/watch') {
+      videoId = url.searchParams.get('v') ?? '';
+    }
+  }
+
+  if (host === 'youtu.be') {
+    videoId = url.pathname.replace('/', '');
+  }
+
+  if (!/^[a-zA-Z0-9_-]{6,}$/.test(videoId)) return null;
+
+  const allowedParams = new Set(['start', 'end', 'si', 't']);
+  const params = new URLSearchParams();
+  for (const [key, val] of url.searchParams.entries()) {
+    if (!allowedParams.has(key)) continue;
+    if (!val) continue;
+    params.set(key, val);
+  }
+
+  const src = `https://www.youtube.com/embed/${videoId}${params.toString() ? `?${params}` : ''}`;
+  return { id: videoId, src };
+}
+
+function parseTikTokEmbed(value) {
+  if (typeof value !== 'string') return null;
+  const raw = value.trim();
+  if (!raw) return null;
+
+  // Allow passing a plain numeric video id.
+  if (/^\d{10,}$/.test(raw)) {
+    return { id: raw, src: `https://www.tiktok.com/embed/v2/${raw}` };
+  }
+
+  if (!isSafeUrl(raw)) return null;
+
+  let url;
+  try {
+    url = new URL(raw);
+  } catch {
+    return null;
+  }
+
+  const host = url.hostname.replace(/^www\./, '').toLowerCase();
+  if (!(host === 'tiktok.com' || host.endsWith('.tiktok.com'))) return null;
+
+  // Common formats:
+  // - https://www.tiktok.com/@user/video/<id>
+  // - https://www.tiktok.com/embed/v2/<id>
+  const match = url.pathname.match(/(?:\/video\/|\/embed\/v2\/)(\d{10,})/);
+  const id = match?.[1] ?? '';
+  if (!/^\d{10,}$/.test(id)) return null;
+
+  return { id, src: `https://www.tiktok.com/embed/v2/${id}` };
+}
+
+function renderMediaCarousel({ titleText, imageSrcRaw, imageAltText, youtubeUrl, tiktokUrl, gallery }) {
+  const items = [];
+  const tt = parseTikTokEmbed(tiktokUrl);
+  if (tt) items.push({ type: 'tiktok', src: tt.src, title: `${titleText} TikTok` });
+
+  const safeImageSrc = isSafeAssetPath(imageSrcRaw) ? imageSrcRaw : 'assets/projects/placeholder.svg';
+  items.push({ type: 'image', src: safeImageSrc, alt: imageAltText || titleText });
+
+  const seen = new Set([safeImageSrc]);
+  if (Array.isArray(gallery)) {
+    for (const entry of gallery) {
+      const srcRaw = typeof entry === 'string' ? entry : String(entry?.src ?? '').trim();
+      if (!srcRaw) continue;
+      if (!isSafeAssetPath(srcRaw)) continue;
+      if (seen.has(srcRaw)) continue;
+      seen.add(srcRaw);
+
+      const alt =
+        typeof entry === 'object' && entry
+          ? String(entry?.alt ?? titleText).trim() || titleText
+          : titleText;
+
+      items.push({ type: 'image', src: srcRaw, alt });
+    }
+  }
+
+  const yt = parseYouTubeEmbed(youtubeUrl);
+  if (yt) items.push({ type: 'youtube', src: yt.src, title: `${titleText} video` });
+
+  const carousel = document.createElement('div');
+  carousel.className = 'carousel';
+  carousel.dataset.index = '0';
+
+  const viewport = document.createElement('div');
+  viewport.className = 'carousel__viewport';
+
+  const track = document.createElement('div');
+  track.className = 'carousel__track';
+
+  items.forEach((item) => {
+    const slide = document.createElement('div');
+    slide.className = 'carousel__slide';
+
+    if (item.type === 'image') {
+      const img = document.createElement('img');
+      img.className = 'carousel__img';
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      img.src = item.src;
+      img.alt = item.alt;
+      slide.appendChild(img);
+    }
+
+    if (item.type === 'youtube') {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'carousel__video';
+
+      const iframe = document.createElement('iframe');
+      iframe.src = item.src;
+      iframe.title = item.title;
+      iframe.loading = 'lazy';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.allowFullscreen = true;
+
+      wrapper.appendChild(iframe);
+      slide.appendChild(wrapper);
+    }
+
+    if (item.type === 'tiktok') {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'carousel__video carousel__video--tiktok';
+
+      const iframe = document.createElement('iframe');
+      iframe.src = item.src;
+      iframe.title = item.title;
+      iframe.loading = 'lazy';
+      iframe.allow = 'encrypted-media; picture-in-picture; web-share';
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.allowFullscreen = true;
+
+      wrapper.appendChild(iframe);
+      slide.appendChild(wrapper);
+    }
+
+    track.appendChild(slide);
+  });
+
+  viewport.appendChild(track);
+  carousel.appendChild(viewport);
+
+  if (items.length > 1) {
+    const controls = document.createElement('div');
+    controls.className = 'carousel__controls';
+
+    const prev = document.createElement('button');
+    prev.type = 'button';
+    prev.className = 'carousel__btn';
+    prev.dataset.action = 'prev';
+    prev.setAttribute('aria-label', 'Previous media');
+    prev.textContent = 'Prev';
+
+    const next = document.createElement('button');
+    next.type = 'button';
+    next.className = 'carousel__btn';
+    next.dataset.action = 'next';
+    next.setAttribute('aria-label', 'Next media');
+    next.textContent = 'Next';
+
+    const dots = document.createElement('div');
+    dots.className = 'carousel__dots';
+    items.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'carousel__dot';
+      dot.dataset.index = String(i);
+      dot.setAttribute('aria-label', `Go to media ${i + 1}`);
+      dots.appendChild(dot);
+    });
+
+    controls.appendChild(prev);
+    controls.appendChild(dots);
+    controls.appendChild(next);
+    carousel.appendChild(controls);
+  }
+
+  return carousel;
+}
+
+function initCarousels(root) {
+  const containers = root instanceof HTMLElement ? [root] : Array.from(document.querySelectorAll('.project-details'));
+  for (const container of containers) {
+    for (const carousel of container.querySelectorAll('.carousel')) {
+      const track = carousel.querySelector('.carousel__track');
+      if (!(track instanceof HTMLElement)) continue;
+
+      const slides = carousel.querySelectorAll('.carousel__slide');
+      if (slides.length <= 1) continue;
+
+      const setIndex = (nextIndex) => {
+        const max = slides.length - 1;
+        const index = Math.max(0, Math.min(max, nextIndex));
+        carousel.dataset.index = String(index);
+        track.style.transform = `translateX(${-index * 100}%)`;
+
+        const dots = carousel.querySelectorAll('.carousel__dot');
+        dots.forEach((dot, i) => {
+          if (!(dot instanceof HTMLElement)) return;
+          if (i === index) dot.setAttribute('aria-current', 'true');
+          else dot.removeAttribute('aria-current');
+        });
+      };
+
+      setIndex(0);
+
+      carousel.addEventListener('click', (event) => {
+        const target = event.target instanceof Element ? event.target : null;
+        if (!target) return;
+
+        const actionBtn = target.closest('button[data-action]');
+        if (actionBtn instanceof HTMLButtonElement) {
+          const current = Number(carousel.dataset.index ?? '0') || 0;
+          const action = actionBtn.dataset.action;
+          if (action === 'prev') setIndex(current - 1);
+          if (action === 'next') setIndex(current + 1);
+          return;
+        }
+
+        const dotBtn = target.closest('button.carousel__dot');
+        if (dotBtn instanceof HTMLButtonElement) {
+          const idx = Number(dotBtn.dataset.index);
+          if (Number.isFinite(idx)) setIndex(idx);
+        }
+      });
+    }
+  }
+}
+
 function setYear() {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
@@ -225,20 +477,26 @@ function renderProjectDetails(projects) {
     const body = document.createElement('div');
     body.className = 'project-detail__body';
 
-    const imageSrcRaw = String(project?.image ?? '').trim();
-    const imageAltText = String(project?.imageAlt ?? titleText).trim() || titleText;
-    const img = document.createElement('img');
-    img.className = 'project-detail__img';
-    img.loading = 'lazy';
-    img.decoding = 'async';
-    img.src = isSafeAssetPath(imageSrcRaw) ? imageSrcRaw : 'assets/projects/placeholder.svg';
-    img.alt = imageAltText;
-
     const desc = document.createElement('p');
     desc.className = 'project-detail__desc';
     desc.textContent = descriptionText;
 
-    body.appendChild(img);
+    const imageSrcRaw = String(project?.image ?? '').trim();
+    const imageAltText = String(project?.imageAlt ?? titleText).trim() || titleText;
+    const youtubeUrl = String(project?.youtube ?? '').trim();
+    const tiktokUrl = String(project?.tiktok ?? '').trim();
+    const gallery = Array.isArray(project?.gallery) ? project.gallery : null;
+
+    body.appendChild(
+      renderMediaCarousel({
+        titleText,
+        imageSrcRaw,
+        imageAltText,
+        youtubeUrl,
+        tiktokUrl,
+        gallery,
+      })
+    );
     if (descriptionText) body.appendChild(desc);
 
     if (safeLinks.length > 0) {
@@ -261,6 +519,8 @@ function renderProjectDetails(projects) {
     details.appendChild(body);
     container.appendChild(details);
   }
+
+  initCarousels(container);
 }
 
 function initProjectCardInteractions() {
