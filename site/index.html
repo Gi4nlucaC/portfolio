@@ -45,9 +45,25 @@
               <a class="button" href="#projects">View projects</a>
               <a class="button button--ghost" href="#contact">Get in touch</a>
             </div>
-            <p class="hero__meta">
-              Engines: <strong>Unity</strong> and <strong>Unreal Engine</strong>. Platforms: <strong>Standalone</strong>, <strong>WebGL</strong>, <strong>Android</strong>, <strong>Meta Quest</strong>, <strong>PSVR</strong>.
-            </p>
+            <div class="hero__meta" aria-label="Engines and platforms">
+              <div class="meta-row">
+                <div class="meta-label">Engines</div>
+                <ul class="tags hero__tags" aria-label="Engines">
+                  <li>Unity</li>
+                  <li>Unreal Engine</li>
+                </ul>
+              </div>
+              <div class="meta-row">
+                <div class="meta-label">Platforms</div>
+                <ul class="tags hero__tags" aria-label="Platforms">
+                  <li>Standalone</li>
+                  <li>WebGL</li>
+                  <li>Android</li>
+                  <li>Meta Quest</li>
+                  <li>PSVR</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           <div class="hero__card" role="note" aria-label="Highlights">
@@ -103,7 +119,7 @@
       <section class="section" id="projects" aria-labelledby="projects-title">
         <div class="container">
           <div class="section__head">
-            <h2 id="projects-title">Featured projects</h2>
+            <h2 id="projects-title">Professional work</h2>
           </div>
 
           <div class="cards" id="projects-grid" aria-label="Project list"></div>
@@ -163,12 +179,19 @@
                 <li>Profiling</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div class="card">
-              <h3>Languages</h3>
-              <p class="muted small">Self-assessed proficiency (based on day-to-day production use).</p>
-              <div class="rating-list" id="language-ratings" aria-label="Programming language ratings"></div>
-            </div>
+      <section class="section" id="languages" aria-labelledby="languages-title">
+        <div class="container">
+          <div class="section__head">
+            <h2 id="languages-title">Languages</h2>
+            <p class="muted">Self-assessed proficiency based on day-to-day production use.</p>
+          </div>
+
+          <div class="card">
+            <div class="rating-list" id="language-ratings" aria-label="Programming language ratings"></div>
           </div>
         </div>
       </section>

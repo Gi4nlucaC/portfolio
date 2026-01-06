@@ -144,8 +144,30 @@ a {
 }
 
 .hero__meta {
-  color: var(--muted);
   margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.meta-label {
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.hero__tags {
+  margin: 0;
+}
+
+.hero__tags li {
+  font-size: 12px;
 }
 
 .hero__card {
@@ -402,7 +424,7 @@ h3 {
 .project__overlay {
   position: absolute;
   inset: 0;
-  padding: 14px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -410,6 +432,7 @@ h3 {
   background: rgba(11, 13, 18, 0.80);
   opacity: 0;
   transition: opacity 180ms ease;
+  overflow: hidden;
 }
 
 .project:hover .project__overlay,
@@ -419,6 +442,11 @@ h3 {
 
 .project__overlay .project__desc {
   color: var(--text);
+  display: -webkit-box;
+  line-clamp: 6;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 @media (hover: none) {
@@ -436,10 +464,13 @@ h3 {
     opacity: 1;
     background: transparent;
     padding: 12px;
+    overflow: visible;
   }
 
   .project__overlay .project__desc {
     color: var(--muted);
+    display: block;
+    overflow: visible;
   }
 }
 
