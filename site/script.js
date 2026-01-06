@@ -53,6 +53,8 @@ function renderProjectCard(project) {
   if (role) badges.push(role);
   if (platform) badges.push(platform);
   if (year) badges.push(year);
+let languageRatingsAnimated = false;
+
 
   const links = Array.isArray(project.links) ? project.links : [];
 
@@ -90,18 +92,8 @@ function renderProjectCard(project) {
 function escapeText(value) {
   return String(value)
     .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#039;');
-}
-
-function isSafeUrl(url) {
-  if (!url) return false;
-  if (url.startsWith('#')) return true;
-
-  try {
-    const parsed = new URL(url);
+      fill.dataset.fill = String(fillPercent);
+      fill.style.width = reduceMotion ? `${fillPercent}%` : '0%';
     return parsed.protocol === 'https:' || parsed.protocol === 'http:';
   } catch {
     return false;
@@ -111,6 +103,65 @@ function isSafeUrl(url) {
 function setYear() {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+function animateLanguageRatings() {
+  if (languageRatingsAnimated) return;
+  const container = document.getElementById('language-ratings');
+  if (!container) return;
+
+  const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false;
+  const fills = Array.from(container.querySelectorAll('.stars-fill'));
+  if (fills.length === 0) return;
+
+  languageRatingsAnimated = true;
+
+  fills.forEach((fillEl, index) => {
+    if (!(fillEl instanceof HTMLElement)) return;
+    const target = Number(fillEl.dataset.fill ?? '0');
+    const clamped = Math.max(0, Math.min(100, target));
+
+    const apply = () => {
+      fillEl.style.width = `${clamped}%`;
+    };
+
+    if (reduceMotion) {
+      apply();
+    } else {
+      window.setTimeout(() => requestAnimationFrame(apply), index * 90);
+    }
+  });
+}
+
+function initLanguageRatingsAnimation() {
+  const container = document.getElementById('language-ratings');
+  if (!container) return;
+
+  const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false;
+  if (reduceMotion) {
+    animateLanguageRatings();
+    return;
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    animateLanguageRatings();
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          animateLanguageRatings();
+          observer.disconnect();
+          return;
+        }
+      }
+    },
+    { threshold: 0.25 }
+  );
+
+  observer.observe(container);
+}
 }
 
 function renderLanguageRatings() {
@@ -140,6 +191,8 @@ function renderLanguageRatings() {
     label.textContent = language.name;
 
     const stars = document.createElement('div');
+    // Helpful when debugging on GitHub Pages.
+    console.error('Failed to load projects.json', error);
     stars.className = 'rating-stars';
     stars.innerHTML = `
       <span class="stars-base" aria-hidden="true">★★★★★</span>
@@ -157,6 +210,7 @@ function renderLanguageRatings() {
 
       if (reduceMotion) {
         apply();
+initLanguageRatingsAnimation();
       } else {
         window.setTimeout(() => {
           requestAnimationFrame(apply);
