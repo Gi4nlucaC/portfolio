@@ -148,6 +148,9 @@ function renderMediaCarousel({ titleText, imageSrcRaw, imageAltText, youtubeUrl,
     const slide = document.createElement('div');
     slide.className = 'carousel__slide';
 
+    const frame = document.createElement('div');
+    frame.className = 'carousel__frame';
+
     if (item.type === 'image') {
       const img = document.createElement('img');
       img.className = 'carousel__img';
@@ -155,13 +158,11 @@ function renderMediaCarousel({ titleText, imageSrcRaw, imageAltText, youtubeUrl,
       img.decoding = 'async';
       img.src = item.src;
       img.alt = item.alt;
-      slide.appendChild(img);
+      frame.appendChild(img);
+      slide.appendChild(frame);
     }
 
     if (item.type === 'youtube') {
-      const wrapper = document.createElement('div');
-      wrapper.className = 'carousel__video';
-
       const iframe = document.createElement('iframe');
       iframe.src = item.src;
       iframe.title = item.title;
@@ -170,13 +171,13 @@ function renderMediaCarousel({ titleText, imageSrcRaw, imageAltText, youtubeUrl,
       iframe.referrerPolicy = 'strict-origin-when-cross-origin';
       iframe.allowFullscreen = true;
 
-      wrapper.appendChild(iframe);
-      slide.appendChild(wrapper);
+      frame.appendChild(iframe);
+      slide.appendChild(frame);
     }
 
     if (item.type === 'tiktok') {
-      const wrapper = document.createElement('div');
-      wrapper.className = 'carousel__video carousel__video--tiktok';
+      const inner = document.createElement('div');
+      inner.className = 'carousel__tiktok';
 
       const iframe = document.createElement('iframe');
       iframe.src = item.src;
@@ -186,8 +187,9 @@ function renderMediaCarousel({ titleText, imageSrcRaw, imageAltText, youtubeUrl,
       iframe.referrerPolicy = 'strict-origin-when-cross-origin';
       iframe.allowFullscreen = true;
 
-      wrapper.appendChild(iframe);
-      slide.appendChild(wrapper);
+      inner.appendChild(iframe);
+      frame.appendChild(inner);
+      slide.appendChild(frame);
     }
 
     track.appendChild(slide);
