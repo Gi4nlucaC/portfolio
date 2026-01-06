@@ -1,16 +1,105 @@
+function escapeText(value) {
+  return String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
+
+function isSafeUrl(url) {
+  if (typeof url !== 'string') return false;
+  const trimmed = url.trim();
+  return trimmed.startsWith('https://') || trimmed.startsWith('http://');
+}
+
+function setYear() {
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+}
+
+function enhanceNav() {
+  for (const link of document.querySelectorAll('a[href^="#"]')) {
+    link.addEventListener('click', (event) => {
+      const href = link.getAttribute('href');
+      if (!href || href === '#') return;
+
+      if (href === '#top') {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        history.replaceState(null, '', href);
+        return;
+      }
+
+      const target = document.querySelector(href);
+      if (!(target instanceof HTMLElement)) return;
+
+      event.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      const hadTabIndex = target.hasAttribute('tabindex');
+      if (!hadTabIndex) target.setAttribute('tabindex', '-1');
+      target.focus({ preventScroll: true });
+      if (!hadTabIndex) {
+        target.addEventListener('blur', () => target.removeAttribute('tabindex'), { once: true });
+      }
+
+      history.replaceState(null, '', href);
+    });
+  }
+}
+
+function renderProjectCard(project) {
+  const card = document.createElement('article');
+  card.className = 'card project';
+
+  const title = escapeText(project?.title ?? 'Project title');
+  const role = escapeText(project?.role ?? '');
+  const platform = escapeText(project?.platform ?? '');
+  const year = escapeText(project?.year ?? '');
+  const description = escapeText(project?.description ?? '');
+
+  const badges = [];
+  if (role) badges.push(role);
+  if (platform) badges.push(platform);
+  if (year) badges.push(year);
+
+  const links = Array.isArray(project?.links) ? project.links : [];
+  const safeLinks = links
+    .map((link) => ({
+      label: escapeText(link?.label ?? ''),
+      url: String(link?.url ?? '').trim(),
+    }))
+    .filter((link) => link.label && isSafeUrl(link.url));
+
+  const badgesHtml = badges.map((text) => `<span class="badge">${text}</span>`).join('');
+  const linksHtml = safeLinks
+    .map((link) => `<a class="link" href="${escapeText(link.url)}" target="_blank" rel="noreferrer">${link.label}</a>`)
+    .join('');
+
+  card.innerHTML = `
+    <div class="project__top">
+      <div class="project__title">${title}</div>
+      <div class="badges" aria-label="Project metadata">${badgesHtml}</div>
+    </div>
+    <p class="project__desc">${description}</p>
+    ${linksHtml ? `<div class="project__links" aria-label="Project links">${linksHtml}</div>` : ''}
+  `;
+
+  return card;
+}
+
 async function loadProjects() {
   const statusEl = document.getElementById('projects-status');
   const gridEl = document.getElementById('projects-grid');
-
   if (!statusEl || !gridEl) return;
 
   try {
     statusEl.textContent = 'Loading projects…';
-
     const response = await fetch('./data/projects.json', { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
-    /** @type {{ projects: Array<any> }} */
+    /** @type {{ projects?: Array<any> }} */
     const data = await response.json();
     if (!data || !Array.isArray(data.projects)) throw new Error('Invalid JSON format');
 
@@ -36,27 +125,8 @@ async function loadProjects() {
   }
 }
 
-function renderProjectCard(project) {
-  const card = document.createElement('article');
-  card.className = 'card project';
-
-  const title = escapeText(project?.title ?? 'Project title');
-  const role = escapeText(project?.role ?? 'Role');
-  const platform = escapeText(project?.platform ?? 'Platforms');
-  const year = escapeText(project?.year ?? '');
-  const description = escapeText(project?.description ?? '');
-
-  const badges = [];
-  if (role) badges.push(role);
-  if (platform) badges.push(platform);
-  if (year) badges.push(year);
-
-  const links = Array.isArray(project?.links) ? project.links : [];
-
-  card.innerHTML = `
-    <div class="project__top">
-      <div class="project__title">${title}</div>
-      <div class="badges" aria-label="Project metadata">
+function renderLanguageRatings() {
+  const container = document.getElementById('language-ratings');
   if (!container) return;
 
   /** @type {Array<{ name: string; rating: number }>} */
@@ -66,14 +136,13 @@ function renderProjectCard(project) {
     { name: 'Java', rating: 4 },
     { name: 'PHP', rating: 4 },
     { name: 'JavaScript', rating: 3.5 },
-    { name: 'Python', rating: 1 }
+    { name: 'Python', rating: 1 },
   ];
 
+  const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false;
   container.innerHTML = '';
 
-  const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false;
-
-  languages.forEach((language, index) => {
+  languages.forEach((language) => {
     const row = document.createElement('div');
     row.className = 'rating-row';
 
@@ -82,8 +151,6 @@ function renderProjectCard(project) {
     label.textContent = language.name;
 
     const stars = document.createElement('div');
-    // Helpful when debugging on GitHub Pages.
-    console.error('Failed to load projects.json', error);
     stars.className = 'rating-stars';
     stars.innerHTML = `
       <span class="stars-base" aria-hidden="true">★★★★★</span>
@@ -92,24 +159,14 @@ function renderProjectCard(project) {
 
     const clamped = Math.max(0, Math.min(5, Number(language.rating)));
     const fillPercent = (clamped / 5) * 100;
-    const fill = stars.querySelector('.stars-fill');
-    if (fill instanceof HTMLElement) {
-      fill.style.width = '0%';
-      const apply = () => {
-        fill.style.width = `${fillPercent}%`;
-      };
-
-      if (reduceMotion) {
-        apply();
-initLanguageRatingsAnimation();
-      } else {
-        window.setTimeout(() => {
-          requestAnimationFrame(apply);
-        }, index * 90);
-      }
-    }
     stars.setAttribute('role', 'img');
     stars.setAttribute('aria-label', `${language.name}: ${clamped} out of 5`);
+
+    const fill = stars.querySelector('.stars-fill');
+    if (fill instanceof HTMLElement) {
+      fill.dataset.targetWidth = `${fillPercent}%`;
+      fill.style.width = reduceMotion ? `${fillPercent}%` : '0%';
+    }
 
     row.appendChild(label);
     row.appendChild(stars);
@@ -117,36 +174,53 @@ initLanguageRatingsAnimation();
   });
 }
 
-function enhanceNav() {
-  for (const link of document.querySelectorAll('a[href^="#"]')) {
-    link.addEventListener('click', (event) => {
-      const href = link.getAttribute('href');
-      if (!href || href === '#') return;
+function initLanguageRatingsAnimation() {
+  const container = document.getElementById('language-ratings');
+  if (!container) return;
 
-      if (href === '#top') {
-        event.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        history.replaceState(null, '', href);
-        return;
-      }
+  const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false;
+  if (reduceMotion) return;
 
-      const target = document.querySelector(href);
-      if (!(target instanceof HTMLElement)) return;
+  const rows = Array.from(container.querySelectorAll('.rating-row'));
+  if (rows.length === 0) return;
 
-      event.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const applyRow = (row, index) => {
+    const fill = row.querySelector('.stars-fill');
+    if (!(fill instanceof HTMLElement)) return;
+    const targetWidth = fill.dataset.targetWidth;
+    if (!targetWidth) return;
 
-      const canFocus = target.hasAttribute('tabindex');
-      if (!canFocus) target.setAttribute('tabindex', '-1');
-      target.focus({ preventScroll: true });
-      if (!canFocus) target.addEventListener('blur', () => target.removeAttribute('tabindex'), { once: true });
+    window.setTimeout(() => {
+      requestAnimationFrame(() => {
+        fill.style.width = targetWidth;
+      });
+    }, index * 90);
+  };
 
-      history.replaceState(null, '', href);
-    });
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          const row = entry.target;
+          const index = rows.indexOf(row);
+          if (index >= 0) applyRow(row, index);
+          observer.unobserve(row);
+        }
+      },
+      { threshold: 0.25 }
+    );
+
+    rows.forEach((row) => observer.observe(row));
+  } else {
+    rows.forEach((row, index) => applyRow(row, index));
   }
 }
 
-setYear();
-enhanceNav();
-loadProjects();
-renderLanguageRatings();
+document.addEventListener('DOMContentLoaded', () => {
+  setYear();
+  enhanceNav();
+  loadProjects();
+  renderLanguageRatings();
+  initLanguageRatingsAnimation();
+});
