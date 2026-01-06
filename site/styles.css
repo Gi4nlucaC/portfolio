@@ -256,6 +256,44 @@ h3 {
   font-size: 13px;
 }
 
+.rating-list {
+  display: grid;
+  gap: 10px;
+}
+
+.rating-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.rating-label {
+  font-weight: 700;
+}
+
+.rating-stars {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  letter-spacing: 2px;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    var(--accent) var(--fill, 0%),
+    rgba(255, 255, 255, 0.16) var(--fill, 0%)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.rating-note {
+  color: var(--muted);
+  font-size: 12px;
+}
+
 .toolbar {
   display: flex;
   align-items: center;

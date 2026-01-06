@@ -113,6 +113,46 @@ function setYear() {
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 }
 
+function renderLanguageRatings() {
+  const container = document.getElementById('language-ratings');
+  if (!container) return;
+
+  /** @type {Array<{ name: string; rating: number }>} */
+  const languages = [
+    { name: 'C#', rating: 5 },
+    { name: 'C++', rating: 4 },
+    { name: 'Java', rating: 4 },
+    { name: 'PHP', rating: 4 },
+    { name: 'JavaScript', rating: 3.5 },
+    { name: 'Python', rating: 1 }
+  ];
+
+  container.innerHTML = '';
+
+  for (const language of languages) {
+    const row = document.createElement('div');
+    row.className = 'rating-row';
+
+    const label = document.createElement('div');
+    label.className = 'rating-label';
+    label.textContent = language.name;
+
+    const stars = document.createElement('div');
+    stars.className = 'rating-stars';
+    stars.textContent = '★★★★★';
+
+    const clamped = Math.max(0, Math.min(5, Number(language.rating)));
+    const fill = `${(clamped / 5) * 100}%`;
+    stars.style.setProperty('--fill', fill);
+    stars.setAttribute('role', 'img');
+    stars.setAttribute('aria-label', `${language.name}: ${clamped} out of 5`);
+
+    row.appendChild(label);
+    row.appendChild(stars);
+    container.appendChild(row);
+  }
+}
+
 function enhanceNav() {
   for (const link of document.querySelectorAll('a[href^="#"]')) {
     link.addEventListener('click', (event) => {
@@ -145,3 +185,4 @@ function enhanceNav() {
 setYear();
 enhanceNav();
 loadProjects();
+renderLanguageRatings();
