@@ -419,6 +419,35 @@ h3 {
   gap: 14px;
 }
 
+.contact__icon {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.contact__icon svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+a.contact__icon:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+a.contact__icon:focus-visible {
+  outline: 2px solid rgba(122, 162, 255, 0.7);
+  outline-offset: 2px;
+}
+
 .contact__label {
   color: var(--muted);
   font-size: 12px;
