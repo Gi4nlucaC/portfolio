@@ -21,7 +21,7 @@
       "role": "Gameplay Programmer",
       "platform": "VR / PlayStation 5",
       "year": "",
-      "description": "Published VR title on Meta Quest and PSVR. I designed some missions and implemented the quest system and dialogue system. I designed and programmed a Beat Saber-inspired hand-tracking mode (Meta Start Dev Competition), a multi-lightset baking solution for instant teleport between co-existing environments, and a system to virtualize alien customer behavior (simulation runs even off-screen). I also contributed to polishing (juice/feel) and handled the PlayStation port.",
+      "description": "Shipped VR title on Meta Quest with PlayStation 5 release support. Built quest + dialogue systems, simulation-driven customer behavior, and a multi-lightset baking workflow for instant scene transitions. Implemented a hand-tracking rhythm mode (Meta Start Dev Competition) and contributed to polish and porting.",
       "links": [
         {
           "label": "Meta Quest Store",
@@ -42,7 +42,7 @@
       "role": "Gameplay Programmer",
       "platform": "WebGL",
       "year": "",
-      "description": "Web game. I owned the 3C end-to-end (character/camera/controls), blockchain integration, and the combat system. I implemented an A* pathfinding solution for enemies that is 100% deterministic, plus the full UI and tutorial.",
+      "description": "WebGL game where I owned 3C (character/camera/controls), combat, and UI/tutorial end-to-end. Added blockchain integration and a deterministic A* pathfinding solution for enemies.",
       "links": [
         { "label": "Play", "href": "https://game.polyverse.gg/login" }
       ]
@@ -55,7 +55,7 @@
       "role": "Gameplay Programmer",
       "platform": "WebGL",
       "year": "",
-      "description": "Card game with an authoritative server. I designed and implemented the core game loop, the full UI, and seeded deck randomization. I built the skins system and a mechanic that gives utility to NFT skins, as well as the special traits for monsters. I also contributed to optimization and polishing (juice/feel).",
+      "description": "Authoritative-server card game. Built the core loop and UI, implemented seeded deck randomization, skins + traits systems, and contributed to performance and feel.",
       "links": [
         { "label": "Play", "href": "https://play.acryptia.io/" }
       ]
