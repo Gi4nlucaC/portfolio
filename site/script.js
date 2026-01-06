@@ -246,9 +246,27 @@ function initCarousels(root) {
       const slides = carousel.querySelectorAll('.carousel__slide');
       if (slides.length <= 1) continue;
 
+      const stopSlideMedia = (slide) => {
+        if (!(slide instanceof Element)) return;
+        const frames = slide.querySelectorAll('iframe');
+        frames.forEach((frame) => {
+          if (!(frame instanceof HTMLIFrameElement)) return;
+          const src = frame.getAttribute('src');
+          if (!src) return;
+          // Reloading the iframe is the simplest cross-provider way to stop playback.
+          frame.setAttribute('src', src);
+        });
+      };
+
       const setIndex = (nextIndex) => {
+        const current = Number(carousel.dataset.index ?? '0') || 0;
         const max = slides.length - 1;
         const index = Math.max(0, Math.min(max, nextIndex));
+
+        if (index !== current) {
+          stopSlideMedia(slides[current]);
+        }
+
         carousel.dataset.index = String(index);
         track.style.transform = `translateX(${-index * 100}%)`;
 
