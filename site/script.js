@@ -105,7 +105,46 @@ function parseTikTokEmbed(value) {
   return { id, src: `https://www.tiktok.com/embed/v2/${id}` };
 }
 
-function renderMediaCarousel({ titleText, imageSrcRaw, imageAltText, youtubeUrl, tiktokUrl, gallery }) {
+function parseVimeoEmbed(value) {
+  if (typeof value !== 'string') return null;
+  const raw = value.trim();
+  if (!raw) return null;
+  if (!isSafeUrl(raw)) return null;
+
+  let url;
+  try {
+    url = new URL(raw);
+  } catch {
+    return null;
+  }
+
+  const host = url.hostname.replace(/^www\./, '').toLowerCase();
+  if (!(host === 'vimeo.com' || host === 'player.vimeo.com')) return null;
+
+  let videoId = '';
+  if (host === 'player.vimeo.com') {
+    const m = url.pathname.match(/^\/video\/(\d+)$/);
+    videoId = m?.[1] ?? '';
+  } else {
+    const m = url.pathname.match(/^\/(\d+)$/);
+    videoId = m?.[1] ?? '';
+  }
+
+  if (!/^\d{6,}$/.test(videoId)) return null;
+
+  const allowedParams = new Set(['h']);
+  const params = new URLSearchParams();
+  for (const [key, val] of url.searchParams.entries()) {
+    if (!allowedParams.has(key)) continue;
+    if (!val) continue;
+    params.set(key, val);
+  }
+
+  const src = `https://player.vimeo.com/video/${videoId}${params.toString() ? `?${params}` : ''}`;
+  return { id: videoId, src };
+}
+
+function renderMediaCarousel({ titleText, imageSrcRaw, imageAltText, youtubeUrl, vimeoUrl, tiktokUrl, gallery }) {
   const items = [];
   const tt = parseTikTokEmbed(tiktokUrl);
   if (tt) items.push({ type: 'tiktok', src: tt.src, title: `${titleText} TikTok` });
@@ -133,6 +172,9 @@ function renderMediaCarousel({ titleText, imageSrcRaw, imageAltText, youtubeUrl,
 
   const yt = parseYouTubeEmbed(youtubeUrl);
   if (yt) items.push({ type: 'youtube', src: yt.src, title: `${titleText} video` });
+
+  const vm = parseVimeoEmbed(vimeoUrl);
+  if (vm) items.push({ type: 'vimeo', src: vm.src, title: `${titleText} video (Vimeo)` });
 
   const carousel = document.createElement('div');
   carousel.className = 'carousel';
@@ -168,6 +210,19 @@ function renderMediaCarousel({ titleText, imageSrcRaw, imageAltText, youtubeUrl,
       iframe.title = item.title;
       iframe.loading = 'lazy';
       iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.allowFullscreen = true;
+
+      frame.appendChild(iframe);
+      slide.appendChild(frame);
+    }
+
+    if (item.type === 'vimeo') {
+      const iframe = document.createElement('iframe');
+      iframe.src = item.src;
+      iframe.title = item.title;
+      iframe.loading = 'lazy';
+      iframe.allow = 'autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share';
       iframe.referrerPolicy = 'strict-origin-when-cross-origin';
       iframe.allowFullscreen = true;
 
@@ -504,6 +559,7 @@ function renderProjectDetails(projects) {
     const imageSrcRaw = String(project?.image ?? '').trim();
     const imageAltText = String(project?.imageAlt ?? titleText).trim() || titleText;
     const youtubeUrl = String(project?.youtube ?? '').trim();
+    const vimeoUrl = String(project?.vimeo ?? '').trim();
     const tiktokUrl = String(project?.tiktok ?? '').trim();
     const gallery = Array.isArray(project?.gallery) ? project.gallery : null;
 
@@ -513,6 +569,7 @@ function renderProjectDetails(projects) {
         imageSrcRaw,
         imageAltText,
         youtubeUrl,
+        vimeoUrl,
         tiktokUrl,
         gallery,
       })
