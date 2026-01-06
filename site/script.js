@@ -119,6 +119,13 @@ function enhanceNav() {
       const href = link.getAttribute('href');
       if (!href || href === '#') return;
 
+      if (href === '#top') {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        history.replaceState(null, '', href);
+        return;
+      }
+
       const target = document.querySelector(href);
       if (!(target instanceof HTMLElement)) return;
 
