@@ -30,10 +30,9 @@ Opzione B (VS Code Live Server):
 4. In **Build and deployment**, scegli **Source: GitHub Actions**.
 5. Fai un push su `main`: la workflow `Deploy to GitHub Pages` partirà e pubblicherà il contenuto di `site/`.
 
-Dopo il deploy, l’URL sarà tipicamente:
+Dopo il deploy, l’URL (repo `portfolio`) sarà:
 
-- Repo “project pages” (es. `portfolio`): `https://<USERNAME>.github.io/<REPO>/`
-- Repo “user pages” (nome repo = `<USERNAME>.github.io`): `https://<USERNAME>.github.io/`
+- `https://<USERNAME>.github.io/portfolio/`
 
 ## Note
 
