@@ -1,0 +1,41 @@
+{
+  "projects": [
+    {
+      "title": "Mars Kitchen",
+      "role": "Gameplay Programmer / Game Designer",
+      "platform": "VR (Meta Quest) / PSVR",
+      "year": "",
+      "description": "VR pubblicato su Meta Quest e PSVR. Ho progettato alcune missioni e implementato quest system + dialogue system. Ho ideato e programmato una modalit\u00e0 hand-tracking ispirata a Beat Saber (Meta Start Dev Competition), una soluzione per set di luci multipli con teleport istantaneo tra ambienti e un sistema di virtualizzazione dei clienti alieni (simulazione anche off-screen). Mi sono occupato anche di polishing (juice/feel) e del porting su PlayStation.",
+      "links": [
+        {
+          "label": "Meta Quest Store",
+          "href": "https://www.meta.com/it-it/experiences/mars-kitchen-christmas-special/8951497098264249/?srsltid=AfmBOooP_mXAMTIJ7eHHXfA6ECiW8cTPc5P7hTHYeknU7GWuVftG1C4p"
+        },
+        {
+          "label": "PlayStation Store",
+          "href": "https://store.playstation.com/it-it/concept/10015040"
+        }
+      ]
+    },
+    {
+      "title": "Polyverse",
+      "role": "Gameplay Programmer / Game Designer",
+      "platform": "Web",
+      "year": "",
+      "description": "Web game. Ho gestito end-to-end la 3C (character/camera/controls), l\u2019integrazione blockchain e il sistema di combattimento. Ho implementato pathfinding A* per nemici 100% deterministico, oltre a UI completa e tutorial.",
+      "links": [
+        { "label": "Play", "href": "https://game.polyverse.gg/login" }
+      ]
+    },
+    {
+      "title": "Acryptia",
+      "role": "Gameplay Programmer / Game Designer",
+      "platform": "Web",
+      "year": "",
+      "description": "Card game con server autoritativo. Ho progettato e implementato il game loop, l\u2019interfaccia completa e la randomizzazione del deck con seed. Ho sviluppato la logica skin e un meccanismo per dare utilit\u00e0 alle skin NFT, oltre ai tratti speciali per i mostri. Ho contribuito a ottimizzazione e polishing (juice/feel).",
+      "links": [
+        { "label": "Play", "href": "https://play.acryptia.io/" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+
+# Logs
+*.log
+
+# Python cache (if you use python http.server, not required but harmless)
+__pycache__/
