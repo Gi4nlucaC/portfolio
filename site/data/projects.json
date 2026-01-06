@@ -2,6 +2,8 @@
   "projects": [
     {
       "title": "Mars Kitchen",
+      "image": "assets/projects/mars-kitchen.svg",
+      "imageAlt": "Mars Kitchen splash image",
       "role": "Gameplay Programmer / Game Designer",
       "platform": "VR (Meta Quest) / PSVR",
       "year": "",
@@ -19,6 +21,8 @@
     },
     {
       "title": "Polyverse",
+      "image": "assets/projects/polyverse.svg",
+      "imageAlt": "Polyverse splash image",
       "role": "Gameplay Programmer / Game Designer",
       "platform": "Web",
       "year": "",
@@ -29,6 +33,8 @@
     },
     {
       "title": "Acryptia",
+      "image": "assets/projects/acryptia.svg",
+      "imageAlt": "Acryptia splash image",
       "role": "Gameplay Programmer / Game Designer",
       "platform": "Web",
       "year": "",

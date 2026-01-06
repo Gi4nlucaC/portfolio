@@ -13,6 +13,16 @@ function isSafeUrl(url) {
   return trimmed.startsWith('https://') || trimmed.startsWith('http://');
 }
 
+function isSafeAssetPath(value) {
+  if (typeof value !== 'string') return false;
+  const trimmed = value.trim();
+  if (!trimmed) return false;
+  const lower = trimmed.toLowerCase();
+  if (lower.startsWith('javascript:')) return false;
+  if (lower.startsWith('data:')) return false;
+  return isSafeUrl(trimmed) || trimmed.startsWith('./') || trimmed.startsWith('assets/');
+}
+
 function setYear() {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
@@ -53,49 +63,100 @@ function renderProjectCard(project) {
   const card = document.createElement('article');
   card.className = 'card project';
 
-  const title = escapeText(project?.title ?? 'Project title');
-  const role = escapeText(project?.role ?? '');
-  const platform = escapeText(project?.platform ?? '');
-  const year = escapeText(project?.year ?? '');
-  const description = escapeText(project?.description ?? '');
+  const titleText = String(project?.title ?? 'Project title');
+  const roleText = String(project?.role ?? '');
+  const platformText = String(project?.platform ?? '');
+  const yearText = String(project?.year ?? '');
+  const descriptionText = String(project?.description ?? '');
+
+  const imageSrcRaw = String(project?.image ?? '').trim();
+  const imageAltText = String(project?.imageAlt ?? titleText).trim() || titleText;
 
   const badges = [];
-  if (role) badges.push(role);
-  if (platform) badges.push(platform);
-  if (year) badges.push(year);
+  if (roleText) badges.push(roleText);
+  if (platformText) badges.push(platformText);
+  if (yearText) badges.push(yearText);
 
   const links = Array.isArray(project?.links) ? project.links : [];
+
   const safeLinks = links
-    .map((link) => ({
-      label: escapeText(link?.label ?? ''),
-      url: String(link?.url ?? '').trim(),
-    }))
-    .filter((link) => link.label && isSafeUrl(link.url));
+    .map((link) => {
+      const label = String(link?.label ?? '').trim();
+      const href = String(link?.href ?? link?.url ?? '').trim();
+      return { label, href };
+    })
+    .filter((link) => link.label && isSafeUrl(link.href));
 
-  const badgesHtml = badges.map((text) => `<span class="badge">${text}</span>`).join('');
-  const linksHtml = safeLinks
-    .map((link) => `<a class="link" href="${escapeText(link.url)}" target="_blank" rel="noreferrer">${link.label}</a>`)
-    .join('');
+  const splash = document.createElement('div');
+  splash.className = 'project__splash';
 
-  card.innerHTML = `
-    <div class="project__top">
-      <div class="project__title">${title}</div>
-      <div class="badges" aria-label="Project metadata">${badgesHtml}</div>
-    </div>
-    <p class="project__desc">${description}</p>
-    ${linksHtml ? `<div class="project__links" aria-label="Project links">${linksHtml}</div>` : ''}
-  `;
+  const img = document.createElement('img');
+  img.className = 'project__img';
+  img.loading = 'lazy';
+  img.decoding = 'async';
+  if (isSafeAssetPath(imageSrcRaw)) {
+    img.src = imageSrcRaw;
+  } else {
+    img.src = 'assets/projects/placeholder.svg';
+  }
+  img.alt = imageAltText;
+  splash.appendChild(img);
+
+  const header = document.createElement('div');
+  header.className = 'project__header';
+
+  const title = document.createElement('div');
+  title.className = 'project__title';
+  title.textContent = titleText;
+  header.appendChild(title);
+
+  const badgesEl = document.createElement('div');
+  badgesEl.className = 'badges';
+  badgesEl.setAttribute('aria-label', 'Project metadata');
+  for (const badgeText of badges) {
+    const badge = document.createElement('span');
+    badge.className = 'badge';
+    badge.textContent = badgeText;
+    badgesEl.appendChild(badge);
+  }
+  header.appendChild(badgesEl);
+  splash.appendChild(header);
+
+  const overlay = document.createElement('div');
+  overlay.className = 'project__overlay';
+
+  const description = document.createElement('p');
+  description.className = 'project__desc';
+  description.textContent = descriptionText;
+  overlay.appendChild(description);
+
+  if (safeLinks.length > 0) {
+    const linksEl = document.createElement('div');
+    linksEl.className = 'project__links';
+    linksEl.setAttribute('aria-label', 'Project links');
+    for (const link of safeLinks) {
+      const a = document.createElement('a');
+      a.className = 'link';
+      a.href = link.href;
+      a.target = '_blank';
+      a.rel = 'noreferrer';
+      a.textContent = link.label;
+      linksEl.appendChild(a);
+    }
+    overlay.appendChild(linksEl);
+  }
+
+  splash.appendChild(overlay);
+  card.appendChild(splash);
 
   return card;
 }
 
 async function loadProjects() {
-  const statusEl = document.getElementById('projects-status');
   const gridEl = document.getElementById('projects-grid');
-  if (!statusEl || !gridEl) return;
+  if (!gridEl) return;
 
   try {
-    statusEl.textContent = 'Loading projects…';
     const response = await fetch('./data/projects.json', { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
@@ -107,10 +168,7 @@ async function loadProjects() {
     for (const project of data.projects) {
       gridEl.appendChild(renderProjectCard(project));
     }
-
-    statusEl.textContent = `${data.projects.length} projects loaded.`;
   } catch (error) {
-    statusEl.textContent = 'Unable to load projects.';
     console.error('Failed to load projects.json', error);
 
     const fallback = document.createElement('div');
