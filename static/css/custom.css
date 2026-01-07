@@ -103,7 +103,7 @@ body.disable-hor-scroll {
 
 /* Homepage background band */
 .homepage-bg {
-    background-color: rgba(37, 37, 38, 0.85);
+    background-color: rgba(14, 14, 14, 0.85);
     width: 100vw;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -113,7 +113,7 @@ body.disable-hor-scroll {
 
 @media (prefers-color-scheme: dark) {
     .homepage-bg {
-        background-color: rgba(37, 37, 38, 0.85);
+        background-color: rgba(14, 14, 14, 0.85);
     }
 }
 
