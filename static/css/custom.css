@@ -2,7 +2,7 @@
 body.disable-hor-scroll {
     overflow: hidden;
     background: #1b1c1d !important;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* Container for homepage */
@@ -12,7 +12,6 @@ body.disable-hor-scroll {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    min-height: 100vh;
     background: transparent;
 }
 
@@ -51,12 +50,8 @@ body.disable-hor-scroll {
     object-fit: cover;
 }
 /* Homepage content */
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+main { /* Removed unused main styles */
+    display: none; 
 }
 
 .homepage-bg {
