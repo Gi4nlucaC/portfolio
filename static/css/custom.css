@@ -48,29 +48,28 @@ body.disable-hor-scroll {
     object-fit: cover;
 }
 
+/* Header transparency */
+.header {
+    background: transparent !important;
+}
+
 /* Homepage content */
 main {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .homepage-bg {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 60vh;
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    position: relative;
-    z-index: 1;
     background-color: rgba(0, 0, 0, 0.8);
     width: 100vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -81,16 +80,17 @@ main {
 
 .homepage-bg h1 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-weight: 700;
 }
 
 .homepage-bg p {
-    margin-left: 20%;
-    margin-right: 20%;
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
 }
 
 .homepage-buttons {
