@@ -1,0 +1,54 @@
+baseURL = 'https://gi4nlucac.github.io/portfolio/'
+languageCode = 'en-us'
+title = 'Gianluca Camarca'
+theme = 'hello-friend-ng'
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+
+  # Subtitle for home
+  homeSubtitle = "Game Developer & Designer"
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Enable sharing buttons, if you like
+  enableSharingButtons = false
+  
+  # Show a global language switcher in the navigation bar
+  enableGlobalLanguageMenu = false
+
+  # Metadata mostly used in document's head
+  description = "Portfolio of Gianluca Camarca - Game Developer and Designer"
+  keywords = "game developer, game designer, portfolio"
+  images = [""]
+
+[params.portrait]
+  path     = ""
+  alt      = "Gianluca Camarca"
+  maxWidth = "150px"
+
+[[params.social]]
+  name = "linkedin"
+  url  = "https://www.linkedin.com/in/[YOUR-PROFILE]"
+
+[[params.social]]
+  name = "github"
+  url  = "https://github.com/[YOUR-USERNAME]"
+
+[[params.social]]
+  name = "email"
+  url  = "mailto:[YOUR-EMAIL]@example.com"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "about/"
+  [[menu.main]]
+    identifier = "projects"
+    name       = "Projects"
+    url        = "projects/"
