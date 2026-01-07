@@ -1,3 +1,37 @@
+// Load and display projects
+async function loadProjects() {
+  try {
+    const response = await fetch('./data/projects.json');
+    const data = await response.json();
+    displayProjects(data.projects || []);
+  } catch (error) {
+    console.error('Error loading projects:', error);
+    document.querySelector('.projects-grid').innerHTML = 
+      '<p class="placeholder-text">Unable to load projects.</p>';
+  }
+}
+
+function displayProjects(projects) {
+  const grid = document.querySelector('.projects-grid');
+  
+  if (!projects || projects.length === 0) {
+    grid.innerHTML = '<p class="placeholder-text">No projects available yet.</p>';
+    return;
+  }
+
+  grid.innerHTML = projects.map(project => `
+    <article class="project-card">
+      <h3>${escapeText(project.title || 'Untitled Project')}</h3>
+      <p>${escapeText(project.description || 'No description available.')}</p>
+      ${project.tags && project.tags.length > 0 ? `
+        <div class="project-card__tags">
+          ${project.tags.map(tag => `<span class="project-tag">${escapeText(tag)}</span>`).join('')}
+        </div>
+      ` : ''}
+    </article>
+  `).join('');
+}
+
 function escapeText(value) {
   return String(value)
     .replaceAll('&', '&amp;')
@@ -7,47 +41,10 @@ function escapeText(value) {
     .replaceAll("'", '&#39;');
 }
 
-function isSafeUrl(url) {
-  if (typeof url !== 'string') return false;
-  const trimmed = url.trim();
-  return trimmed.startsWith('https://') || trimmed.startsWith('http://');
-}
-
-function isSafeAssetPath(value) {
-  if (typeof value !== 'string') return false;
-  const trimmed = value.trim();
-  if (!trimmed) return false;
-  const lower = trimmed.toLowerCase();
-  if (lower.startsWith('javascript:')) return false;
-  if (lower.startsWith('data:')) return false;
-  return isSafeUrl(trimmed) || trimmed.startsWith('./') || trimmed.startsWith('assets/');
-}
-
-function slugify(value) {
-  return String(value)
-    .trim()
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');
-}
-
-function splitBadgeText(value) {
-  const text = String(value ?? '').trim();
-  if (!text) return [];
-
-  // Split common separators used in the JSON (keep it simple and predictable).
-  const parts = text
-    .split(/\s*(?:\/|\||,)\s*/g)
-    .map((p) => p.trim())
-    .filter(Boolean);
-
-  return parts.length > 0 ? parts : [text];
-}
-
-function parseYouTubeEmbed(value) {
-  if (typeof value !== 'string') return null;
-  const raw = value.trim();
-  if (!raw) return null;
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+  loadProjects();
+});
   if (!isSafeUrl(raw)) return null;
 
   let url;

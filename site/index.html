@@ -3,101 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio | Gianluca Camarca</title>
+    <title>Gianluca Camarca | Game Developer</title>
     <meta
       name="description"
-      content="Portfolio of gameplay programming work: shipped projects, skills, and contact."
+      content="Game Developer and Designer portfolio. Explore my projects and get in touch."
     />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
-    <header class="header" id="top">
-      <div class="container header__inner">
-        <div class="brand">
-          <div class="brand__mark" aria-hidden="true">G</div>
-          <div class="brand__text">
-            <div class="brand__name">Gianluca Camarca</div>
-            <div class="brand__role">Gameplay Programmer • Game Designer</div>
-          </div>
-        </div>
-
-        <nav class="nav" aria-label="Primary navigation">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
-
     <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="container hero__inner">
-          <div>
-            <div class="hero__avatar" role="img" aria-label="Gianluca Camarca profile photo"></div>
-            <h1 id="hero-title">Gianluca Camarca</h1>
-            <p class="hero__lead">
-              Gameplay Programmer • <strong>2 shipped titles</strong> (PlayStation Store / Meta Quest Store) • Systems ownership (quests, dialogue, inventory, multiplayer) • Unity 6yr / Unreal 3yr
-            </p>
-            <div class="hero__cta">
-              <a class="button" href="#projects">View projects</a>
-              <a class="button button--ghost" href="#contact">Get in touch</a>
+      <div class="container">
+        <section class="hero-simple">
+          <h1 class="hero-simple__title">Gianluca Camarca, Game Developer</h1>
+          
+          <div class="hero-simple__intro">
+            <p>Hi! I am Gianluca Camarca, a game developer and designer active in the industry since [YEAR].</p>
+          </div>
+
+          <nav class="hero-simple__nav">
+            <a href="#about" class="nav-link">About me</a>
+            <a href="#projects" class="nav-link">My projects</a>
+          </nav>
+
+          <div class="hero-simple__contact">
+            <p class="contact-label">Contact me:</p>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/[YOUR-PROFILE]" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+                Linkedin
+              </a>
+              <a href="https://github.com/[YOUR-USERNAME]" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                </svg>
+                Github
+              </a>
+              <a href="mailto:[YOUR-EMAIL]@example.com" class="social-link" aria-label="Email">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                Email
+              </a>
             </div>
-            <div class="hero__meta" aria-label="Engines and platforms">
-              <div class="meta-row">
-                <div class="meta-label">Engines</div>
-                <ul class="tags hero__tags" aria-label="Engines">
-                    <li class="tag tag--with-icon">
-                      <span class="tag__icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                          <path fill="currentColor" d="M12 2 21 7v10l-9 5-9-5V7l9-5Zm0 2.3L5 8v8l7 3.7 7-3.7V8l-7-3.7Z" />
-                        </svg>
-                      </span>
-                      Unity <span class="tag__meta">(6 years)</span>
-                    </li>
-                    <li class="tag tag--with-icon">
-                      <span class="tag__icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                          <path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16Z" />
-                          <path fill="currentColor" d="M8.5 7.5h2v6c0 1.6.8 2.5 2 2.5s2-.9 2-2.5v-6h2v6.3c0 2.7-1.7 4.4-4 4.4s-4-1.7-4-4.4V7.5Z" />
-                        </svg>
-                      </span>
-                      Unreal Engine <span class="tag__meta">(3 years)</span>
-                    </li>
-                </ul>
-              </div>
-              <div class="meta-row">
-                <div class="meta-label">Platforms</div>
-                <ul class="tags hero__tags" aria-label="Platforms">
-                    <li class="tag tag--with-icon">
-                      <span class="tag__icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                          <path fill="currentColor" d="M4 5h16v10H4V5Zm2 2v6h12V7H6Zm-1 10h14v2H5v-2Z" />
-                        </svg>
-                      </span>
-                      Windows
-                    </li>
-                    <li class="tag tag--with-icon">
-                      <span class="tag__icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                          <path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm7.9 9H15c-.1-2.3-.7-4.4-1.6-6a8 8 0 0 1 6.5 6ZM9 11H4.1a8 8 0 0 1 6.5-6c-.9 1.6-1.5 3.7-1.6 6Zm0 2c.1 2.3.7 4.4 1.6 6a8 8 0 0 1-6.5-6H9Zm6 0h4.9a8 8 0 0 1-6.5 6c.9-1.6 1.5-3.7 1.6-6ZM11 11c.1-2.5.8-4.8 1-5.4.2.6.9 2.9 1 5.4h-2Zm2 2c-.1 2.5-.8 4.8-1 5.4-.2-.6-.9-2.9-1-5.4h2Z" />
-                        </svg>
-                      </span>
-                      WebGL
-                    </li>
-                    <li class="tag tag--with-icon">
-                      <span class="tag__icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                          <path fill="currentColor" d="M7 7a5 5 0 0 1 10 0v6a5 5 0 0 1-10 0V7Zm5-3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V7a3 3 0 0 0-3-3Z" />
-                          <path fill="currentColor" d="M10 20h4v2h-4v-2Z" />
-                        </svg>
-                      </span>
-                      Android
-                    </li>
-                    <li class="tag tag--with-icon">
+          </div>
+        </section>
+
+        <section id="about" class="content-section">
+          <h2>About me</h2>
+          <p>[Add your bio here - talk about your experience, what you do, your passion for game development, etc.]</p>
+        </section>
+
+        <section id="projects" class="content-section">
+          <h2>My projects</h2>
+          <div class="projects-grid">
+            <!-- Projects will be loaded from projects.json -->
+            <p class="placeholder-text">Projects loading...</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__copyright">© 2025 Gianluca Camarca. All rights reserved.</p>
+        <p class="footer__credits">This website was created with HTML, CSS and JavaScript.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
                       <span class="tag__icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
                           <path fill="currentColor" d="M7 9c0-1.7 1.3-3 3-3h4c1.7 0 3 1.3 3 3v4c0 1.7-1.3 3-3 3h-4c-1.7 0-3-1.3-3-3V9Zm3-1c-.6 0-1 .4-1 1v4c0 .6.4 1 1 1h4c.6 0 1-.4 1-1V9c0-.6-.4-1-1-1h-4Z" />
