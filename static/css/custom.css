@@ -5,14 +5,13 @@ body.disable-hor-scroll {
     min-height: 100vh;
 }
 
-/* Container for homepage */
+/* Container */
 .container {
     flex: 1 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background: transparent;
 }
 
 /* Content wrapper */
@@ -34,8 +33,7 @@ body.disable-hor-scroll {
     height: 100%;
     z-index: -1;
     overflow: hidden;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+    opacity: 1;
 }
 
 .video-container video {
@@ -49,19 +47,14 @@ body.disable-hor-scroll {
     transform: translate(-50%, -50%);
     object-fit: cover;
 }
-/* Homepage content */
-main { /* Removed unused main styles */
-    display: none; 
-}
 
+/* Homepage background band */
 .homepage-bg {
     background-color: rgba(0, 0, 0, 0.8);
     width: 100vw;
     padding-top: 5px;
     padding-bottom: 5px;
     text-align: center;
-    color: #fff;
-    z-index: 1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -74,19 +67,22 @@ main { /* Removed unused main styles */
     font-size: 2.5rem;
     margin-bottom: 15px;
     font-weight: 700;
+    margin-top: 10px;
 }
 
 .homepage-bg p {
     font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 800px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .homepage-buttons {
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
 }
@@ -124,10 +120,8 @@ main { /* Removed unused main styles */
     background: rgba(255, 255, 255, 0.05);
 }
 
-/* Footer custom */
+/* Footer */
 .footer-custom-bg {
-    padding: 40px 20px;
-    text-align: center;
     width: 100%;
     align-content: center;
     background-color: rgba(0, 0, 0, 0.9);
@@ -147,6 +141,27 @@ main { /* Removed unused main styles */
 
 .clickable-icon:hover a {
     color: #dd254d;
+}
+
+/* Responsive */
+@media (max-width: 684px) {
+    .homepage-bg h1 {
+        font-size: 1.8rem;
+    }
+
+    .homepage-bg p {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .homepage-buttons button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .video-container {
+        display: none;
+    }
 }
 
 /* Full width backgrounds with alternating colors */
