@@ -530,6 +530,10 @@ function renderProjectDetails(projects) {
     const platformText = String(project?.platform ?? '').trim();
     const yearText = String(project?.year ?? '').trim();
     const descriptionText = String(project?.description ?? '').trim();
+    const rawHighlights = Array.isArray(project?.highlights) ? project.highlights : null;
+    const highlights = Array.isArray(rawHighlights)
+      ? rawHighlights.map((h) => String(h ?? '').trim()).filter(Boolean)
+      : [];
 
     const links = Array.isArray(project?.links) ? project.links : [];
     const safeLinks = links
@@ -597,6 +601,22 @@ function renderProjectDetails(projects) {
         gallery,
       })
     );
+
+    if (highlights.length > 0) {
+      const kicker = document.createElement('div');
+      kicker.className = 'muted small';
+      kicker.textContent = 'What I built';
+      body.appendChild(kicker);
+
+      const ul = document.createElement('ul');
+      ul.className = 'list';
+      for (const item of highlights) {
+        const li = document.createElement('li');
+        li.textContent = item;
+        ul.appendChild(li);
+      }
+      body.appendChild(ul);
+    }
     if (descriptionText) body.appendChild(desc);
 
     if (safeLinks.length > 0) {

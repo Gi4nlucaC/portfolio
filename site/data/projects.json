@@ -22,6 +22,13 @@
       "platform": "VR / PlayStation 5",
       "year": "",
       "description": "Shipped VR title on Meta Quest with PlayStation 5 release support. Built quest + dialogue systems, simulation-based customer behavior, and a multi-lightset baking workflow for instant scene transitions. Implemented a hand-tracking rhythm mode (Meta Start Dev Competition) and contributed to polish and porting.",
+      "highlights": [
+        "Quest + dialogue systems (designer-friendly authoring + iteration)",
+        "Simulation-based customer behavior and moment-to-moment interactions",
+        "Multi-lightset baking workflow for instant scene transitions",
+        "Hand-tracking rhythm mode (Meta Start Dev Competition)",
+        "VR polish + platform release support (Meta Quest / PS5)"
+      ],
       "links": [
         {
           "label": "Meta Quest Store",
@@ -43,6 +50,13 @@
       "platform": "WebGL",
       "year": "",
       "description": "WebGL game where I owned 3C (character/camera/controls), combat, and UI/tutorial end-to-end. Added blockchain integration and a deterministic A* pathfinding solution for enemies.",
+      "highlights": [
+        "Owned 3C (character + camera + controls) end-to-end",
+        "Combat feel + enemy behaviors",
+        "UI and tutorial flow (first-time user experience)",
+        "Deterministic A* pathfinding for enemies",
+        "Blockchain integration"
+      ],
       "links": [
         { "label": "Play", "href": "https://game.polyverse.gg/login" }
       ]
@@ -64,6 +78,13 @@
       "platform": "WebGL",
       "year": "",
       "description": "Authoritative-server card game. Built the core loop and UI, implemented seeded deck randomization, plus a Game Pass system, inventory system, and equipment system. Developed monsters with special effects and NFT game skins with real in-game utility (progression/gameplay impact).",
+      "highlights": [
+        "Authoritative server gameplay (Mirror) + PlayFab services",
+        "Core loop + UI implementation",
+        "Seeded deck randomization",
+        "Game Pass + inventory + equipment systems",
+        "Monsters with special effects + NFT skins with real in-game utility"
+      ],
       "links": [
         { "label": "Play", "href": "https://play.acryptia.io/" }
       ]
