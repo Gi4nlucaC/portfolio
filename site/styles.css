@@ -263,6 +263,32 @@ h3 {
   font-size: 13px;
 }
 
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+}
+
+.tag__icon {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  color: var(--text);
+  opacity: 0.9;
+}
+
+.tag__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.tag__meta {
+  color: var(--muted);
+  opacity: 0.95;
+}
+
 .rating-list {
   display: grid;
   gap: 10px;
