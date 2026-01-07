@@ -179,6 +179,12 @@ a {
   font-size: 12px;
 }
 
+/* Optical alignment: SVGs can sit slightly high vs text */
+.hero__tags .tag__icon {
+  position: relative;
+  top: 1px;
+}
+
 .hero__card {
   background: linear-gradient(180deg, rgba(18, 22, 36, 0.92), rgba(15, 19, 32, 0.92));
   border: 1px solid var(--border);
