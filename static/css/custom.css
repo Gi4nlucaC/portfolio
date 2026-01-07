@@ -18,6 +18,10 @@ body {
     color: var(--vscode-text) !important;
 }
 
+* {
+    font-family: 'Consolas', 'Courier New', monospace !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Consolas', 'Courier New', monospace !important;
     color: var(--vscode-text) !important;
@@ -25,6 +29,10 @@ h1, h2, h3, h4, h5, h6 {
 
 code, pre {
     font-family: 'Consolas', 'Courier New', monospace !important;
+}
+
+p, li, span, div {
+    color: var(--vscode-text) !important;
 }
 
 a {
@@ -47,6 +55,10 @@ a:hover {
 
 .menu a {
     color: var(--vscode-text) !important;
+}
+
+.menu a:hover {
+    color: var(--vscode-keyword) !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -78,9 +90,18 @@ a:hover {
     color: var(--vscode-text) !important;
 }
 
+.post-content p,
+.post-content li,
+.post-content span {
+    color: var(--vscode-text) !important;
+}
+
+.post-content h1,
 .post-content h2,
 .post-content h3,
-.post-content h4 {
+.post-content h4,
+.post-content h5,
+.post-content h6 {
     color: var(--vscode-keyword) !important;
 }
 
@@ -98,6 +119,17 @@ a:hover {
 blockquote {
     border-left: 3px solid var(--vscode-keyword) !important;
     color: var(--vscode-comment) !important;
+}
+
+/* Footer styling */
+.footer {
+    background: var(--vscode-bg-lighter) !important;
+    border-top: 1px solid #3c3c3c !important;
+    color: var(--vscode-text) !important;
+}
+
+.footer__inner, .footer__content {
+    color: var(--vscode-text) !important;
 }
 
 /* Body adjustments */
