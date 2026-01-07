@@ -13,6 +13,16 @@ body.disable-hor-scroll {
     background: transparent;
 }
 
+/* Content wrapper */
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 auto;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
 /* Video background */
 .video-container {
     position: fixed;
