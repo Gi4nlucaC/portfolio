@@ -7,8 +7,11 @@ body.disable-hor-scroll {
 
 /* Container for homepage */
 .container {
+    flex: 1 auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
     min-height: 100vh;
     background: transparent;
 }
@@ -59,8 +62,8 @@ main {
 .homepage-bg {
     background-color: rgba(0, 0, 0, 0.8);
     width: 100vw;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     text-align: center;
     color: #fff;
     z-index: 1;
