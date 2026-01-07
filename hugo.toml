@@ -12,6 +12,9 @@ theme = 'hello-friend-ng'
   # Subtitle for home
   homeSubtitle = "Hi! I am [Your Name], a game developer active in the industry since [year]."
 
+  # Background video (optional - add your video URL here)
+  # backgroundImage = "path/to/your/background.jpg"
+  
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
   disableReadOtherPosts = false
 
@@ -31,6 +34,18 @@ theme = 'hello-friend-ng'
   alt      = "Profile picture"
   maxWidth = "150px"
 
+# Main navigation buttons (Call to Action)
+[menu]
+  [[menu.main]]
+    identifier = "resume"
+    name       = "About me"
+    url        = "resume/"
+  [[menu.main]]
+    identifier = "projects"
+    name       = "My projects"
+    url        = "projects/"
+
+# Social links
 [[params.social]]
   name = "linkedin"
   url  = "https://www.linkedin.com/in/your-profile"
@@ -42,16 +57,6 @@ theme = 'hello-friend-ng'
 [[params.social]]
   name = "email"
   url  = "mailto:your.email@example.com"
-
-[menu]
-  [[menu.main]]
-    identifier = "resume"
-    name       = "About me"
-    url        = "resume/"
-  [[menu.main]]
-    identifier = "projects"
-    name       = "My projects"
-    url        = "projects/"
 
 [params.footer]
   trademark = true
