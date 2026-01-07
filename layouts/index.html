@@ -39,8 +39,17 @@
             
                 function playVideo() {
                     videoContainer.style.opacity = "1"; 
-                    video.play().catch(error => console.log("Autoplay prevented:", error));
+                    video.play().catch(error => {
+                        console.log("Video not available or autoplay prevented");
+                        videoContainer.style.display = "none";
+                    });
                 }
+                
+                // Check if video source exists
+                video.addEventListener("error", function() {
+                    console.log("Video file not found - hiding video container");
+                    videoContainer.style.display = "none";
+                });
             
                 if (video.readyState >= 3) {  
                     playVideo();
