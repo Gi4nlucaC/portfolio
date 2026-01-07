@@ -368,12 +368,17 @@ h3 {
   left: 0;
   right: 0;
   bottom: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 2fr) 1fr;
   align-items: center;
-  justify-content: space-between;
   gap: 10px;
   padding: 12px;
   background: linear-gradient(to top, rgba(11, 13, 18, 0.90), rgba(11, 13, 18, 0.0));
+}
+
+.project__header::before {
+  content: '';
+  grid-column: 1;
 }
 
 .project__top {
@@ -385,15 +390,19 @@ h3 {
 
 .project__title {
   font-weight: 800;
-  flex: 1;
+  grid-column: 2;
+  justify-self: center;
   min-width: 0;
+  max-width: 100%;
+  text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .project__header .badges {
-  flex: 0 0 auto;
+  grid-column: 3;
+  justify-self: end;
   flex-wrap: nowrap;
 }
 
