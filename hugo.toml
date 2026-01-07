@@ -28,6 +28,13 @@ theme = 'hello-friend-ng'
   # Custom CSS
   customCSS = ["css/custom.css"]
 
+# Logo configuration
+[params.logo]
+  logoText = "hello world!"
+  logoMark = ">"
+  logoCursorColor = "#FFFFFF"
+  logoCursorAnimate = "2s"
+
 [params.portrait]
   path     = ""
   alt      = "Profile picture"

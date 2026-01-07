@@ -1,7 +1,49 @@
+/* VS Code Theme */
+:root {
+    --vscode-bg: #1e1e1e;
+    --vscode-bg-lighter: #252526;
+    --vscode-text: #d4d4d4;
+    --vscode-comment: #6a9955;
+    --vscode-keyword: #569cd6;
+    --vscode-string: #ce9178;
+    --vscode-function: #dcdcaa;
+    --vscode-cursor: #ffffff;
+    --vscode-selection: #264f78;
+}
+
+/* Override theme fonts with monospace */
+body {
+    font-family: 'Consolas', 'Courier New', monospace !important;
+    background: var(--vscode-bg) !important;
+    color: var(--vscode-text) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Consolas', 'Courier New', monospace !important;
+}
+
+code, pre {
+    font-family: 'Consolas', 'Courier New', monospace !important;
+}
+
+/* Header with VS Code styling */
+.header {
+    background: var(--vscode-bg-lighter) !important;
+    border-bottom: 1px solid #3c3c3c;
+}
+
+.logo__text {
+    color: var(--vscode-text) !important;
+}
+
+.logo__cursor {
+    background-color: var(--vscode-cursor) !important;
+}
+
 /* Body adjustments */
 body.disable-hor-scroll {
     overflow: hidden;
-    background: #1b1c1d !important;
+    background: var(--vscode-bg) !important;
     min-height: 100vh;
 }
 
@@ -50,16 +92,17 @@ body.disable-hor-scroll {
 
 /* Homepage background band */
 .homepage-bg {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(37, 37, 38, 0.95);
     width: 100vw;
     padding-top: 5px;
     padding-bottom: 5px;
     text-align: center;
+    color: var(--vscode-text);
 }
 
 @media (prefers-color-scheme: dark) {
     .homepage-bg {
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(37, 37, 38, 0.95);
     }
 }
 
@@ -105,27 +148,28 @@ body.disable-hor-scroll {
     padding: 12px 30px;
     font-size: 1rem;
     font-weight: 600;
-    border-radius: 8px;
-    border: 2px solid currentColor;
+    border-radius: 0;
+    border: 1px solid var(--vscode-keyword);
     background: transparent;
-    color: inherit;
+    color: var(--vscode-keyword);
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: inherit;
+    font-family: 'Consolas', 'Courier New', monospace;
 }
 
 .homepage-buttons button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--vscode-selection);
+    border-color: var(--vscode-text);
+    color: var(--vscode-text);
 }
 
 /* Footer */
 .footer-custom-bg {
     width: 100%;
     align-content: center;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: var(--vscode-bg-lighter);
     justify-content: center;
+    border-top: 1px solid #3c3c3c;
 }
 
 .footer-custom p {
