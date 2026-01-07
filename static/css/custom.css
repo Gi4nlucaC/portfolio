@@ -5,6 +5,10 @@ body.disable-hor-scroll {
     height: 100vh;
 }
 
+body.disable-hor-scroll .header {
+    display: none;
+}
+
 /* Container for homepage */
 .container {
     display: flex;
