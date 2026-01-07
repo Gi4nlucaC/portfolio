@@ -47,12 +47,6 @@ body.disable-hor-scroll {
     transform: translate(-50%, -50%);
     object-fit: cover;
 }
-
-/* Header transparency */
-.header {
-    background: transparent !important;
-}
-
 /* Homepage content */
 main {
     flex: 1;
