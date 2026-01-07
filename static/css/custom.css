@@ -32,12 +32,23 @@ code, pre {
     border-bottom: 1px solid #3c3c3c;
 }
 
+.menu {
+    background: var(--vscode-bg-lighter) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .menu {
+        background: var(--vscode-bg-lighter) !important;
+    }
+}
+
 .logo__text {
     color: var(--vscode-text) !important;
 }
 
 .logo__cursor {
     background-color: var(--vscode-cursor) !important;
+    width: 2px !important;
 }
 
 /* Body adjustments */
@@ -92,7 +103,7 @@ body.disable-hor-scroll {
 
 /* Homepage background band */
 .homepage-bg {
-    background-color: rgba(37, 37, 38, 0.95);
+    background-color: rgba(37, 37, 38, 0.85);
     width: 100vw;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -102,7 +113,7 @@ body.disable-hor-scroll {
 
 @media (prefers-color-scheme: dark) {
     .homepage-bg {
-        background-color: rgba(37, 37, 38, 0.95);
+        background-color: rgba(37, 37, 38, 0.85);
     }
 }
 
