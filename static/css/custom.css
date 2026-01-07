@@ -1,3 +1,15 @@
+/* Body adjustments */
+body.disable-hor-scroll {
+    overflow-x: hidden;
+}
+
+/* Container for homepage */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 /* Video background */
 .video-container {
     position: fixed;
@@ -24,6 +36,13 @@
 }
 
 /* Homepage content */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .homepage-bg {
     display: flex;
     flex-direction: column;
@@ -32,11 +51,14 @@
     min-height: 60vh;
     text-align: center;
     padding: 40px 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .homepage-bg h1 {
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .homepage-bg p {
@@ -44,18 +66,27 @@
     margin-right: 20%;
     font-size: 1.1rem;
     line-height: 1.6;
+    margin-bottom: 0;
 }
 
 .homepage-buttons {
     margin-top: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 .homepage-buttons p {
     margin: 0;
+    display: flex;
+    gap: 20px;
 }
 
 .homepage-buttons span {
-    margin: 0 10px;
+    display: inline-block;
+}
+
+.homepage-buttons a {
+    text-decoration: none;
 }
 
 .homepage-buttons button {
@@ -68,11 +99,13 @@
     color: inherit;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-family: inherit;
 }
 
 .homepage-buttons button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 /* Footer custom */
