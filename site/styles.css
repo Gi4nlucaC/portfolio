@@ -347,19 +347,6 @@ h3 {
   display: block;
 }
 
-.project__center-title {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-  text-align: center;
-  font-weight: 900;
-  line-height: 1.15;
-  pointer-events: none;
-}
-
 .project__header {
   position: absolute;
   left: 0;

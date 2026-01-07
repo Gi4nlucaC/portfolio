@@ -467,11 +467,6 @@ function renderProjectCard(project) {
   img.alt = imageAltText;
   splash.appendChild(img);
 
-  const centerTitle = document.createElement('div');
-  centerTitle.className = 'project__center-title';
-  centerTitle.textContent = titleText;
-  splash.appendChild(centerTitle);
-
   const header = document.createElement('div');
   header.className = 'project__header';
 
