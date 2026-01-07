@@ -43,32 +43,16 @@ a {
 .skip-link {
   position: absolute;
   left: -999px;
-  top: 8px;
+  top: 10px;
   padding: 10px 12px;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
+  z-index: 1000;
 }
 
 .skip-link:focus {
-  left: 12px;
-}
-
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(11, 13, 18, 0.72);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-}
-
-.header__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 0;
-  gap: 16px;
+  left: 10px;
 }
 
 .brand {
@@ -363,6 +347,19 @@ h3 {
   display: block;
 }
 
+.project__center-title {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  text-align: center;
+  font-weight: 900;
+  line-height: 1.15;
+  pointer-events: none;
+}
+
 .project__header {
   position: absolute;
   left: 0;
@@ -374,6 +371,11 @@ h3 {
   gap: 10px;
   padding: 12px;
   background: linear-gradient(to top, rgba(11, 13, 18, 0.90), rgba(11, 13, 18, 0.0));
+}
+
+.project__header .badges {
+  flex: 0 0 auto;
+  flex-wrap: nowrap;
 }
 
 .project__header::before {

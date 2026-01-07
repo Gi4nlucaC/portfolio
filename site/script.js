@@ -467,13 +467,13 @@ function renderProjectCard(project) {
   img.alt = imageAltText;
   splash.appendChild(img);
 
+  const centerTitle = document.createElement('div');
+  centerTitle.className = 'project__center-title';
+  centerTitle.textContent = titleText;
+  splash.appendChild(centerTitle);
+
   const header = document.createElement('div');
   header.className = 'project__header';
-
-  const title = document.createElement('div');
-  title.className = 'project__title';
-  title.textContent = titleText;
-  header.appendChild(title);
 
   const badgesEl = document.createElement('div');
   badgesEl.className = 'badges';
