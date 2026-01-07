@@ -31,6 +31,19 @@ function slugify(value) {
     .replace(/(^-|-$)/g, '');
 }
 
+function splitBadgeText(value) {
+  const text = String(value ?? '').trim();
+  if (!text) return [];
+
+  // Split common separators used in the JSON (keep it simple and predictable).
+  const parts = text
+    .split(/\s*(?:\/|\||,)\s*/g)
+    .map((p) => p.trim())
+    .filter(Boolean);
+
+  return parts.length > 0 ? parts : [text];
+}
+
 function parseYouTubeEmbed(value) {
   if (typeof value !== 'string') return null;
   const raw = value.trim();
@@ -426,7 +439,7 @@ function renderProjectCard(project) {
 
   const badges = [];
   if (roleText) badges.push(roleText);
-  if (platformText) badges.push(platformText);
+  for (const part of splitBadgeText(platformText)) badges.push(part);
   if (yearText) badges.push(yearText);
 
   const links = Array.isArray(project?.links) ? project.links : [];
@@ -551,7 +564,11 @@ function renderProjectDetails(projects) {
     const badgesEl = document.createElement('div');
     badgesEl.className = 'badges';
     badgesEl.setAttribute('aria-label', 'Project metadata');
-    for (const text of [roleText, platformText, yearText].filter(Boolean)) {
+    const badgeValues = [];
+    if (roleText) badgeValues.push(roleText);
+    badgeValues.push(...splitBadgeText(platformText));
+    if (yearText) badgeValues.push(yearText);
+    for (const text of badgeValues.filter(Boolean)) {
       const badge = document.createElement('span');
       badge.className = 'badge';
       badge.textContent = text;
