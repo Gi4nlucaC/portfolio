@@ -1,0 +1,118 @@
+/* Video background */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+/* Homepage content */
+.homepage-bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.homepage-bg h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.homepage-bg p {
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.homepage-buttons {
+    margin-top: 40px;
+}
+
+.homepage-buttons p {
+    margin: 0;
+}
+
+.homepage-buttons span {
+    margin: 0 10px;
+}
+
+.homepage-buttons button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 2px solid currentColor;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.homepage-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer custom */
+.footer-custom-bg {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-custom p {
+    margin: 10px 0;
+    font-size: 0.95rem;
+}
+
+.clickable-icon a {
+    transition: color 0.25s ease-in-out;
+    display: inline-flex;
+    margin: 0 8px;
+}
+
+.clickable-icon:hover a {
+    color: #dd254d;
+}
+
+/* Responsive */
+@media (max-width: 684px) {
+    .homepage-bg h1 {
+        font-size: 1.8rem;
+    }
+
+    .homepage-bg p {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .homepage-buttons button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .video-container {
+        display: none;
+    }
+}

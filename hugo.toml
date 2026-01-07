@@ -12,10 +12,6 @@ theme = 'hello-friend-ng'
   # Subtitle for home
   homeSubtitle = "Hi! I am [Your Name], a game developer active in the industry since [year]."
 
-  # Background video (optional - add your video URL here)
-  # backgroundImage = "path/to/your/background.jpg"
-  
-  # Set disableReadOtherPosts to true in order to hide the links to other posts.
   disableReadOtherPosts = false
 
   # Enable sharing buttons
@@ -28,6 +24,9 @@ theme = 'hello-friend-ng'
   description = "Game developer portfolio"
   keywords = "game developer, portfolio"
   images = [""]
+
+  # Custom CSS
+  customCSS = ["/css/custom.css"]
 
 [params.portrait]
   path     = ""

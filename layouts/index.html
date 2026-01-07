@@ -1,0 +1,56 @@
+{{ define "body" }}
+    <body class="disable-hor-scroll" style="background: transparent;">
+{{ end }}
+
+{{ define "main" }}
+    <main aria-role="main">
+        <div class="video-container" style="opacity: 1;">
+            <video id="bg-video" muted loop playsinline>
+                <source src="/videos/background.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="homepage-bg">
+            <h1>{{ .Site.Title }}</h1>
+
+            {{ partial "subtitle.html" . }}
+
+            <div class="homepage-buttons">
+                <p>
+                    <span><a href="resume"><button>About me</button></a></span> 
+                    <span><a href="projects"><button>My projects</button></a></span>
+                </p>
+            </div>
+        </div>
+
+        <script>
+            function isMobileDisplay() {
+                mQuery = getComputedStyle(document.body).getPropertyValue("--phoneWidth");
+                return window.matchMedia(mQuery).matches;
+            }
+
+            if (!isMobileDisplay()) {
+                document.body.style.background = "transparent";
+            }
+            
+            document.addEventListener("DOMContentLoaded", function () {
+                const videoContainer = document.querySelector(".video-container");
+                const video = document.getElementById("bg-video");
+            
+                function playVideo() {
+                    videoContainer.style.opacity = "1"; 
+                    video.play().catch(error => console.log("Autoplay prevented:", error));
+                }
+            
+                if (video.readyState >= 3) {  
+                    playVideo();
+                } else {
+                    video.onloadeddata = playVideo;
+                    video.oncanplaythrough = playVideo;
+                }
+
+                video.addEventListener("click", playVideo);
+            });
+        </script>
+    </main>
+{{ end }}

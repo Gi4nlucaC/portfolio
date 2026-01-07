@@ -1,0 +1,20 @@
+<footer>
+    <div class="footer-custom-bg">
+        <div class="footer-custom">
+            <p style="text-align: center;font-size: 1em;margin-bottom: 5px;">Contact me:</p>
+            
+            {{- with .Site.Params.social }}
+            <div>
+                {{ partial "social-icons.html" . }}
+            </div>
+            {{- end }}
+
+            <p>© {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.</p>
+            {{- with .Site.Params.footer.bottomText }}
+                {{- range . }}
+                    <p>{{ . | markdownify }}</p>
+                {{- end }}
+            {{- end }}
+        </div>
+    </div>
+</footer>
