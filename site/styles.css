@@ -32,6 +32,31 @@ body {
 }
 
 a {
+
+/* Icon tags (used in hero engine/platform capsules) */
+.tag--with-icon {
+  gap: 8px;
+}
+
+.tag__icon {
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: currentColor;
+  flex: 0 0 16px;
+}
+
+.tag__icon svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.tag__meta {
+  opacity: .8;
+}
   color: inherit;
 }
 
