@@ -1,6 +1,7 @@
 /* Body adjustments */
 body.disable-hor-scroll {
     overflow-x: hidden;
+    background: #1b1c1d !important;
 }
 
 /* Container for homepage */
@@ -8,6 +9,7 @@ body.disable-hor-scroll {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: transparent;
 }
 
 /* Video background */
