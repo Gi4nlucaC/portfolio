@@ -21,13 +21,13 @@
       "role": "Gameplay Programmer",
       "platform": "VR / PlayStation 5",
       "year": "",
-      "description": "Shipped VR title on Meta Quest with PlayStation 5 release support. Built quest + dialogue systems, simulation-based customer behavior, and a multi-lightset baking workflow for instant scene transitions. Implemented a hand-tracking rhythm mode (Meta Start Dev Competition) and contributed to polish and porting.",
+      "description": "Commercial VR title shipped on Meta Quest Store and PlayStation Store (PlayStation 5 support). Owned quest/dialogue systems, AI-driven customer simulation, and a multi-lightset baking workflow for instant scene transitions. Implemented hand-tracking rhythm mode (Meta Start Dev Competition finalist). Contributed to VR polish and platform release engineering.",
       "highlights": [
-        "Quest + dialogue systems (designer-friendly authoring + iteration)",
-        "Simulation-based customer behavior and moment-to-moment interactions",
-        "Multi-lightset baking workflow for instant scene transitions",
-        "Hand-tracking rhythm mode (Meta Start Dev Competition)",
-        "VR polish + platform release support (Meta Quest / PS5)"
+        "Quest + dialogue systems: designer-friendly authoring, conditional branching, runtime state management",
+        "AI simulation: customer behavior state machine, goal-driven interactions, tunable parameters",
+        "Multi-lightset baking pipeline: instant scene transitions without runtime overhead",
+        "Hand-tracking rhythm mode: custom gesture recognition + scoring (Meta Start Dev Competition)",
+        "VR polish + platform support: performance optimization (Quest 2/Pro), PlayStation 5 release engineering"
       ],
       "links": [
         {
@@ -49,13 +49,13 @@
       "role": "Gameplay Programmer",
       "platform": "WebGL",
       "year": "",
-      "description": "WebGL game where I owned 3C (character/camera/controls), combat, and UI/tutorial end-to-end. Added blockchain integration and a deterministic A* pathfinding solution for enemies.",
+      "description": "WebGL multiplayer game (Unity). Owned 3C (character/camera/controls), combat system, and UI/tutorial flows end-to-end. Integrated blockchain wallet (MetaMask) for NFT authentication. Implemented deterministic A* pathfinding for server-authoritative enemy movement.",
       "highlights": [
-        "Owned 3C (character + camera + controls) end-to-end",
-        "Combat feel + enemy behaviors",
-        "UI and tutorial flow (first-time user experience)",
-        "Deterministic A* pathfinding for enemies",
-        "Blockchain integration"
+        "3C ownership: character controller (physics-based movement), camera system (dynamic framing), input handling (keyboard + gamepad)",
+        "Combat system: attack states, hit detection, damage calculation, enemy AI behaviors",
+        "UI + tutorial: first-time user flow, onboarding sequence, HUD + menus",
+        "Deterministic A* pathfinding: server-side enemy movement with client prediction",
+        "Blockchain integration: MetaMask wallet connection, NFT ownership verification"
       ],
       "links": [
         { "label": "Play", "href": "https://game.polyverse.gg/login" }
@@ -77,13 +77,13 @@
       "role": "Gameplay Programmer",
       "platform": "WebGL",
       "year": "",
-      "description": "Authoritative-server card game. Built the core loop and UI, implemented seeded deck randomization, plus a Game Pass system, inventory system, and equipment system. Developed monsters with special effects and NFT game skins with real in-game utility (progression/gameplay impact).",
+      "description": "Authoritative-server card game (Unity + Mirror networking). Owned core gameplay loop, UI implementation, and three major systems: Game Pass (progression rewards), inventory (card collection management), and equipment (loadout customization). Implemented seeded deck randomization (server-authoritative), monsters with special effects (on-play triggers, conditional logic), and NFT game skins with real gameplay utility (stat modifiers, ability unlocks).",
       "highlights": [
-        "Authoritative server gameplay (Mirror) + PlayFab services",
-        "Core loop + UI implementation",
-        "Seeded deck randomization",
-        "Game Pass + inventory + equipment systems",
-        "Monsters with special effects + NFT skins with real in-game utility"
+        "Authoritative server architecture: Mirror networking, server-side game logic, client prediction + reconciliation",
+        "Core loop + UI: match flow state machine, card play validation, visual feedback, animations",
+        "Game Pass system: progression tracking, reward unlocks, UI integration",
+        "Inventory + equipment: card collection management, loadout system, stat calculations",
+        "Gameplay content: monster special effects (trigger system, conditional logic), NFT skins with gameplay impact (stat modifiers, ability unlocks)"
       ],
       "links": [
         { "label": "Play", "href": "https://play.acryptia.io/" }
