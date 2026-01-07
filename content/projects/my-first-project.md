@@ -1,23 +1,20 @@
 +++
-date = '2026-01-07T18:56:15+01:00'
+date = '2026-01-07'
 draft = false
-title = 'My First Project'
-tags = ['Unity', 'C#', 'Game Design']
+title = 'Project Title'
+tags = ['tag1', 'tag2', 'tag3']
 +++
 
-This is an example project. Replace this with your actual project details.
+Brief project description.
 
-## Description
+## Overview
 
-Add your project description here.
+Detailed project description and information.
 
 ## Role
 
-- Gameplay Programmer
-- Game Designer
+Your role in the project.
 
 ## Technologies
 
-- Unity
-- C#
-- [Add more technologies]
+Technologies used in this project.

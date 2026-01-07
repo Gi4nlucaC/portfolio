@@ -4,6 +4,4 @@ draft = false
 title = 'Projects'
 +++
 
-Here are some of my game development projects.
-
-<!-- Projects will be listed automatically below -->
+Here are some of my projects.

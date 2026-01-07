@@ -1,6 +1,6 @@
 baseURL = 'https://gi4nlucac.github.io/portfolio/'
 languageCode = 'en-us'
-title = 'Gianluca Camarca'
+title = 'Your Name, Game Developer'
 theme = 'hello-friend-ng'
 
 [params]
@@ -10,45 +10,56 @@ theme = 'hello-friend-ng'
   dateformNumTime = "2006-01-02 15:04"
 
   # Subtitle for home
-  homeSubtitle = "Game Developer & Designer"
+  homeSubtitle = "Hi! I am [Your Name], a game developer active in the industry since [year]."
 
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
   disableReadOtherPosts = false
 
-  # Enable sharing buttons, if you like
+  # Enable sharing buttons
   enableSharingButtons = false
   
   # Show a global language switcher in the navigation bar
   enableGlobalLanguageMenu = false
 
   # Metadata mostly used in document's head
-  description = "Portfolio of Gianluca Camarca - Game Developer and Designer"
-  keywords = "game developer, game designer, portfolio"
+  description = "Game developer portfolio"
+  keywords = "game developer, portfolio"
   images = [""]
 
 [params.portrait]
   path     = ""
-  alt      = "Gianluca Camarca"
+  alt      = "Profile picture"
   maxWidth = "150px"
 
 [[params.social]]
   name = "linkedin"
-  url  = "https://www.linkedin.com/in/[YOUR-PROFILE]"
+  url  = "https://www.linkedin.com/in/your-profile"
 
 [[params.social]]
   name = "github"
-  url  = "https://github.com/[YOUR-USERNAME]"
+  url  = "https://github.com/your-username"
 
 [[params.social]]
   name = "email"
-  url  = "mailto:[YOUR-EMAIL]@example.com"
+  url  = "mailto:your.email@example.com"
 
 [menu]
   [[menu.main]]
-    identifier = "about"
-    name       = "About"
-    url        = "about/"
+    identifier = "resume"
+    name       = "About me"
+    url        = "resume/"
   [[menu.main]]
     identifier = "projects"
-    name       = "Projects"
+    name       = "My projects"
     url        = "projects/"
+
+[params.footer]
+  trademark = true
+  rss = false
+  copyright = true
+  author = true
+
+  topText = []
+  bottomText = [
+    "This website was created with Hugo, using the theme \"hello-friend-ng\" by rhazdon."
+  ]
