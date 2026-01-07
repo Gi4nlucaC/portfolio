@@ -505,6 +505,10 @@ h3 {
   background: linear-gradient(180deg, rgba(18, 22, 36, 0.92), rgba(15, 19, 32, 0.92));
   box-shadow: 0 18px 40px var(--shadow);
 
+  /* Keep rounded corners clean for media inside */
+  overflow: hidden;
+}
+
 /* Carousel (project details media) */
 .carousel {
   display: grid;
@@ -574,6 +578,7 @@ h3 {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 12px;
+  max-width: 100%;
 }
 
 .carousel__btn {
@@ -583,6 +588,7 @@ h3 {
   padding: 8px 10px;
   border-radius: 10px;
   font: inherit;
+  white-space: nowrap;
 }
 
 .carousel__btn:hover,
@@ -594,6 +600,8 @@ h3 {
   display: flex;
   justify-content: center;
   gap: 8px;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .carousel__dot {
@@ -607,8 +615,7 @@ h3 {
 .carousel__dot[aria-current='true'] {
   background: var(--text);
 }
-  overflow: hidden;
-}
+
 
 .project-detail__summary {
   list-style: none;
