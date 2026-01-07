@@ -6,7 +6,7 @@
     <main aria-role="main">
         <div class="video-container" style="opacity: 1;">
             <video id="bg-video" muted loop playsinline>
-                <source src="/videos/background.mp4" type="video/mp4">
+                <source src="{{ "videos/background.mp4" | relURL }}" type="video/mp4">
             </video>
         </div>
 
@@ -17,8 +17,8 @@
 
             <div class="homepage-buttons">
                 <p>
-                    <span><a href="resume"><button>About me</button></a></span> 
-                    <span><a href="projects"><button>My projects</button></a></span>
+                    <span><a href="{{ "resume" | absLangURL }}"><button>About me</button></a></span> 
+                    <span><a href="{{ "projects" | absLangURL }}"><button>My projects</button></a></span>
                 </p>
             </div>
         </div>
