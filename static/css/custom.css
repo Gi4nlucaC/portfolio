@@ -20,10 +20,19 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Consolas', 'Courier New', monospace !important;
+    color: var(--vscode-text) !important;
 }
 
 code, pre {
     font-family: 'Consolas', 'Courier New', monospace !important;
+}
+
+a {
+    color: var(--vscode-keyword) !important;
+}
+
+a:hover {
+    color: var(--vscode-function) !important;
 }
 
 /* Header with VS Code styling */
@@ -34,6 +43,10 @@ code, pre {
 
 .menu {
     background: var(--vscode-bg-lighter) !important;
+}
+
+.menu a {
+    color: var(--vscode-text) !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,6 +62,42 @@ code, pre {
 .logo__cursor {
     background-color: var(--vscode-cursor) !important;
     width: 2px !important;
+}
+
+/* Posts and content pages */
+.post, .posts {
+    background: transparent !important;
+    color: var(--vscode-text) !important;
+}
+
+.post-title, .posts-group-title {
+    color: var(--vscode-function) !important;
+}
+
+.post-content {
+    color: var(--vscode-text) !important;
+}
+
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+    color: var(--vscode-keyword) !important;
+}
+
+.post-content code {
+    background: var(--vscode-bg-lighter) !important;
+    color: var(--vscode-string) !important;
+}
+
+.post-content pre {
+    background: var(--vscode-bg-lighter) !important;
+    border: 1px solid #3c3c3c !important;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 3px solid var(--vscode-keyword) !important;
+    color: var(--vscode-comment) !important;
 }
 
 /* Body adjustments */
