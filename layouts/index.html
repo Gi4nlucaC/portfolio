@@ -3,27 +3,26 @@
 {{ end }}
 
 {{ define "main" }}
-    <main aria-role="main">
-        <div class="video-container" style="opacity: 1;">
-            <video id="bg-video" muted loop playsinline>
-                <source src="{{ "videos/background.mp4" | relURL }}" type="video/mp4">
-            </video>
+    <div class="video-container" style="opacity: 1;">
+        <video id="bg-video" muted loop playsinline>
+            <source src="{{ "videos/background.mp4" | relURL }}" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="homepage-bg">
+        <h1>{{ .Site.Title }}</h1>
+
+        {{ partial "subtitle.html" . }}
+
+        <div class="homepage-buttons">
+            <p>
+                <span><a href="{{ "resume" | absLangURL }}"><button>About me</button></a></span> 
+                <span><a href="{{ "projects" | absLangURL }}"><button>My projects</button></a></span>
+            </p>
         </div>
+    </div>
 
-        <div class="homepage-bg">
-            <h1>{{ .Site.Title }}</h1>
-
-            {{ partial "subtitle.html" . }}
-
-            <div class="homepage-buttons">
-                <p>
-                    <span><a href="{{ "resume" | absLangURL }}"><button>About me</button></a></span> 
-                    <span><a href="{{ "projects" | absLangURL }}"><button>My projects</button></a></span>
-                </p>
-            </div>
-        </div>
-
-        <script>
+    <script>
             function isMobileDisplay() {
                 mQuery = getComputedStyle(document.body).getPropertyValue("--phoneWidth");
                 return window.matchMedia(mQuery).matches;
@@ -61,5 +60,4 @@
                 video.addEventListener("click", playVideo);
             });
         </script>
-    </main>
-{{ end }}
+
