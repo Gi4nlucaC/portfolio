@@ -41,8 +41,14 @@
                 function playVideo() {
                     videoContainer.style.opacity = "1"; 
                     video.play().catch(error => {
-                        console.log("Video not available or autoplay prevented");
-                        videoContainer.style.display = "none";
+                        console.log("Video autoplay prevented:", error);
+                        // Try again after a short delay
+                        setTimeout(() => {
+                            video.play().catch(err => {
+                                console.log("Second attempt failed - hiding video");
+                                videoContainer.style.display = "none";
+                            });
+                        }, 500);
                     });
                 }
                 
@@ -52,6 +58,11 @@
                     videoContainer.style.display = "none";
                 });
             
+                // Force immediate play attempt
+                video.play().catch(error => {
+                    console.log("Initial play attempt blocked");
+                });
+
                 if (video.readyState >= 3) {  
                     playVideo();
                 } else {
@@ -59,7 +70,9 @@
                     video.oncanplaythrough = playVideo;
                 }
 
-                video.addEventListener("click", playVideo);
+                // Try to play on any user interaction
+                document.body.addEventListener("touchstart", playVideo, { once: true });
+                document.body.addEventListener("click", playVideo, { once: true });
             });
         </script>
 {{ end }}
