@@ -2,6 +2,7 @@
 date = '2020-09-01'
 draft = false
 title = 'Professional Game Title'
+category = 'professional'
 tags = ['Unreal Engine', 'Released']
 featured_image = '/images/projects/professional-project-placeholder.jpg'
 +++

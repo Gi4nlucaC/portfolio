@@ -8,9 +8,8 @@
             {{ end }}
 
             {{ $pages := .Pages }}
-            {{ $professionalPages := where $pages "Params.tags" "intersect" (slice "Unreal Engine" "Unity" "Released" "In Progress") }}
+            {{ $professionalPages := where $pages "Params.category" "eq" "professional" }}
             {{ $personalPages := where $pages "Params.category" "eq" "personal" }}
-            {{ $jamPages := where $pages "Params.tags" "intersect" (slice "Game Jam") }}
 
             {{ if gt (len $professionalPages) 0 }}
                 <div class="projects-section">
@@ -34,18 +33,7 @@
                 </div>
             {{ end }}
 
-            {{ if gt (len $jamPages) 0 }}
-                <div class="projects-section">
-                    <h2>Game Jams</h2>
-                    <div class="projects-grid">
-                        {{ range $jamPages }}
-                            {{ partial "project-card.html" . }}
-                        {{ end }}
-                    </div>
-                </div>
-            {{ end }}
-
-            {{ $otherPages := $pages | complement $professionalPages | complement $personalPages | complement $jamPages }}
+            {{ $otherPages := $pages | complement $professionalPages | complement $personalPages }}
             {{ if gt (len $otherPages) 0 }}
                 <div class="projects-section">
                     <h2>Other Projects</h2>
