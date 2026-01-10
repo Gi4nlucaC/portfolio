@@ -9,12 +9,7 @@
             </div>
             {{- end }}
 
-            <p>© {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.</p>
-            {{- with .Site.Params.footer.bottomText }}
-                {{- range . }}
-                    <p>{{ . | markdownify }}</p>
-                {{- end }}
-            {{- end }}
+            <p>© {{ now.Format "2006" }} Gianluca Camarca. All rights reserved.</p>
         </div>
     </div>
 </footer>
