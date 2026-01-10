@@ -349,3 +349,46 @@ body.disable-hor-scroll {
         font-size: 0.9rem;
     }
 }
+
+/* Resume page styling */
+.post-content h2 {
+    margin-top: 2.5em !important;
+    margin-bottom: 1em !important;
+    font-size: 1.5em !important;
+    border-bottom: 2px solid var(--vscode-keyword) !important;
+    padding-bottom: 0.3em !important;
+}
+
+.post-content h4 {
+    margin-top: 1.5em !important;
+    margin-bottom: 0.5em !important;
+    color: var(--vscode-function) !important;
+}
+
+.post-content hr {
+    border: none !important;
+    border-top: 1px solid #3c3c3c !important;
+    margin: 2em 0 !important;
+}
+
+.post-content ul {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+}
+
+.post-content ul li:before {
+    content: ' ' !important;
+    color: var(--vscode-keyword) !important;
+    font-weight: bold !important;
+    display: inline-block !important;
+    width: 1em !important;
+    margin-left: 0 !important;
+}
+
+.post-content em {
+    color: var(--vscode-comment) !important;
+}
+
+.post-content strong {
+    color: var(--vscode-function) !important;
+}
