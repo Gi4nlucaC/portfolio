@@ -3,6 +3,7 @@ date = '2024-01-20'
 draft = false
 title = 'Game Jam Entry Title'
 tags = ['Game Jam', 'Released']
+featured_image = '/images/projects/gamejam-placeholder.jpg'
 +++
 
 A game created during [Name] Game Jam in 48 hours.

@@ -477,3 +477,114 @@ body.disable-hor-scroll {
         grid-template-columns: 1fr !important;
     }
 }
+
+/* Projects page with cards and images */
+.projects-intro {
+    margin-bottom: 3em;
+}
+
+.projects-section {
+    margin-bottom: 4em;
+}
+
+.projects-section h2 {
+    font-size: 1.8em !important;
+    margin-bottom: 1.5em !important;
+    margin-top: 2em !important;
+    color: var(--vscode-keyword) !important;
+    border-bottom: 2px solid var(--vscode-keyword) !important;
+    padding-bottom: 0.5em !important;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+}
+
+.project-card {
+    background: var(--vscode-bg-lighter);
+    border: 1px solid #3c3c3c;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--vscode-keyword);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: var(--vscode-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-no-image {
+    background: var(--vscode-selection);
+}
+
+.project-no-image span {
+    font-size: 4em;
+    color: var(--vscode-keyword);
+    font-weight: bold;
+}
+
+.project-content {
+    padding: 1.5em;
+}
+
+.project-content h4 {
+    margin: 0 0 0.5em 0;
+    font-size: 1.3em;
+    color: var(--vscode-function) !important;
+}
+
+.project-content p {
+    color: var(--vscode-text);
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.project-tags .tag {
+    background: var(--vscode-selection);
+    color: var(--vscode-keyword);
+    padding: 0.3em 0.8em;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+@media (max-width: 684px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

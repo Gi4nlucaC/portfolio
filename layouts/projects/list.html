@@ -1,0 +1,61 @@
+{{ define "main" }}
+    <div class="content">
+        <main class="posts">
+            <h1>{{ .Title }}</h1>
+
+            {{ if .Content }}
+                <div class="projects-intro">{{ .Content }}</div>
+            {{ end }}
+
+            {{ $pages := .Pages }}
+            {{ $professionalPages := where $pages "Params.tags" "intersect" (slice "Unreal Engine" "Unity" "Released" "In Progress") }}
+            {{ $personalPages := where $pages "Params.category" "eq" "personal" }}
+            {{ $jamPages := where $pages "Params.tags" "intersect" (slice "Game Jam") }}
+
+            {{ if gt (len $professionalPages) 0 }}
+                <div class="projects-section">
+                    <h2>Professional Projects</h2>
+                    <div class="projects-grid">
+                        {{ range $professionalPages }}
+                            {{ partial "project-card.html" . }}
+                        {{ end }}
+                    </div>
+                </div>
+            {{ end }}
+
+            {{ if gt (len $personalPages) 0 }}
+                <div class="projects-section">
+                    <h2>Personal Projects</h2>
+                    <div class="projects-grid">
+                        {{ range $personalPages }}
+                            {{ partial "project-card.html" . }}
+                        {{ end }}
+                    </div>
+                </div>
+            {{ end }}
+
+            {{ if gt (len $jamPages) 0 }}
+                <div class="projects-section">
+                    <h2>Game Jams</h2>
+                    <div class="projects-grid">
+                        {{ range $jamPages }}
+                            {{ partial "project-card.html" . }}
+                        {{ end }}
+                    </div>
+                </div>
+            {{ end }}
+
+            {{ $otherPages := $pages | complement $professionalPages | complement $personalPages | complement $jamPages }}
+            {{ if gt (len $otherPages) 0 }}
+                <div class="projects-section">
+                    <h2>Other Projects</h2>
+                    <div class="projects-grid">
+                        {{ range $otherPages }}
+                            {{ partial "project-card.html" . }}
+                        {{ end }}
+                    </div>
+                </div>
+            {{ end }}
+        </main>
+    </div>
+{{ end }}
