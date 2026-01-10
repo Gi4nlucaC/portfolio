@@ -9,24 +9,52 @@
     <lastBuildDate>Wed, 07 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://gi4nlucac.github.io/portfolio/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Tag1</title>
-      <link>https://gi4nlucac.github.io/portfolio/tags/tag1/</link>
+      <title>Game Engine</title>
+      <link>https://gi4nlucac.github.io/portfolio/tags/game-engine/</link>
       <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://gi4nlucac.github.io/portfolio/tags/tag1/</guid>
+      <guid>https://gi4nlucac.github.io/portfolio/tags/game-engine/</guid>
       <description></description>
     </item>
     <item>
-      <title>Tag2</title>
-      <link>https://gi4nlucac.github.io/portfolio/tags/tag2/</link>
+      <title>Status</title>
+      <link>https://gi4nlucac.github.io/portfolio/tags/status/</link>
       <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://gi4nlucac.github.io/portfolio/tags/tag2/</guid>
+      <guid>https://gi4nlucac.github.io/portfolio/tags/status/</guid>
       <description></description>
     </item>
     <item>
-      <title>Tag3</title>
-      <link>https://gi4nlucac.github.io/portfolio/tags/tag3/</link>
-      <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://gi4nlucac.github.io/portfolio/tags/tag3/</guid>
+      <title>Game Jam</title>
+      <link>https://gi4nlucac.github.io/portfolio/tags/game-jam/</link>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gi4nlucac.github.io/portfolio/tags/game-jam/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Released</title>
+      <link>https://gi4nlucac.github.io/portfolio/tags/released/</link>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gi4nlucac.github.io/portfolio/tags/released/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>In Progress</title>
+      <link>https://gi4nlucac.github.io/portfolio/tags/in-progress/</link>
+      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://gi4nlucac.github.io/portfolio/tags/in-progress/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unity</title>
+      <link>https://gi4nlucac.github.io/portfolio/tags/unity/</link>
+      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://gi4nlucac.github.io/portfolio/tags/unity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unreal Engine</title>
+      <link>https://gi4nlucac.github.io/portfolio/tags/unreal-engine/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://gi4nlucac.github.io/portfolio/tags/unreal-engine/</guid>
       <description></description>
     </item>
   </channel>
