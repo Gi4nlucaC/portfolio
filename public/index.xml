@@ -27,7 +27,28 @@
       <link>https://gi4nlucac.github.io/portfolio/projects/my-first-project/</link>
       <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://gi4nlucac.github.io/portfolio/projects/my-first-project/</guid>
-      <description>&lt;p&gt;Brief project description.&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Detailed project description and information.&lt;/p&gt;&#xA;&lt;h2 id=&#34;role&#34;&gt;Role&lt;/h2&gt;&#xA;&lt;p&gt;Your role in the project.&lt;/p&gt;&#xA;&lt;h2 id=&#34;technologies&#34;&gt;Technologies&lt;/h2&gt;&#xA;&lt;p&gt;Technologies used in this project.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Brief one-line description of the project.&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Detailed project description. What is the game about? What genre? What platform?&lt;/p&gt;&#xA;&lt;p&gt;Example:&#xA;A third-person action-adventure game set in a sci-fi world. The game features advanced combat mechanics, parkour movement, and AI-driven enemies.&lt;/p&gt;&#xA;&lt;h2 id=&#34;my-role&#34;&gt;My Role&lt;/h2&gt;&#xA;&lt;p&gt;Your specific contributions to the project:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Implemented core gameplay mechanics&lt;/li&gt;&#xA;&lt;li&gt;Developed AI systems&lt;/li&gt;&#xA;&lt;li&gt;Created animation systems&lt;/li&gt;&#xA;&lt;li&gt;Optimized performance&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;technologies&#34;&gt;Technologies&lt;/h2&gt;&#xA;&lt;p&gt;List of technologies, engines, and tools used:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Engine:&lt;/strong&gt; Unreal Engine 5 / Unity&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Language:&lt;/strong&gt; C++ / C#&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tools:&lt;/strong&gt; Git, Perforce, Visual Studio&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;key-features&#34;&gt;Key Features&lt;/h2&gt;&#xA;&lt;p&gt;Main features you worked on:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Game Jam Entry Title</title>
+      <link>https://gi4nlucac.github.io/portfolio/projects/game-jam-1/</link>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gi4nlucac.github.io/portfolio/projects/game-jam-1/</guid>
+      <description>&lt;p&gt;A game created during [Name] Game Jam in 48 hours.&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;[Brief description of the game and the jam theme]&lt;/p&gt;&#xA;&lt;h2 id=&#34;my-role&#34;&gt;My Role&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Solo developer / Team role&lt;/li&gt;&#xA;&lt;li&gt;Implemented all gameplay&lt;/li&gt;&#xA;&lt;li&gt;Created game mechanics&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;technologies&#34;&gt;Technologies&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Engine:&lt;/strong&gt; Unity / Godot&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Language:&lt;/strong&gt; C# / GDScript&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Duration:&lt;/strong&gt; 48 hours&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#&#34;&gt;Itch.io Page&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Personal Project Name</title>
+      <link>https://gi4nlucac.github.io/portfolio/projects/personal-project-1/</link>
+      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://gi4nlucac.github.io/portfolio/projects/personal-project-1/</guid>
+      <description>&lt;p&gt;A personal project I&amp;rsquo;m working on in my spare time.&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;[Describe your personal project, what you&amp;rsquo;re learning, and your goals]&lt;/p&gt;&#xA;&lt;h2 id=&#34;technologies&#34;&gt;Technologies&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Engine:&lt;/strong&gt; Unity&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Language:&lt;/strong&gt; C#&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Focus:&lt;/strong&gt; Gameplay Programming&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;what-im-learning&#34;&gt;What I&amp;rsquo;m Learning&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;New techniques&lt;/li&gt;&#xA;&lt;li&gt;Advanced systems&lt;/li&gt;&#xA;&lt;li&gt;Best practices&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Professional Game Title</title>
+      <link>https://gi4nlucac.github.io/portfolio/projects/professional-project-1/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://gi4nlucac.github.io/portfolio/projects/professional-project-1/</guid>
+      <description>&lt;p&gt;A brief description of your professional game project.&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;[Describe the game, genre, platform, and main features]&lt;/p&gt;&#xA;&lt;h2 id=&#34;my-role&#34;&gt;My Role&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Implemented gameplay mechanics&lt;/li&gt;&#xA;&lt;li&gt;Developed AI systems&lt;/li&gt;&#xA;&lt;li&gt;Optimized performance&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;technologies&#34;&gt;Technologies&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Engine:&lt;/strong&gt; Unreal Engine 5&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Language:&lt;/strong&gt; C++&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tools:&lt;/strong&gt; Git, Visual Studio&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;key-features&#34;&gt;Key Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Feature 1&lt;/li&gt;&#xA;&lt;li&gt;Feature 2&lt;/li&gt;&#xA;&lt;li&gt;Feature 3&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>

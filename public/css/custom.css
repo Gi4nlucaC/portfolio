@@ -392,3 +392,88 @@ body.disable-hor-scroll {
 .post-content strong {
     color: var(--vscode-function) !important;
 }
+
+/* Projects page styling */
+.posts-group {
+    margin-bottom: 3em !important;
+}
+
+.posts-group-title {
+    font-size: 1.8em !important;
+    margin-bottom: 1.5em !important;
+    margin-top: 2em !important;
+    color: var(--vscode-keyword) !important;
+    border-bottom: 2px solid var(--vscode-keyword) !important;
+    padding-bottom: 0.5em !important;
+}
+
+.posts-list {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+    gap: 2em !important;
+    list-style: none !important;
+    padding: 0 !important;
+}
+
+.post-on-list {
+    background: var(--vscode-bg-lighter) !important;
+    border: 1px solid #3c3c3c !important;
+    border-radius: 8px !important;
+    padding: 1.5em !important;
+    transition: transform 0.2s, border-color 0.2s !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.post-on-list:hover {
+    transform: translateY(-5px) !important;
+    border-color: var(--vscode-keyword) !important;
+}
+
+.post-on-list .post-title {
+    font-size: 1.3em !important;
+    margin-bottom: 0.5em !important;
+    color: var(--vscode-function) !important;
+}
+
+.post-on-list .post-title a {
+    color: var(--vscode-function) !important;
+    text-decoration: none !important;
+}
+
+.post-on-list .post-title a:hover {
+    color: var(--vscode-keyword) !important;
+}
+
+.post-on-list p {
+    color: var(--vscode-text) !important;
+    flex-grow: 1 !important;
+    margin-bottom: 1em !important;
+}
+
+.post-on-list .post-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5em !important;
+    margin-top: auto !important;
+}
+
+.post-on-list .post-tags .tag {
+    background: var(--vscode-selection) !important;
+    color: var(--vscode-keyword) !important;
+    padding: 0.3em 0.8em !important;
+    border-radius: 4px !important;
+    font-size: 0.85em !important;
+    text-decoration: none !important;
+}
+
+.post-on-list .post-tags .tag:hover {
+    background: var(--vscode-keyword) !important;
+    color: var(--vscode-bg) !important;
+}
+
+@media (max-width: 684px) {
+    .posts-list {
+        grid-template-columns: 1fr !important;
+    }
+}
