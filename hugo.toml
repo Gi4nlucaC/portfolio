@@ -1,6 +1,6 @@
 baseURL = 'https://gi4nlucac.github.io/portfolio/'
 languageCode = 'en-us'
-title = 'Your Name, Game Developer'
+title = 'Gianluca Camarca, Game Developer'
 theme = 'hello-friend-ng'
 
 [params]
@@ -10,7 +10,7 @@ theme = 'hello-friend-ng'
   dateformNumTime = "2006-01-02 15:04"
 
   # Subtitle for home
-  homeSubtitle = "Hi! I am [Your Name], a game developer active in the industry since [year]."
+  homeSubtitle = "Hi! I am Gianluca Camarca, a game developer active in the industry since 2020."
 
   disableReadOtherPosts = false
 
@@ -26,7 +26,7 @@ theme = 'hello-friend-ng'
   images = [""]
 
   # Custom CSS
-  customCSS = ["css/custom.css"]
+  customCSS = ["/portfolio/css/custom.css"]
 
 # Logo configuration
 [params.logo]
