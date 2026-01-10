@@ -294,10 +294,6 @@ body.disable-hor-scroll {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
-
-    .video-container {
-        display: none;
-    }
 }
 
 /* Full width backgrounds with alternating colors */
@@ -351,9 +347,5 @@ body.disable-hor-scroll {
     .homepage-buttons button {
         padding: 10px 20px;
         font-size: 0.9rem;
-    }
-
-    .video-container {
-        display: none;
     }
 }
