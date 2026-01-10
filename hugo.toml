@@ -71,6 +71,4 @@ theme = 'hello-friend-ng'
   author = true
 
   topText = []
-  bottomText = [
-    "This website was created with Hugo, using the theme \"hello-friend-ng\" by rhazdon."
-  ]
+  bottomText = []
