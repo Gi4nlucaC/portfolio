@@ -1,0 +1,10 @@
+Add your background video here as background.mp4
+
+Recommended specs:
+- Format: MP4 (H.264 codec)
+- Resolution: 1920x1080 or higher
+- Duration: 10-30 seconds (looping)
+- Muted (no audio needed)
+- Optimized for web (compressed)
+
+Example: background.mp4
