@@ -3,7 +3,7 @@ date = '2019-06-01'
 draft = false
 title = 'Polyverse'
 description = "After an alien invasion and an attempt to defend with AI and military cyborgs, the AI turns hostile causing a nuclear apocalypse. The mutated world hosts five races (Alien, Human, Cyborg, Ape, Mutant) fighting for resources and survival; initially living in shelters as society rebuilds."
-card_summary = "Action RPG shooter"
+card_summary = "Procedural multiverse engine —\nscalable worlds"
 category = 'professional'
 tags = ['ARPG']
 featured_image = 'assets/polyverse/polyverse_main.jpg'
@@ -23,10 +23,6 @@ status = 'Alpha'
 platforms = 'WebGL'
 links = []
 +++
-
-## Overview
-
-Polyverse is a procedural multiverse engine enabling expansive, scalable worlds across platforms. I worked on architecture and performance systems to support dynamic streaming and procedural generation.
 
 ## Role
 
