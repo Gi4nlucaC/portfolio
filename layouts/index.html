@@ -4,9 +4,10 @@
 
 {{ define "main" }}
     <div class="video-container">
-        <video id="bg-video" muted loop playsinline>
+        <video id="bg-video" autoplay muted loop playsinline preload="auto">
             <source src="{{ "videos/background_new.mp4" | relURL }}" type="video/mp4">
         </video>
+        <button id="bg-video-play-fallback" class="bg-video-play-fallback" style="display:none;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:10;padding:12px 18px;border-radius:6px;border:none;background:rgba(0,0,0,0.6);color:#fff;">Play</button>
     </div>
 
     <div class="content">
@@ -41,17 +42,37 @@
 
                 function playVideo() {
                     videoContainer.style.opacity = "1";
-                    video.play().catch(error => console.log("Autoplay prevented:", error));
+                    video.play().then(() => {
+                        var fb = document.getElementById('bg-video-play-fallback'); if (fb) fb.style.display = 'none';
+                    }).catch(error => {
+                        // Autoplay blocked: show fallback play button for user interaction
+                        console.log("Autoplay prevented:", error);
+                        var fb = document.getElementById('bg-video-play-fallback');
+                        if (fb) fb.style.display = 'block';
+                    });
                 }
+
+                // Ensure browser starts loading the video
+                try { video.load(); } catch(e) {}
 
                 if (video.readyState >= 3) {
                     playVideo();
                 } else {
-                    video.onloadeddata = playVideo;
-                    video.oncanplaythrough = playVideo;
+                    video.addEventListener('loadeddata', playVideo);
+                    video.addEventListener('canplaythrough', playVideo);
                 }
 
-                video.addEventListener("click", playVideo);
+                // click anywhere to try and play
+                video.addEventListener("click", function(){ playVideo(); });
+                var fallbackBtn = document.getElementById('bg-video-play-fallback');
+                if (fallbackBtn) {
+                    fallbackBtn.addEventListener('click', function(e){
+                        e.stopPropagation();
+                        // user interaction should allow playback
+                        video.muted = false;
+                        playVideo();
+                    });
+                }
             });
         })();
     </script>
