@@ -7,7 +7,7 @@
                 <div class="projects-intro">{{ .Content }}</div>
             {{ end }}
 
-            {{ $pages := .Pages }}
+            {{ $pages := .Pages.ByWeight }}
             {{ $professionalPages := where $pages "Params.category" "eq" "professional" }}
             {{ $personalPages := where $pages "Params.category" "eq" "personal" }}
 
