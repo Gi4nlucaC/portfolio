@@ -2,6 +2,7 @@
 date = '2020-09-01'
 draft = false
 title = 'Mars Kitchen'
+description = 'A VR kitchen simulation game, set on retro futuristic Mars.'
 category = 'professional'
 tags = ['Unity', 'VR', 'Released']
 featured_image = '/images/projects/mars-kitchen-preview.jpg'

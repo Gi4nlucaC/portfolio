@@ -2,6 +2,7 @@
 date = '2026-01-07'
 draft = false
 title = 'Project Title'
+description = 'Brief one-line description of the project.'
 category = 'personal'
 tags = ['Game Engine', 'Status']
 featured_image = ''

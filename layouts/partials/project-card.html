@@ -18,7 +18,11 @@
         {{ end }}
         <div class="project-content">
             <h4>{{ .Title }}</h4>
-            <p>{{ .Summary }}</p>
+            {{ if .Params.description }}
+                <p>{{ .Params.description }}</p>
+            {{ else }}
+                <p>{{ .Summary | truncate 100 }}</p>
+            {{ end }}
             {{ if .Params.tags }}
                 <div class="project-tags">
                     {{ range .Params.tags }}
