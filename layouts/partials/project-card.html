@@ -38,12 +38,18 @@
         <div class="project-content">
             <h4>{{ .Title }}</h4>
             {{/* Use a short summary for cards: prefer `card_summary`, then `summary`, then truncated .Summary */}}
+            {{/* Prefer explicit card_summary, then description, then summary; collapse whitespace/newlines */}}
             {{ if .Params.card_summary }}
-                <p>{{ .Params.card_summary }}</p>
+                {{ $card := .Params.card_summary | replaceRE "\\s+" " " | plainify | trim }}
+                <p>{{ $card }}</p>
+            {{ else if .Params.description }}
+                {{ $desc := .Params.description | replaceRE "\\s+" " " | plainify | trim }}
+                <p>{{ $desc }}</p>
             {{ else if .Params.summary }}
-                <p>{{ .Params.summary }}</p>
+                {{ $sum := .Params.summary | replaceRE "\\s+" " " | plainify | trim }}
+                <p>{{ $sum }}</p>
             {{ else }}
-                <p>{{ .Summary | truncate 100 }}</p>
+                <p>{{ .Summary | plainify | replaceRE "\\s+" " " | truncate 140 }}</p>
             {{ end }}
             <div class="project-tags">
                 {{/* Use Scratch to avoid emitting duplicate tags */}}

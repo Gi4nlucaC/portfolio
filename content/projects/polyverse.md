@@ -3,12 +3,12 @@ date = '2019-06-01'
 draft = false
 title = 'Polyverse'
 description = "After an alien invasion and an attempt to defend with AI and military cyborgs, the AI turns hostile causing a nuclear apocalypse. The mutated world hosts five races (Alien, Human, Cyborg, Ape, Mutant) fighting for resources and survival; initially living in shelters as society rebuilds."
-card_summary = "Procedural multiverse engine —\nscalable worlds"
+card_summary = "An Action Rpg Shooter set in a post-apocalyptic Earth"
+weight = 1
 category = 'professional'
 tags = ['ARPG']
 featured_image = 'assets/polyverse/polyverse_main.jpg'
 gallery = [
-	'assets/polyverse/polyverse_main.jpg',
 	'assets/polyverse/poly.png',
 	'assets/polyverse/poly2.png',
 	'assets/polyverse/poly3.png',
