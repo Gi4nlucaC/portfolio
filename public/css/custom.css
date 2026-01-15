@@ -794,3 +794,147 @@ body.disable-hor-scroll {
         grid-template-columns: 1fr;
     }
 }
+
+/* Gallery Carousel in Project Page */
+.project-gallery-carousel {
+    margin: 3em 0;
+}
+
+.project-gallery-carousel h2 {
+    margin-bottom: 1.5em;
+    color: var(--vscode-function) !important;
+    text-align: center;
+}
+
+.gallery-carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    background: var(--vscode-bg-lighter);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gallery-carousel-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.gallery-carousel-image:first-child {
+    opacity: 1;
+}
+
+.gallery-carousel-prev,
+.gallery-carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--vscode-keyword);
+    border: none;
+    font-size: 3em;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+.gallery-carousel-prev:hover,
+.gallery-carousel-next:hover {
+    background: rgba(0, 0, 0, 0.9);
+    color: var(--vscode-function);
+}
+
+.gallery-carousel-prev {
+    left: 20px;
+}
+
+.gallery-carousel-next {
+    right: 20px;
+}
+
+.gallery-carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.gallery-carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.gallery-carousel-dot.active {
+    background: var(--vscode-keyword);
+}
+
+@media (max-width: 684px) {
+    .gallery-carousel-prev,
+    .gallery-carousel-next {
+        width: 40px;
+        height: 40px;
+        font-size: 2em;
+    }
+    
+    .gallery-carousel-prev {
+        left: 10px;
+    }
+    
+    .gallery-carousel-next {
+        right: 10px;
+    }
+}
+
+/* Project Info Section with Title */
+.project-info-section {
+    margin: 2em 0;
+}
+
+.project-info-title {
+    color: var(--vscode-function) !important;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+.project-description {
+    margin-bottom: 1.5em;
+    padding: 1em;
+    background: var(--vscode-bg-lighter);
+    border-radius: 8px;
+}
+
+.project-description .info-label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.project-description .info-value {
+    line-height: 1.6;
+    display: block;
+}

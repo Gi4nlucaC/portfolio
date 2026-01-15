@@ -2,10 +2,10 @@
 date = '2020-09-01'
 draft = false
 title = 'Mars Kitchen'
-description = 'A VR kitchen simulation game, set on retro futuristic Mars.'
+description = 'A VR kitchen simulation game, set on retro futuristic Martian setting. Players experience the challenge of preparing meals in a VR kitchen environment on Mars, combining realistic cooking mechanics with an immersive sci-fi atmosphere.'
 category = 'professional'
 tags = ['Unity', 'VR', 'Released']
-featured_image = 'assets/marskitchen/1_1MasterImage_MK_1.png'
+featured_image = 'assets/marskitchen/MK_Master Image_16_9.jpg'
 gallery = [
   'assets/marskitchen/MK_Screenshot (1).jpg',
   'assets/marskitchen/MK_Screenshot (2).jpg',
@@ -25,8 +25,6 @@ company = 'Force Field'
 status = 'Released'
 platforms = 'Meta Quest, PlayStation VR'
 +++
-
-A VR kitchen simulation game, set on retro futuristic Martian setting. Players experience the challenge of preparing meals in a VR kitchen environment on Mars, combining realistic cooking mechanics with an immersive sci-fi atmosphere.
 
 ## My Role
 

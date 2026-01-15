@@ -7,7 +7,7 @@
 
             {{ if .Params.video }}
                 <div class="project-video-hero">
-                    <video controls width="100%" poster="{{ if .Params.featured_image }}{{ .Params.featured_image | relURL }}{{ end }}">
+                    <video controls width="100%" poster="{{ if .Params.featured_image }}{{ .Params.featured_image | relURL }}{{ end }}" preload="metadata">
                         <source src="{{ .Params.video | relURL }}" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -18,59 +18,73 @@
                 </div>
             {{ end }}
 
-            <div class="project-info-grid">
-                {{ if .Params.role }}
-                    <div class="project-info-item">
-                        <span class="info-label">Role:</span>
-                        <span class="info-value">{{ .Params.role }}</span>
+            <div class="project-info-section">
+                <h2 class="project-info-title">Project Info</h2>
+                
+                {{ if .Params.description }}
+                    <div class="project-description">
+                        <span class="info-label">Description:</span>
+                        <p class="info-value">{{ .Params.description }}</p>
                     </div>
                 {{ end }}
+                
+                <div class="project-info-grid">
+                    {{ if .Params.role }}
+                        <div class="project-info-item">
+                            <span class="info-label">Role:</span>
+                            <span class="info-value">{{ .Params.role }}</span>
+                        </div>
+                    {{ end }}
 
-                {{ if .Params.engine }}
-                    <div class="project-info-item">
-                        <span class="info-label">Engine:</span>
-                        <span class="info-value">{{ .Params.engine }}</span>
-                    </div>
-                {{ end }}
+                    {{ if .Params.engine }}
+                        <div class="project-info-item">
+                            <span class="info-label">Engine:</span>
+                            <span class="info-value">{{ .Params.engine }}</span>
+                        </div>
+                    {{ end }}
 
-                {{ if .Params.company }}
-                    <div class="project-info-item">
-                        <span class="info-label">Company:</span>
-                        <span class="info-value">{{ .Params.company }}</span>
-                    </div>
-                {{ end }}
+                    {{ if .Params.company }}
+                        <div class="project-info-item">
+                            <span class="info-label">Company:</span>
+                            <span class="info-value">{{ .Params.company }}</span>
+                        </div>
+                    {{ end }}
 
-                {{ if .Params.status }}
-                    <div class="project-info-item">
-                        <span class="info-label">Status:</span>
-                        <span class="info-value">{{ .Params.status }}</span>
-                    </div>
-                {{ end }}
+                    {{ if .Params.status }}
+                        <div class="project-info-item">
+                            <span class="info-label">Status:</span>
+                            <span class="info-value">{{ .Params.status }}</span>
+                        </div>
+                    {{ end }}
 
-                {{ if .Params.platforms }}
-                    <div class="project-info-item">
-                        <span class="info-label">Platforms:</span>
-                        <span class="info-value">{{ .Params.platforms }}</span>
-                    </div>
-                {{ end }}
+                    {{ if .Params.platforms }}
+                        <div class="project-info-item">
+                            <span class="info-label">Platforms:</span>
+                            <span class="info-value">{{ .Params.platforms }}</span>
+                        </div>
+                    {{ end }}
+                </div>
             </div>
 
             <div class="post-content">
                 {{ .Content }}
             </div>
                 
-                {{ if .Params.gallery }}
-                    <div class="project-gallery">
-                        <h2>Gallery</h2>
-                        <div class="gallery-grid">
+            {{ if .Params.gallery }}
+                <div class="project-gallery-carousel">
+                    <h2>Gallery</h2>
+                    <div class="gallery-carousel-container">
+                        <div class="gallery-carousel-images">
                             {{ range .Params.gallery }}
-                                <a href="{{ . | relURL }}" target="_blank" class="gallery-item">
-                                    <img src="{{ . | relURL }}" alt="{{ $.Title }}">
-                                </a>
+                                <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="gallery-carousel-image">
                             {{ end }}
                         </div>
+                        <button class="gallery-carousel-prev" aria-label="Previous image">‹</button>
+                        <button class="gallery-carousel-next" aria-label="Next image">›</button>
+                        <div class="gallery-carousel-dots"></div>
                     </div>
-                {{ end }}
+                </div>
+            {{ end }}
             </div>
         </article>
     </div>
