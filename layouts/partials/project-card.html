@@ -45,13 +45,31 @@
             {{ else }}
                 <p>{{ .Summary | truncate 100 }}</p>
             {{ end }}
-            {{ if .Params.tags }}
-                <div class="project-tags">
+            <div class="project-tags">
+                {{/* Render front-matter tags but skip the generic 'Game Engine' tag */}}
+                {{ if .Params.tags }}
                     {{ range .Params.tags }}
-                        <span class="tag">{{ . }}</span>
+                        {{ if ne . "Game Engine" }}
+                            <span class="tag">{{ . }}</span>
+                        {{ end }}
                     {{ end }}
-                </div>
-            {{ end }}
+                {{ end }}
+
+                {{/* Show engine as a tag (if present) */}}
+                {{ if .Params.engine }}
+                    <span class="tag">{{ .Params.engine }}</span>
+                {{ end }}
+
+                {{/* Show status as a tag; append ' Release' if not already present */}}
+                {{ if .Params.status }}
+                    {{ $status := .Params.status }}
+                    {{ $lower := lower $status }}
+                    {{ if not (in $lower "release") }}
+                        {{ $status = printf "%s Release" $status }}
+                    {{ end }}
+                    <span class="tag">{{ $status }}</span>
+                {{ end }}
+            </div>
         </div>
     </a>
 </div>

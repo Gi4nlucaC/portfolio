@@ -5,7 +5,7 @@ title = 'Polyverse'
 description = "After an alien invasion and an attempt to defend with AI and military cyborgs, the AI turns hostile causing a nuclear apocalypse. The mutated world hosts five races (Alien, Human, Cyborg, Ape, Mutant) fighting for resources and survival; initially living in shelters as society rebuilds."
 card_summary = "Action RPG shooter"
 category = 'professional'
-tags = ['Game Engine','ARPG']
+tags = ['ARPG']
 featured_image = 'assets/polyverse/polyverse_main.jpg'
 gallery = [
 	'assets/polyverse/polyverse_main.jpg'
