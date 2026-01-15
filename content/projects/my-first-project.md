@@ -6,6 +6,8 @@ description = 'Brief one-line description of the project.'
 category = 'personal'
 tags = ['Game Engine', 'Status']
 featured_image = ''
+gallery = []
+video = ''
 +++
 
 Brief one-line description of the project.

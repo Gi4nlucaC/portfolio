@@ -5,20 +5,20 @@ title = 'Mars Kitchen'
 description = 'A VR kitchen simulation game, set on retro futuristic Mars.'
 category = 'professional'
 tags = ['Unity', 'VR', 'Released']
-featured_image = '/assets/marskitchen/1_1MasterImage_MK_1.png'
+featured_image = 'assets/marskitchen/1_1MasterImage_MK_1.png'
 gallery = [
-  '/assets/marskitchen/MK_Screenshot (1).jpg',
-  '/assets/marskitchen/MK_Screenshot (2).jpg',
-  '/assets/marskitchen/MK_Screenshot (3).jpg',
-  '/assets/marskitchen/MK_Screenshot (4).jpg',
-  '/assets/marskitchen/MK_Screenshot (5).jpg',
-  '/assets/marskitchen/MK_Screenshot (6).jpg',
-  '/assets/marskitchen/MK_Screenshot (7).jpg',
-  '/assets/marskitchen/MK_Screenshot (8).jpg',
-  '/assets/marskitchen/MK_Screenshot (9).jpg',
-  '/assets/marskitchen/MK_Screenshot (10).jpg'
+  'assets/marskitchen/MK_Screenshot (1).jpg',
+  'assets/marskitchen/MK_Screenshot (2).jpg',
+  'assets/marskitchen/MK_Screenshot (3).jpg',
+  'assets/marskitchen/MK_Screenshot (4).jpg',
+  'assets/marskitchen/MK_Screenshot (5).jpg',
+  'assets/marskitchen/MK_Screenshot (6).jpg',
+  'assets/marskitchen/MK_Screenshot (7).jpg',
+  'assets/marskitchen/MK_Screenshot (8).jpg',
+  'assets/marskitchen/MK_Screenshot (9).jpg',
+  'assets/marskitchen/MK_Screenshot (10).jpg'
 ]
-video = '/assets/marskitchen/marskitchen.MP4'
+video = 'assets/marskitchen/marskitchen.MP4'
 +++
 
 A VR kitchen simulation game, set on retro futuristic Mars.
