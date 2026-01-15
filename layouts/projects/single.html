@@ -73,6 +73,17 @@
                 </div>
             </div>
 
+            {{ if .Params.links }}
+                <div class="project-links-section">
+                    <h2 class="project-info-title">Links</h2>
+                    <ul class="project-links-list">
+                        {{ range .Params.links }}
+                            <li><a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ . }}</a></li>
+                        {{ end }}
+                    </ul>
+                </div>
+                </div>
+            {{ end }}
             <div class="post-content">
                 {{ .Content }}
             </div>

@@ -3,7 +3,7 @@ date = '2020-09-01'
 draft = false
 title = 'Mars Kitchen'
 description = 'A VR kitchen simulation game, set on retro futuristic Martian setting. Players experience the challenge of preparing meals in a VR kitchen environment on Mars, combining realistic cooking mechanics with an immersive sci-fi atmosphere.'
-card_summary = 'A silly, retro-futuristic VR cooking sim set on Mars — whip up meals in low gravity.'
+card_summary = 'A silly, retro-futuristic VR cooking sim set on Mars'
 category = 'professional'
 tags = ['Unity', 'VR', 'Released']
 featured_image = 'assets/marskitchen/MK_Master Image_16_9.jpg'
@@ -26,6 +26,11 @@ language = 'C#'
 company = 'Taco Studios'
 status = 'Released'
 platforms = 'Meta Quest, PlayStation VR'
+links = [
+  "https://marskitchenvr.com/",
+  "https://www.meta.com/experiences/mars-kitchen/8951497098264249/",
+  "https://store.playstation.com/en-us/concept/10015040"
+]
 +++
 
 ## My Role
