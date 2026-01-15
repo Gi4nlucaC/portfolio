@@ -10,7 +10,7 @@ featured_image = 'assets/polyverse/polyverse_main.jpg'
 gallery = [
 	'assets/polyverse/polyverse_main.jpg'
 ]
-video = 'assets/polyverse/polyverse_trailer.mp4'
+video = 'assets/polyverse/polyverse_trailer_v2.mp4'
 role = 'Gameplay Programmer'
 engine = 'Unity'
 language = 'C#'
