@@ -7,7 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="Hi there! My name is Gianluca Camarca, I&#39;ve been in the gaming industry since 2020, nice to meet you." />
+<meta name="description" content="Gameplay Programmer &amp; Technical Game Designer working professionally in the industry since 2021" />
 <meta name="keywords" content="game developer, portfolio" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -16,7 +16,7 @@
 
     <title>
         
-            Gianluca Camarca, Gameplay Programmer &amp; Technical Game Designer 
+            Gianluca Camarca 
         
     </title>
 
@@ -44,7 +44,7 @@
 
 
 
-  <meta itemprop="name" content="Gianluca Camarca, Gameplay Programmer & Technical Game Designer">
+  <meta itemprop="name" content="Gianluca Camarca">
   <meta itemprop="description" content="Game developer portfolio">
   <meta itemprop="datePublished" content="2026-01-07T18:55:27+01:00">
   <meta itemprop="dateModified" content="2026-01-07T18:55:27+01:00">
@@ -52,7 +52,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://gi4nlucac.github.io/portfolio/">
-  <meta name="twitter:title" content="Gianluca Camarca, Gameplay Programmer & Technical Game Designer">
+  <meta name="twitter:title" content="Gianluca Camarca">
   <meta name="twitter:description" content="Game developer portfolio">
 
 
@@ -63,7 +63,7 @@
 
 
 
-<link rel="alternate" type="application/rss+xml" href="https://gi4nlucac.github.io/portfolio/index.xml" title="Gianluca Camarca, Gameplay Programmer & Technical Game Designer" />
+<link rel="alternate" type="application/rss+xml" href="https://gi4nlucac.github.io/portfolio/index.xml" title="Gianluca Camarca" />
 
 
 
@@ -121,18 +121,19 @@
 
 
             
-    <div class="video-container" style="opacity: 1;">
-        <video id="bg-video" autoplay muted loop playsinline webkit-playsinline>
+    <div class="video-container" style="opacity: 0;">
+        <video id="bg-video" autoplay muted loop playsinline preload="auto">
             <source src="/portfolio/videos/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
     </div>
 
     <div class="content">
         <div class="homepage-bg">
-            <h1>Gianluca Camarca, Gameplay Programmer &amp; Technical Game Designer</h1>
+            <h1>Gianluca Camarca</h1>
 
             
-    <p>Hi there! My name is Gianluca Camarca, I&#39;ve been in the gaming industry since 2020, nice to meet you.</p>
+    <p>Gameplay Programmer &amp; Technical Game Designer working professionally in the industry since 2021</p>
 
             <div class="homepage-buttons">
                 <p>
@@ -144,8 +145,9 @@
     </div>
 
     <script>
+        (function() {
             function isMobileDisplay() {
-                mQuery = getComputedStyle(document.body).getPropertyValue("--phoneWidth");
+                const mQuery = getComputedStyle(document.body).getPropertyValue("--phoneWidth");
                 return window.matchMedia(mQuery).matches;
             }
 
@@ -153,47 +155,73 @@
                 document.body.style.background = "transparent";
             }
             
-            document.addEventListener("DOMContentLoaded", function () {
-                const videoContainer = document.querySelector(".video-container");
-                const video = document.getElementById("bg-video");
+            const videoContainer = document.querySelector(".video-container");
+            const video = document.getElementById("bg-video");
             
-                function playVideo() {
-                    videoContainer.style.opacity = "1"; 
-                    video.play().catch(error => {
-                        console.log("Video autoplay prevented:", error);
-                        
-                        setTimeout(() => {
-                            video.play().catch(err => {
-                                console.log("Second attempt failed - hiding video");
-                                videoContainer.style.display = "none";
-                            });
-                        }, 500);
+            if (!video || !videoContainer) {
+                console.error("Video elements not found");
+                return;
+            }
+
+            let playAttempted = false;
+
+            function attemptPlay() {
+                if (playAttempted) return;
+                playAttempted = true;
+
+                console.log("Attempting to play video, readyState:", video.readyState);
+                
+                video.play()
+                    .then(() => {
+                        console.log("Video playing successfully");
+                        videoContainer.style.opacity = "1";
+                    })
+                    .catch(error => {
+                        console.error("Video play failed:", error);
+                        videoContainer.style.opacity = "1"; 
                     });
-                }
-                
-                
-                video.addEventListener("error", function() {
-                    console.log("Video file not found - hiding video container");
-                    videoContainer.style.display = "none";
-                });
+            }
+
             
-                
-                video.play().catch(error => {
-                    console.log("Initial play attempt blocked");
-                });
-
-                if (video.readyState >= 3) {  
-                    playVideo();
-                } else {
-                    video.onloadeddata = playVideo;
-                    video.oncanplaythrough = playVideo;
-                }
-
-                
-                document.body.addEventListener("touchstart", playVideo, { once: true });
-                document.body.addEventListener("click", playVideo, { once: true });
+            video.addEventListener("error", function(e) {
+                console.error("Video error:", e, "Network state:", video.networkState);
             });
-        </script>
+
+            
+            video.addEventListener("loadeddata", function() {
+                console.log("Video data loaded");
+                attemptPlay();
+            });
+
+            video.addEventListener("canplay", function() {
+                console.log("Video can play");
+                attemptPlay();
+            });
+
+            
+            if (video.readyState >= 2) {
+                console.log("Video already ready");
+                attemptPlay();
+            }
+
+            
+            function userInteractionPlay() {
+                console.log("User interaction detected");
+                attemptPlay();
+            }
+
+            document.addEventListener("click", userInteractionPlay, { once: true });
+            document.addEventListener("touchstart", userInteractionPlay, { once: true });
+
+            
+            setTimeout(() => {
+                if (!playAttempted) {
+                    console.log("Timeout fallback");
+                    attemptPlay();
+                }
+            }, 1000);
+        })();
+    </script>
 
 
             
