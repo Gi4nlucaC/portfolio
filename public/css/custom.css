@@ -303,6 +303,17 @@ body.disable-hor-scroll {
     }
 }
 
+/* Project card summary clamp: limit to two lines with ellipsis */
+.project-card .project-content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2em;
+    max-height: 2.4em; /* 2 lines x line-height */
+}
+
 /* Full width backgrounds with alternating colors */
 .full-width-bg {
     width: 100vw;

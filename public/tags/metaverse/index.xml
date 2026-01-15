@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Metaverse on Gianluca Camarca</title>
+    <link>https://gi4nlucac.github.io/portfolio/tags/metaverse/</link>
+    <description>Recent content in Metaverse on Gianluca Camarca</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gi4nlucac.github.io/portfolio/tags/metaverse/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Metaverse — Regione Lombardia</title>
+      <link>https://gi4nlucac.github.io/portfolio/projects/metaverse-regione-lombardia/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://gi4nlucac.github.io/portfolio/projects/metaverse-regione-lombardia/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Metaverse — Regione Lombardia is an accessible, city-scale metaverse prototype designed to host cultural exhibitions, live events, and civic services. The project focuses on performance, progressive enhancement for WebGL, and accessible interaction patterns.&lt;/p&gt;&#xA;&lt;h2 id=&#34;my-role&#34;&gt;My Role&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Technical direction and architecture&lt;/li&gt;&#xA;&lt;li&gt;Networked scenes and streaming&lt;/li&gt;&#xA;&lt;li&gt;Accessibility and UX for public audiences&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;key-features&#34;&gt;Key Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lightweight streaming and scene LOD&lt;/li&gt;&#xA;&lt;li&gt;Multi-user events and moderation tools&lt;/li&gt;&#xA;&lt;li&gt;Integration with regional content and services&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>
