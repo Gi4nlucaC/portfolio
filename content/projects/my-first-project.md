@@ -3,6 +3,7 @@ date = '2026-01-07'
 draft = false
 title = 'Project Title'
 description = 'Brief one-line description of the project.'
+card_summary = ''
 category = 'personal'
 tags = ['Game Engine', 'Status']
 featured_image = ''
@@ -10,7 +11,10 @@ gallery = []
 video = ''
 role = 'Your Role'
 engine = 'Engine Name'
+language = ''
+company = ''
 status = 'Status'
+
 platforms = 'Platforms'
 +++
 

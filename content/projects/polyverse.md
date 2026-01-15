@@ -2,12 +2,21 @@
 date = '2019-06-01'
 draft = false
 title = 'Polyverse'
+description = 'Procedural multiverse engine for scalable cross-platform worlds.'
+card_summary = 'A procedural multiverse engine designed for scalable cross-platform worlds.'
 category = 'professional'
 tags = ['Game Engine','Procedural','Released']
 featured_image = 'assets/polyverse/polyverse_cover.jpg'
-card_summary = 'A procedural multiverse engine designed for scalable cross-platform worlds.'
-summary = 'Procedural multiverse engine for scalable cross-platform worlds.'
-+++ 
+gallery = []
+video = ''
+role = 'Engine Architect'
+engine = 'Custom'
+language = 'C++'
+company = ''
+status = 'Released'
+platforms = 'PC, Consoles'
+links = []
++++
 
 ## Overview
 

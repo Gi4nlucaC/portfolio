@@ -3,15 +3,20 @@ date = '2023-06-01'
 draft = false
 title = 'Personal Project Name'
 description = "A personal project I'm working on in my spare time."
-tags = ['Unity', 'In Progress']
+card_summary = ''
 category = 'personal'
+tags = ['Unity', 'In Progress']
 featured_image = 'images/projects/personal-project-placeholder.jpg'
 gallery = []
 video = ''
 role = 'Solo Developer'
 engine = 'Unity'
+language = ''
+company = ''
 status = 'In Progress'
 platforms = 'PC'
+
+links = []
 +++
 
 A personal project I'm working on in my spare time.
