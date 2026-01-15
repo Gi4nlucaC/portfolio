@@ -1,4 +1,5 @@
 {{ $featured_image := .Params.featured_image }}
+{{ $gallery := .Params.gallery }}
 {{ $imagePath := "" }}
 
 {{ if $featured_image }}
@@ -7,9 +8,27 @@
 
 <div class="project-card">
     <a href="{{ .Permalink }}" class="project-card-link">
-        {{ if $imagePath }}
-            <div class="project-image">
-                <img src="{{ $imagePath | relURL }}" alt="{{ .Title }} preview">
+        {{ if or $imagePath $gallery }}
+            <div class="project-image-container">
+                {{ if $gallery }}
+                    <div class="project-carousel">
+                        <div class="carousel-images">
+                            {{ if $imagePath }}
+                                <img src="{{ $imagePath | relURL }}" alt="{{ .Title }} preview" class="carousel-image active">
+                            {{ end }}
+                            {{ range $gallery }}
+                                <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="carousel-image">
+                            {{ end }}
+                        </div>
+                        <button class="carousel-prev" aria-label="Previous image">‹</button>
+                        <button class="carousel-next" aria-label="Next image">›</button>
+                        <div class="carousel-dots"></div>
+                    </div>
+                {{ else if $imagePath }}
+                    <div class="project-image">
+                        <img src="{{ $imagePath | relURL }}" alt="{{ .Title }} preview">
+                    </div>
+                {{ end }}
             </div>
         {{ else }}
             <div class="project-image project-no-image">
