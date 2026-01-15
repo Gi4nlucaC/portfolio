@@ -78,7 +78,12 @@
                     <h2 class="project-info-title">Links</h2>
                     <ul class="project-links-list">
                         {{ range .Params.links }}
-                            <li><a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ . }}</a></li>
+                            {{ $item := . }}
+                                {{ if isset $item "label" }}
+                                    <li><a href="{{ index $item "url" }}" target="_blank" rel="noopener noreferrer">{{ index $item "label" }}</a></li>
+                                {{ else }}
+                                    <li><a href="{{ $item }}" target="_blank" rel="noopener noreferrer">{{ $item }}</a></li>
+                                {{ end }}
                         {{ end }}
                     </ul>
                 </div>

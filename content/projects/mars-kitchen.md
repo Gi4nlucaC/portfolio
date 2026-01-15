@@ -27,9 +27,9 @@ company = 'Taco Studios'
 status = 'Released'
 platforms = 'Meta Quest, PlayStation VR'
 links = [
-  "https://marskitchenvr.com/",
-  "https://www.meta.com/experiences/mars-kitchen/8951497098264249/",
-  "https://store.playstation.com/en-us/concept/10015040"
+  { label = "Website", url = "https://marskitchenvr.com/" },
+  { label = "Meta Quest Store", url = "https://www.meta.com/experiences/mars-kitchen/8951497098264249/" },
+  { label = "PlayStation Store", url = "https://store.playstation.com/en-us/concept/10015040" }
 ]
 +++
 
