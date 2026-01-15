@@ -73,21 +73,6 @@
                 </div>
             </div>
 
-            {{ if .Params.links }}
-                <div class="project-links-section">
-                    <h2 class="project-info-title">Links</h2>
-                    <ul class="project-links-list">
-                        {{ range .Params.links }}
-                            {{ $item := . }}
-                                {{ if isset $item "label" }}
-                                    <li><a href="{{ index $item "url" }}" target="_blank" rel="noopener noreferrer">{{ index $item "label" }}</a></li>
-                                {{ else }}
-                                    <li><a href="{{ $item }}" target="_blank" rel="noopener noreferrer">{{ $item }}</a></li>
-                                {{ end }}
-                        {{ end }}
-                    </ul>
-                </div>
-            {{ end }}
             <div class="post-content">
                 {{ .Content }}
 
@@ -104,6 +89,22 @@
                             <button class="gallery-carousel-next" aria-label="Next image">›</button>
                             <div class="gallery-carousel-dots"></div>
                         </div>
+                    </div>
+                {{ end }}
+
+                {{ if .Params.links }}
+                    <div class="project-links-section">
+                        <h2 class="project-info-title">Links</h2>
+                        <ul class="project-links-list">
+                            {{ range .Params.links }}
+                                {{ $item := . }}
+                                    {{ if isset $item "label" }}
+                                        <li><a href="{{ index $item "url" }}" target="_blank" rel="noopener noreferrer">{{ index $item "label" }}</a></li>
+                                    {{ else }}
+                                        <li><a href="{{ $item }}" target="_blank" rel="noopener noreferrer">{{ $item }}</a></li>
+                                    {{ end }}
+                            {{ end }}
+                        </ul>
                     </div>
                 {{ end }}
             </div>
