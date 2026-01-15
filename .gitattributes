@@ -1,3 +1,8 @@
 *.MP4 filter=lfs diff=lfs merge=lfs -text
 static/videos/*.mp4 -filter -diff -merge -text
 public/videos/*.mp4 -filter -diff -merge -text
+
+# Do not track MP4s in site asset folders with LFS (allow Git to store them normally)
+static/assets/**/*.mp4 -filter -diff -merge -text
+public/assets/**/*.mp4 -filter -diff -merge -text
+*.mp4 -filter -diff -merge -text
