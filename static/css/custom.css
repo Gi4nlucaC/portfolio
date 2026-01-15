@@ -773,9 +773,9 @@ body.disable-hor-scroll {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1em;
     margin: 2em 0;
-    padding: 1.5em;
-    background: var(--vscode-bg-lighter);
-    border-radius: 8px;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
     border-left: 3px solid var(--vscode-keyword);
 }
 
@@ -931,9 +931,9 @@ body.disable-hor-scroll {
 
 .project-description {
     margin-bottom: 1.5em;
-    padding: 1em;
-    background: var(--vscode-bg-lighter);
-    border-radius: 8px;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
 }
 
 .project-description .info-label {
@@ -949,9 +949,10 @@ body.disable-hor-scroll {
 /* Description item spans full width in grid */
 .project-description-item {
     grid-column: 1 / -1;
-    padding: 1em;
-    background: var(--vscode-bg);
-    border-radius: 4px;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
 }
 
 .project-description-item .info-value {
