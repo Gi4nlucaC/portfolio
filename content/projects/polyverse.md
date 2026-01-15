@@ -2,21 +2,21 @@
 date = '2019-06-01'
 draft = false
 title = 'Polyverse'
-description = "Dopo un'invasione aliena e un intento di difesa con IA e cyborg militari, l'IA diventa ostile causando un'apocalisse nucleare. Il mondo mutato ospita cinque razze (Alien, Human, Cyborg, Ape, Mutant) che lottano per risorse e sopravvivenza; inizialmente vivono in rifugi mentre ricostruiscono la società."
-card_summary = "Action RPG shooter ambientato in un mondo post-apocalittico dominato da cinque razze."
+description = "After an alien invasion and an attempt to defend with AI and military cyborgs, the AI turns hostile causing a nuclear apocalypse. The mutated world hosts five races (Alien, Human, Cyborg, Ape, Mutant) fighting for resources and survival; initially living in shelters as society rebuilds."
+card_summary = "Action RPG shooter set in a post-apocalyptic world ruled by five warring races."
 category = 'professional'
 tags = ['Game Engine','Procedural','Released']
 featured_image = 'assets/polyverse/polyverse_main.jpg'
 gallery = [
 	'assets/polyverse/polyverse_main.jpg'
 ]
-video = 'assets/polyverse/Polyverse Trailer.mp4'
-role = 'Engine Architect'
-engine = 'Custom'
-language = 'C++'
-company = ''
+video = 'assets/polyverse/polyverse_trailer.mp4'
+role = 'Gameplay Programmer'
+engine = 'Unity'
+language = 'C#'
+company = 'Taco Studios'
 status = 'Released'
-platforms = 'PC, Consoles'
+platforms = 'WebGL'
 links = []
 +++
 

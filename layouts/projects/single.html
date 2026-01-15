@@ -7,7 +7,7 @@
 
             {{ if .Params.video }}
                 <div class="project-video-hero">
-                    <video controls width="100%" poster="{{ if .Params.featured_image }}{{ .Params.featured_image | relURL }}{{ end }}" preload="metadata">
+                    <video controls width="100%" poster="{{ if .Params.featured_image }}{{ .Params.featured_image | relURL }}{{ end }}" preload="metadata" autoplay muted playsinline loop>
                         <source src="{{ .Params.video | relURL }}" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
