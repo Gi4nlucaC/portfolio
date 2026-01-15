@@ -19,35 +19,36 @@ gallery = [
   'assets/marskitchen/MK_Screenshot (10).jpg'
 ]
 video = 'assets/marskitchen/marskitchen.MP4'
+role = 'Gameplay Programmer'
+engine = 'Unity'
+company = 'Force Field'
+status = 'Released'
+platforms = 'Meta Quest, PlayStation VR'
 +++
 
-A VR kitchen simulation game, set on retro futuristic Mars.
-
-## Overview
-
-Mars Kitchen is a virtual reality cooking simulation game that takes place in a retro-futuristic Martian setting. Players experience the challenge of preparing meals in a VR kitchen environment on Mars, combining realistic cooking mechanics with an immersive sci-fi atmosphere.
-
-Released on Meta Quest and PlayStation VR platforms.
+A VR kitchen simulation game, set on retro futuristic Martian setting. Players experience the challenge of preparing meals in a VR kitchen environment on Mars, combining realistic cooking mechanics with an immersive sci-fi atmosphere.
 
 ## My Role
 
-- [Your specific contributions to the project]
-- [Gameplay systems you developed]
-- [VR mechanics implementation]
-- [Optimization work for VR platforms]
-
-## Technologies
-
-- **Engine:** Unity
-- **Platform:** Meta Quest, PlayStation VR
-- **Language:** C#
-- **Focus:** VR Interaction, Gameplay Programming
+- Implemented core VR interaction systems
+- Developed physics-based cooking mechanics
+- Created grabbing and manipulation systems
+- Optimized performance for VR platforms
+- Integrated audio and haptic feedback
 
 ## Key Features
 
 - VR cooking mechanics and interactions
 - Retro-futuristic Martian environment
 - Physics-based object manipulation
+- Multi-platform VR support
+
+## Links
+
+- [Meta Quest Store](https://www.meta.com/experiences/mars-kitchen/8951497098264249/)
+- [PlayStation Store](https://store.playstation.com/en-us/concept/10015040)
+
+
 - Multi-platform VR support
 
 ## Links

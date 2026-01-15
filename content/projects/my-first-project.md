@@ -8,6 +8,10 @@ tags = ['Game Engine', 'Status']
 featured_image = ''
 gallery = []
 video = ''
+role = 'Your Role'
+engine = 'Engine Name'
+status = 'Status'
+platforms = 'Platforms'
 +++
 
 Brief one-line description of the project.

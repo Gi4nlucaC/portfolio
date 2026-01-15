@@ -1,55 +1,63 @@
 {{ define "main" }}
     <div class="content">
-        <article class="post">
+        <article class="post project-single">
             <header class="post-header">
                 <h1 class="post-title">{{ .Title }}</h1>
-                <div class="post-meta">
-                    <time>{{ .Date.Format "January 2, 2006" }}</time>
-                    {{ if .Params.tags }}
-                        <span class="post-tags">
-                            {{ range .Params.tags }}
-                                <a href="{{ "tags/" | relURL }}{{ . | urlize }}/">#{{ . }}</a>
-                            {{ end }}
-                        </span>
-                    {{ end }}
-                </div>
             </header>
 
-            {{ if .Params.featured_image }}
+            {{ if .Params.video }}
+                <div class="project-video-hero">
+                    <video controls width="100%" poster="{{ if .Params.featured_image }}{{ .Params.featured_image | relURL }}{{ end }}">
+                        <source src="{{ .Params.video | relURL }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            {{ else if .Params.featured_image }}
                 <div class="post-featured-image">
                     <img src="{{ .Params.featured_image | relURL }}" alt="{{ .Title }}">
                 </div>
             {{ end }}
 
-            <div class="post-content">
-                {{ $content := .Content }}
-                {{ $parts := split $content "## My Role" }}
-                {{ if gt (len $parts) 1 }}
-                    {{ index $parts 0 | safeHTML }}
-                    
-                    {{ if $.Params.video }}
-                        <div class="project-video">
-                            <video controls width="100%">
-                                <source src="{{ $.Params.video | relURL }}" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    {{ end }}
-                    
-                    <h2>My Role</h2>
-                    {{ index $parts 1 | safeHTML }}
-                {{ else }}
-                    {{ .Content }}
-                    
-                    {{ if .Params.video }}
-                        <div class="project-video">
-                            <video controls width="100%">
-                                <source src="{{ .Params.video | relURL }}" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    {{ end }}
+            <div class="project-info-grid">
+                {{ if .Params.role }}
+                    <div class="project-info-item">
+                        <span class="info-label">Role:</span>
+                        <span class="info-value">{{ .Params.role }}</span>
+                    </div>
                 {{ end }}
+
+                {{ if .Params.engine }}
+                    <div class="project-info-item">
+                        <span class="info-label">Engine:</span>
+                        <span class="info-value">{{ .Params.engine }}</span>
+                    </div>
+                {{ end }}
+
+                {{ if .Params.company }}
+                    <div class="project-info-item">
+                        <span class="info-label">Company:</span>
+                        <span class="info-value">{{ .Params.company }}</span>
+                    </div>
+                {{ end }}
+
+                {{ if .Params.status }}
+                    <div class="project-info-item">
+                        <span class="info-label">Status:</span>
+                        <span class="info-value">{{ .Params.status }}</span>
+                    </div>
+                {{ end }}
+
+                {{ if .Params.platforms }}
+                    <div class="project-info-item">
+                        <span class="info-label">Platforms:</span>
+                        <span class="info-value">{{ .Params.platforms }}</span>
+                    </div>
+                {{ end }}
+            </div>
+
+            <div class="post-content">
+                {{ .Content }}
+            </div>
                 
                 {{ if .Params.gallery }}
                     <div class="project-gallery">

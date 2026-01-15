@@ -8,6 +8,10 @@ category = 'personal'
 featured_image = 'images/projects/personal-project-placeholder.jpg'
 gallery = []
 video = ''
+role = 'Solo Developer'
+engine = 'Unity'
+status = 'In Progress'
+platforms = 'PC'
 +++
 
 A personal project I'm working on in my spare time.
