@@ -809,8 +809,10 @@ body.disable-hor-scroll {
 
 .project-gallery-carousel h2 {
     margin-bottom: 1.5em;
-    color: var(--vscode-function) !important;
+    color: var(--vscode-keyword) !important;
     text-align: center;
+    border-bottom: 2px solid var(--vscode-keyword);
+    padding-bottom: 0.4em;
 }
 
 .gallery-carousel-container {
@@ -924,9 +926,11 @@ body.disable-hor-scroll {
 }
 
 .project-info-title {
-    color: var(--vscode-function) !important;
+    color: var(--vscode-keyword) !important;
     margin-bottom: 1em;
     font-size: 1.5em;
+    border-bottom: 2px solid var(--vscode-keyword);
+    padding-bottom: 0.4em;
 }
 
 .project-description {
