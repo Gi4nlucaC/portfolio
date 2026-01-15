@@ -37,8 +37,11 @@
         {{ end }}
         <div class="project-content">
             <h4>{{ .Title }}</h4>
-            {{ if .Params.description }}
-                <p>{{ .Params.description }}</p>
+            {{/* Use a short summary for cards: prefer `card_summary`, then `summary`, then truncated .Summary */}}
+            {{ if .Params.card_summary }}
+                <p>{{ .Params.card_summary }}</p>
+            {{ else if .Params.summary }}
+                <p>{{ .Params.summary }}</p>
             {{ else }}
                 <p>{{ .Summary | truncate 100 }}</p>
             {{ end }}
