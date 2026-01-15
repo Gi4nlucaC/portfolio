@@ -40,13 +40,13 @@
             {{/* Use a short summary for cards: prefer `card_summary`, then `summary`, then truncated .Summary */}}
             {{/* Prefer explicit card_summary, then description, then summary; collapse whitespace/newlines */}}
             {{ if .Params.card_summary }}
-                {{ $card := .Params.card_summary | replaceRE "\\s+" " " | plainify | trim }}
+                {{ $card := .Params.card_summary | replaceRE "\\s+" " " | plainify | strings.TrimSpace }}
                 <p>{{ $card }}</p>
             {{ else if .Params.description }}
-                {{ $desc := .Params.description | replaceRE "\\s+" " " | plainify | trim }}
+                {{ $desc := .Params.description | replaceRE "\\s+" " " | plainify | strings.TrimSpace }}
                 <p>{{ $desc }}</p>
             {{ else if .Params.summary }}
-                {{ $sum := .Params.summary | replaceRE "\\s+" " " | plainify | trim }}
+                {{ $sum := .Params.summary | replaceRE "\\s+" " " | plainify | strings.TrimSpace }}
                 <p>{{ $sum }}</p>
             {{ else }}
                 <p>{{ .Summary | plainify | replaceRE "\\s+" " " | truncate 140 }}</p>
