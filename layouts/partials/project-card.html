@@ -46,18 +46,31 @@
                 <p>{{ .Summary | truncate 100 }}</p>
             {{ end }}
             <div class="project-tags">
+                {{/* Use Scratch to avoid emitting duplicate tags */}}
+                {{ $.Scratch.Set "seenTags" "" }}
+
                 {{/* Render front-matter tags but skip the generic 'Game Engine' tag */}}
                 {{ if .Params.tags }}
                     {{ range .Params.tags }}
-                        {{ if ne . "Game Engine" }}
-                            <span class="tag">{{ . }}</span>
+                        {{ $t := . }}
+                        {{ if ne $t "Game Engine" }}
+                            {{ $seen := $.Scratch.Get "seenTags" }}
+                            {{ if not (in $seen $t) }}
+                                <span class="tag">{{ $t }}</span>
+                                {{ $.Scratch.Set "seenTags" (print $seen "|" $t) }}
+                            {{ end }}
                         {{ end }}
                     {{ end }}
                 {{ end }}
 
                 {{/* Show engine as a tag (if present) */}}
                 {{ if .Params.engine }}
-                    <span class="tag">{{ .Params.engine }}</span>
+                    {{ $et := .Params.engine }}
+                    {{ $seen := $.Scratch.Get "seenTags" }}
+                    {{ if not (in $seen $et) }}
+                        <span class="tag">{{ $et }}</span>
+                        {{ $.Scratch.Set "seenTags" (print $seen "|" $et) }}
+                    {{ end }}
                 {{ end }}
 
                 {{/* Show status as a tag; append ' Release' if not already present */}}
@@ -67,7 +80,11 @@
                     {{ if not (in $lower "release") }}
                         {{ $status = printf "%s Release" $status }}
                     {{ end }}
-                    <span class="tag">{{ $status }}</span>
+                    {{ $seen := $.Scratch.Get "seenTags" }}
+                    {{ if not (in $seen $status) }}
+                        <span class="tag">{{ $status }}</span>
+                        {{ $.Scratch.Set "seenTags" (print $seen "|" $status) }}
+                    {{ end }}
                 {{ end }}
             </div>
         </div>
