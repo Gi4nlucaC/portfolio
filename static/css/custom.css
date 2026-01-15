@@ -262,6 +262,13 @@ body.disable-hor-scroll {
     background-color: var(--vscode-bg-lighter);
     justify-content: center;
     border-top: 1px solid #3c3c3c;
+    padding: 20px 0;
+}
+
+.footer-custom {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .footer-custom p {

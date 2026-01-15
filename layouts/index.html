@@ -3,8 +3,8 @@
 {{ end }}
 
 {{ define "main" }}
-    <div class="video-container" style="opacity: 0;">
-        <video id="bg-video" autoplay muted loop playsinline preload="auto">
+    <div class="video-container" style="opacity: 0; background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%);">
+        <video id="bg-video" autoplay muted loop playsinline preload="none" poster="">
             <source src="{{ "videos/background.mp4" | relURL }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -44,33 +44,39 @@
                 return;
             }
 
+            // Always show the container (with gradient fallback)
+            videoContainer.style.opacity = "1";
+
             let playAttempted = false;
+            let videoLoaded = false;
 
             function attemptPlay() {
                 if (playAttempted) return;
                 playAttempted = true;
 
-                console.log("Attempting to play video, readyState:", video.readyState);
+                console.log("Attempting to play video, readyState:", video.readyState, "networkState:", video.networkState);
                 
                 video.play()
                     .then(() => {
                         console.log("Video playing successfully");
-                        videoContainer.style.opacity = "1";
+                        videoLoaded = true;
                     })
                     .catch(error => {
-                        console.error("Video play failed:", error);
-                        videoContainer.style.opacity = "1"; // Show anyway
+                        console.warn("Video play failed, using gradient fallback:", error);
                     });
             }
 
-            // Error handling
+            // Error handling - graceful degradation
             video.addEventListener("error", function(e) {
-                console.error("Video error:", e, "Network state:", video.networkState);
+                console.warn("Video error, using gradient fallback. Error:", e, "Network state:", video.networkState);
+                video.style.display = "none"; // Hide broken video, show gradient
             });
 
             // Success handling
             video.addEventListener("loadeddata", function() {
                 console.log("Video data loaded");
+                videoLoaded = true;
+                video.style.opacity = "1";
                 attemptPlay();
             });
 
@@ -79,28 +85,26 @@
                 attemptPlay();
             });
 
-            // Immediate attempt if already loaded
-            if (video.readyState >= 2) {
-                console.log("Video already ready");
-                attemptPlay();
-            }
+            // Try after short delay
+            setTimeout(() => {
+                if (video.readyState >= 2) {
+                    console.log("Video ready after timeout");
+                    attemptPlay();
+                } else {
+                    console.log("Video not ready, gradient fallback active");
+                }
+            }, 2000);
 
-            // Fallback: Try on user interaction
+            // Try on user interaction as last resort
             function userInteractionPlay() {
-                console.log("User interaction detected");
-                attemptPlay();
+                if (!playAttempted && video.readyState >= 2) {
+                    console.log("User interaction play attempt");
+                    attemptPlay();
+                }
             }
 
             document.addEventListener("click", userInteractionPlay, { once: true });
             document.addEventListener("touchstart", userInteractionPlay, { once: true });
-
-            // Last resort: Try after delay
-            setTimeout(() => {
-                if (!playAttempted) {
-                    console.log("Timeout fallback");
-                    attemptPlay();
-                }
-            }, 1000);
         })();
     </script>
 {{ end }}
