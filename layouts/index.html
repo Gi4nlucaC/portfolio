@@ -3,10 +3,9 @@
 {{ end }}
 
 {{ define "main" }}
-    <div class="video-container" style="opacity: 1; background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%);">
-        <video id="bg-video" autoplay muted loop playsinline preload="auto" poster="">
+    <div class="video-container">
+        <video id="bg-video" muted loop playsinline>
             <source src="{{ "videos/background.mp4" | relURL }}" type="video/mp4">
-            Your browser does not support the video tag.
         </video>
     </div>
 
@@ -35,21 +34,24 @@
             if (!isMobileDisplay()) {
                 document.body.style.background = "transparent";
             }
-            
-            const videoContainer = document.querySelector(".video-container");
-            const video = document.getElementById("bg-video");
-            
-            if (!video || !videoContainer) {
-                console.error("Video elements not found");
-                return;
-            }
 
-            // Forza sempre la visibilità del video
-            video.style.opacity = "1";
-            videoContainer.style.opacity = "1";
-            // Prova a far partire il video appena possibile
-            video.addEventListener("canplay", function() {
-                video.play();
+            document.addEventListener("DOMContentLoaded", function () {
+                const videoContainer = document.querySelector(".video-container");
+                const video = document.getElementById("bg-video");
+
+                function playVideo() {
+                    videoContainer.style.opacity = "1";
+                    video.play().catch(error => console.log("Autoplay prevented:", error));
+                }
+
+                if (video.readyState >= 3) {
+                    playVideo();
+                } else {
+                    video.onloadeddata = playVideo;
+                    video.oncanplaythrough = playVideo;
+                }
+
+                video.addEventListener("click", playVideo);
             });
         })();
     </script>
