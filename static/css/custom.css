@@ -773,10 +773,9 @@ body.disable-hor-scroll {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1em;
     margin: 2em 0;
-    padding: 0;
+    padding: 20px;
     background: transparent;
     border-radius: 0;
-    border-left: 3px solid var(--vscode-keyword);
 }
 
 .project-info-item {
