@@ -107,33 +107,6 @@
                         </ul>
                     </div>
                 {{ end }}
-                {{ if .Params.video }}
-                    <div id="project-video-fallback" class="project-video-fallback" style="margin-top:16px;">
-                        <button id="project-video-play-button" class="btn">Play video</button>
-                        <a id="project-video-download" class="btn" href="{{ .Params.video | relURL }}" download>Download video</a>
-                        <div id="project-video-error" style="display:none;color:var(--vscode-errorForeground);margin-top:8px;">Video cannot be played in this browser.</div>
-                    </div>
-                    <script>
-                        (function(){
-                            var vid = document.querySelector('.project-video-hero video');
-                            var btn = document.getElementById('project-video-play-button');
-                            var err = document.getElementById('project-video-error');
-                            if(!vid) return;
-                            vid.addEventListener('error', function(e){
-                                err.style.display = 'block';
-                            });
-                            btn.addEventListener('click', function(){
-                                vid.muted = false;
-                                var p = vid.play();
-                                if(p && p.catch){
-                                    p.catch(function(){
-                                        err.style.display = 'block';
-                                    });
-                                }
-                            });
-                        })();
-                    </script>
-                {{ end }}
             </div>
         </article>
     </div>
