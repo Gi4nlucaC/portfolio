@@ -21,7 +21,8 @@ gallery = [
 video = 'assets/marskitchen/marskitchen.MP4'
 role = 'Gameplay Programmer'
 engine = 'Unity'
-company = 'Force Field'
+language = 'C#'
+company = 'Taco Studios'
 status = 'Released'
 platforms = 'Meta Quest, PlayStation VR'
 +++
@@ -39,18 +40,3 @@ platforms = 'Meta Quest, PlayStation VR'
 - VR cooking mechanics and interactions
 - Retro-futuristic Martian environment
 - Physics-based object manipulation
-- Multi-platform VR support
-
-## Links
-
-- [Meta Quest Store](https://www.meta.com/experiences/mars-kitchen/8951497098264249/)
-- [PlayStation Store](https://store.playstation.com/en-us/concept/10015040)
-
-
-- Multi-platform VR support
-
-## Links
-
-- [Meta Quest Store](https://www.meta.com/experiences/mars-kitchen/8951497098264249/)
-- [PlayStation Store](https://store.playstation.com/en-us/concept/10015040)
-

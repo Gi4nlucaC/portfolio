@@ -938,3 +938,16 @@ body.disable-hor-scroll {
     line-height: 1.6;
     display: block;
 }
+
+/* Description item spans full width in grid */
+.project-description-item {
+    grid-column: 1 / -1;
+    padding: 1em;
+    background: var(--vscode-bg);
+    border-radius: 4px;
+}
+
+.project-description-item .info-value {
+    line-height: 1.6;
+    margin-top: 0.5em;
+}

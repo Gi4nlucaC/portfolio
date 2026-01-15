@@ -21,14 +21,14 @@
             <div class="project-info-section">
                 <h2 class="project-info-title">Project Info</h2>
                 
-                {{ if .Params.description }}
-                    <div class="project-description">
-                        <span class="info-label">Description:</span>
-                        <p class="info-value">{{ .Params.description }}</p>
-                    </div>
-                {{ end }}
-                
                 <div class="project-info-grid">
+                    {{ if .Params.description }}
+                        <div class="project-info-item project-description-item">
+                            <span class="info-label">Description:</span>
+                            <p class="info-value">{{ .Params.description }}</p>
+                        </div>
+                    {{ end }}
+                    
                     {{ if .Params.role }}
                         <div class="project-info-item">
                             <span class="info-label">Role:</span>
@@ -40,6 +40,13 @@
                         <div class="project-info-item">
                             <span class="info-label">Engine:</span>
                             <span class="info-value">{{ .Params.engine }}</span>
+                        </div>
+                    {{ end }}
+
+                    {{ if .Params.language }}
+                        <div class="project-info-item">
+                            <span class="info-label">Language:</span>
+                            <span class="info-value">{{ .Params.language }}</span>
                         </div>
                     {{ end }}
 
