@@ -87,27 +87,25 @@
                         {{ end }}
                     </ul>
                 </div>
-                </div>
             {{ end }}
             <div class="post-content">
                 {{ .Content }}
-            </div>
-                
-            {{ if .Params.gallery }}
-                <div class="project-gallery-carousel">
-                    <h2>Gallery</h2>
-                    <div class="gallery-carousel-container">
-                        <div class="gallery-carousel-images">
-                            {{ range .Params.gallery }}
-                                <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="gallery-carousel-image">
-                            {{ end }}
+
+                {{ if .Params.gallery }}
+                    <div class="project-gallery-carousel">
+                        <h2>Gallery</h2>
+                        <div class="gallery-carousel-container">
+                            <div class="gallery-carousel-images">
+                                {{ range .Params.gallery }}
+                                    <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="gallery-carousel-image">
+                                {{ end }}
+                            </div>
+                            <button class="gallery-carousel-prev" aria-label="Previous image">‹</button>
+                            <button class="gallery-carousel-next" aria-label="Next image">›</button>
+                            <div class="gallery-carousel-dots"></div>
                         </div>
-                        <button class="gallery-carousel-prev" aria-label="Previous image">‹</button>
-                        <button class="gallery-carousel-next" aria-label="Next image">›</button>
-                        <div class="gallery-carousel-dots"></div>
                     </div>
-                </div>
-            {{ end }}
+                {{ end }}
             </div>
         </article>
     </div>
