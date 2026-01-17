@@ -6,7 +6,7 @@ description = 'A VR kitchen simulation game, set on retro futuristic Martian set
 card_summary = 'A silly, retro-futuristic VR cooking sim set on Mars'
 weight = 1
 category = 'professional'
-tags = ['Unity', 'VR', 'Released']
+tags = ['Unity', 'VR', 'Released', 'PS5']
 featured_image = 'assets/marskitchen/MK_Master Image_16_9.jpg'
 gallery = [
   'assets/marskitchen/MK_Screenshot (1).jpg',

@@ -6,7 +6,7 @@ description = "Acryptia is a strategic dungeon card game, in which players have 
 card_summary = "A strategic dungeon card game with 150K+ matches per season"
 weight = 4
 category = "professional"
-tags = ["Unity", "WebGL"]
+tags = ["Unity", "Card Game", "WebGL", "Mobile"]
 featured_image = "assets/acryptia/acrytpia_cover.png"
 gallery = [
   "assets/acryptia/acryptia0.gif",
@@ -30,7 +30,10 @@ links = [
 
 Acryptia is a dungeon card game in which players have to beat Rug'O, our hatable card dealer, to advance to new levels, climb the leaderboard, and win prizes.
 
+
 The game is playable both on desktop and mobile. Thanks to more than 150,000 matches played per Season, Acryptia is one of the most popular games in all Web3.
+
+<p><strong>One of the most popular games in all Web3.</strong></p>
 
 ## My Role
 

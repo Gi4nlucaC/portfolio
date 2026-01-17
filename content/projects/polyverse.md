@@ -6,7 +6,7 @@ description = "After an alien invasion and an attempt to defend with AI and mili
 card_summary = "An Action Rpg Shooter set in a post-apocalyptic Earth"
 weight = 2
 category = 'professional'
-tags = ['ARPG']
+tags = ['ARPG', 'Unity', 'Beta Release']
 featured_image = 'assets/polyverse/polyverse_main.jpg'
 gallery = [
 	'assets/polyverse/poly.png',
@@ -19,7 +19,7 @@ role = 'Gameplay Programmer'
 engine = 'Unity'
 language = 'C#'
 company = 'Taco Studios'
-status = 'Alpha'
+status = 'Beta Release'
 platforms = 'WebGL'
 links = []
 +++

@@ -6,7 +6,7 @@ description = "A public-facing metaverse experience for Regione Lombardia enabli
 card_summary = "Public metaverse for Regione Lombardia — cultural spaces and civic events"
 weight = 3
 category = 'professional'
-tags = ['Unity', 'WebGL', 'Metaverse']
+tags = ['Unity', 'Crossplatform', 'Metaverse']
 featured_image = 'assets/metaverse-lombardia/cover.jpg'
 gallery = [
   'assets/metaverse-lombardia/space1.jpg',
