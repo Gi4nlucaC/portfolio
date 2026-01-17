@@ -21,6 +21,7 @@ language = 'C#'
 company = 'Elite Division'
 status = 'Released'
 platforms = 'Crossplatform: WebGL, Standalone, VR, Mobile'
+links = [
   { label = "Website", url = "https://eventi.regione.lombardia.it/it/metaverso" }
 ]
 +++
