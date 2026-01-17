@@ -1,36 +1,36 @@
 document.addEventListener('DOMContentLoaded', function() {
+  console.log('Email script loaded');
+  
   // Cerca link che contengono #email-protected (anche con baseURL)
-  var socialLinks = document.querySelectorAll('a[href*="#email-protected"]');
+  var socialLinks = document.querySelectorAll('a[href*="email-protected"]');
+  console.log('Found links:', socialLinks.length);
   
   socialLinks.forEach(function(link) {
+    console.log('Setting up email link:', link.href);
+    
     link.addEventListener('click', function(e) {
+      console.log('Email link clicked');
       e.preventDefault();
-      e.stopImmediatePropagation();
-      var user = 'camarca.gianluca';
-      var domain = 'gmail.com';
-      var email = user + '@' + domain;
+      e.stopPropagation();
       
-      // Copia la mail negli appunti
-      navigator.clipboard.writeText(email).then(function() {
-        // Mostra feedback visivo
-        var originalTitle = link.getAttribute('title');
-        link.setAttribute('title', '✓ Email copied: ' + email);
-        
-        // Cambia temporaneamente lo stile per feedback
-        var originalColor = link.style.color;
-        link.style.color = '#4CAF50';
-        
-        setTimeout(function() {
-          link.setAttribute('title', 'Click to copy email');
-          link.style.color = originalColor;
-        }, 2000);
-      }).catch(function(err) {
-        // Fallback: mostra la mail in un alert se clipboard non funziona
-        alert('Email: ' + email);
-      });
+      var email = 'camarca.gianluca@gmail.com';
+      
+      // Prova a copiare negli appunti
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(function() {
+          console.log('Email copied:', email);
+          alert('Email copied to clipboard: ' + email);
+        }).catch(function(err) {
+          console.error('Clipboard failed:', err);
+          prompt('Copy this email:', email);
+        });
+      } else {
+        // Fallback per browser che non supportano clipboard API
+        console.log('Clipboard API not available, using prompt');
+        prompt('Copy this email:', email);
+      }
       
       return false;
     }, true);
-    link.setAttribute('title', 'Click to copy email');
   });
 });
