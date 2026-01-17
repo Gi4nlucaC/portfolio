@@ -108,21 +108,27 @@ ITIS Enrico Fermi, Rome | _Grade: 90/100_
 
 ## TECH SKILLS
 
-- **Languages:** C#, C++, Python, JavaScript (WebGL Interop), HLSL/Shader Graph.
-- **Engines:** Unity (Expert), Unreal Engine 5 (Fellowship Graduate).
-- **Networking:** Mirror, Netcode for GameObjects, PlayFab, Photon, LiveKit, Prediction/Reconciliation.
-- **Architecture:** Strategy Pattern, State Machines, Behavior Trees, MVC, ScriptableObject Architecture.
-- **Gameplay:** Custom Character Controllers, 3C (Character/Camera/Control), A\* Pathfinding, Inverse Kinematics.
-- **Graphics/VR:** URP Render Features, Niagara VFX, Oculus/Meta SDK, OpenXR, VR Optimization, Linear Algebra.
-- **Tools:** Git, Visual Studio, RenderDoc, PlasticSCM.
+- **4+ years of professional experience** in game development, shipping titles on both **Unity** and **Unreal Engine 5**.
+- **Proficient in C# and C++**, with a strong focus on scalable architecture and memory management.
+- **Specialized in Multiplayer Networking**, with deep knowledge of Server-Authoritative architecture, Client-Side Prediction, and Reconciliation (Mirror, Netcode for GameObjects).
+- **Solid 3D Math skills** (Linear Algebra, Quaternions, Dot/Cross products) applied to custom physics and gameplay mechanics.
+- **Strong debugging and profiling skills**, experienced in optimizing performance for constrained platforms (VR, Mobile).
+- **Proficient with Version Control Systems**, specifically **Git** and **Diversion**.
+
+---
 
 ## SOFT SKILLS
 
-- **Technical Leadership:** Proven ability to take ownership of complex projects and lead architecture decisions.
-- **Communication:** Expert in communicating complex technical concepts to Designers and Artists (Teaching experience).
-- **Creative Problem Solving:** Expertise in finding technical solutions to ambitious design requirements (Technical Game Design).
-- **Console Development:** Experience with Sony TRC and certification processes.
+- **Positive Team Culture:** Naturally inclined to foster a supportive and friendly work environment, building strong interpersonal connections that enhance collaboration and team morale.
+- **Proactive problem-solving mindset**, capable of analyzing design requirements to identify technical risks and set priorities.
+- **Proven Technical Leadership**, with experience taking full ownership of project architecture and mentoring junior developers/students.
+- **Strong communication skills**, specifically in bridging the gap between Engineering and Art/Design departments.
+- **Comfortable working autonomously** on complex vertical slices or collaborating within cross-functional teams.
+- **Systems Thinking approach:** My passion for complex board games and immersive sims translates into a deep understanding of game loops and economy balance.
+- **Selective & Analytical Gamer:** As a parent with limited time, I focus on analyzing high-value design experiences—from intricate RPGs to creative Indie gems.
+
+---
 
 ## PORTFOLIO
 
-See my projects in detail on [this page](/projects).
+See my projects in detail on [this page](/portfolio/projects).
