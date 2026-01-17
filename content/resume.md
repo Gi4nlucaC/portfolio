@@ -4,102 +4,120 @@ draft = false
 title = 'Resume'
 +++
 
-I am Gianluca Camarca, a Gameplay Programmer and Technical Game Designer with over 4 years of experience in the industry. Currently serving as a Lead XR Developer and Lecturer, I specialize in architecting scalable gameplay systems, authoritative networking, and VR interactions. I combine a strong engineering background with design sensibility to bridge the gap between complex code and engaging player experiences.
+# Gianluca Camarca
+
+Gameplay Programmer & Technical Game Designer with 4+ years of experience
 
 [Download Resume as PDF](#) | [Linkedin](https://www.linkedin.com/in/gianluca-camarca/) | [Gitlab](https://gitlab.com/g.camarca) | [Email](#email-protected)
 
-## WORK HISTORY
+---
 
-#### Gameplay Programmer & Technical Designer
+## Profile
 
-_2022 - Present_
-**Taco Studios**
-
-Responsible for core gameplay implementation, networking architecture, and tool development across multiple shipping titles.
-
-**Project:** _Polyverse_ (Multiplayer Isometric Action RPG)
-
-- **Engineered a Server-Authoritative Networking Architecture** using **Mirror** and **PlayFab**. Implemented advanced **Client-Side Prediction and Server Reconciliation** to ensure lag-free movement and prevent cheating in a token-based economy.
-- **Wrote a deterministic Custom A\* Pathfinding algorithm** and Behavior Tree system from scratch, bypassing Unity’s standard NavMesh to guarantee perfectly synchronized enemy movement across all clients.
-- **Developed a Custom Kinematic Character Controller** to handle non-standard gravity logic and stair traversal, coupled with an animation state machine featuring **Inverse Kinematics (IK)**.
-- **Extended the Universal Render Pipeline (URP)** by writing a custom Render Feature/Pass to achieve an "X-Ray" silhouette effect for characters occluded by geometry.
-- **Created a Data-Driven Gameplay Framework** using ScriptableObjects, empowering designers to balance weapons and stats independently.
-
-**Project:** _Mars Kitchen_ (VR Cooking Simulation)
-
-- **Architected a seamless "Endless Mode"** by implementing a custom **Runtime Lightmap Swapping** system, allowing instant environment changes without scene reloading.
-- **Engineered an AI Virtualization System** to simulate off-screen customer behavior and orders, maintaining game state consistency with minimal performance cost.
-- **Owned the PlayStation VR porting and certification pipeline**, successfully navigating Sony's TRC requirements to launch on the PlayStation Store.
-- **Acted as Technical Designer**, prototyping and implementing complex mechanics (e.g., "Black Hole" physics, gesture-based minigames) and a robust localization system for 5 languages.
-
-**Project:** _Acryptia_ (Web3 Roguelite Card Game)
-
-- **Implemented the Strategy Design Pattern** to handle complex card logic and execution flow, ensuring code scalability and maintainability.
-- **Developed a Server-Authoritative Logic layer** on PlayFab/Mirror, managing deck population, shuffling, and match validation server-side to ensure security.
-- **Created a Dynamic Skinning System** using custom **RGB-mask Shaders**, allowing UI elements to be recolored at runtime via ScriptableObjects, significantly reducing asset size.
-- **Built custom Designer Tools**, including a Deck Configurator and balancing tools, to accelerate content iteration.
-- **Solved UI limitations** by implementing particle systems directly within the 2D Canvas for enhanced game feel ("juice").
+I am a Gameplay Programmer and Technical Game Designer specializing in scalable gameplay systems, authoritative networking, and VR interactions. I combine a strong engineering background with design sensibility to bridge the gap between complex code and engaging player experiences.
 
 ---
 
-#### Lead XR Developer
+## Work History
 
+### **Taco Studios**  
+*Gameplay Programmer & Technical Designer*  
+_2022 - Present_
+
+**Main Responsibilities:**
+- Core gameplay implementation
+- Networking architecture
+- Tool development across multiple shipping titles
+
+**Key Projects:**
+- **Polyverse** (Multiplayer Isometric Action RPG)
+  - Engineered a server-authoritative networking architecture (Mirror, PlayFab)
+  - Implemented client-side prediction and server reconciliation
+  - Wrote a deterministic custom A* pathfinding algorithm and behavior tree system
+  - Developed a custom kinematic character controller with IK
+  - Extended URP with custom render features (X-Ray effect)
+  - Created a data-driven gameplay framework (ScriptableObjects)
+- **Mars Kitchen** (VR Cooking Simulation)
+  - Architected seamless "Endless Mode" with runtime lightmap swapping
+  - Engineered AI virtualization for off-screen customer behavior
+  - Led PlayStation VR porting and certification
+  - Prototyped complex mechanics and localization for 5 languages
+- **Acryptia** (Web3 Roguelite Card Game)
+  - Implemented the Strategy Design Pattern for card logic
+  - Developed server-authoritative logic layer (PlayFab/Mirror)
+  - Created dynamic skinning system (RGB-mask shaders)
+  - Built custom designer tools (Deck Configurator, balancing)
+  - Enhanced UI with 2D Canvas particle systems
+
+---
+
+### **Elite Division**  
+*Lead XR Developer*  
 _2023 - Present_
-**Elite Division**
 
 **Project:** _Metaverse - Regione Lombardia_ (XR/Metaverse Experience)
-_Lead Engineer responsible for the full-cycle development of a large-scale metaverse infrastructure for a high-profile government client._
-
-- **Architected a Cross-Platform RTC system** integrating **LiveKit** with Unity. Successfully bridged native SDKs with WebGL-specific libraries (JavaScript interop) to enable seamless Voice, Video, and Screensharing across desktop and web clients.
-- **Engineered the core networking architecture** using **Netcode for GameObjects**, managing avatar synchronization and state replication for a multi-user environment.
-- **Executed an aggressive optimization strategy** to guarantee high framerates on constrained devices (WebGL/Mobile), implementing strict asset pipelines, static/dynamic batching, and occlusion culling.
-- **Took full ownership** of the technical pipeline, working autonomously to deliver a complex, scalable product from concept to deployment.
+- Architected a cross-platform RTC system (LiveKit + Unity, JS interop)
+- Engineered core networking (Netcode for GameObjects)
+- Executed aggressive optimization for WebGL/Mobile
+- Full technical pipeline ownership from concept to deployment
 
 ---
 
-#### Lecturer (Interactive Systems - Unreal Engine)
-
+### **RUFA - Rome University of Fine Arts**  
+*Lecturer (Interactive Systems - Unreal Engine)*  
 _2025 - Present_
-**RUFA - Rome University of Fine Arts**
+- Designed and delivered Unreal Engine 5 bootcamp for "Interactive Systems 2"
+- Taught behavior trees, animation blueprints, Niagara systems
+- Mentored students in prototyping and technical art
 
-- **Designed and delivered an intensive Unreal Engine 5 bootcamp** for the "Interactive Systems 2" course (3rd Year Digital Arts program).
-- **Bridged the gap between Art and Engineering**, teaching complex technical architectures—including **Behavior Trees**, **Animation Blueprints**, and **Niagara Systems**—to a design-focused audience.
-- **Empowered functional prototyping:** Mentored students on how to translate artistic visions into playable mechanics, fostering technical independence in future technical artists.
+---
 
-## EDUCATION
+## Education
 
-**High School Diploma: Computer Science (Perito Informatico)**
-ITIS Enrico Fermi, Rome | _Grade: 90/100_
+- **High School Diploma: Computer Science (Perito Informatico)**  
+  ITIS Enrico Fermi, Rome | _Grade: 90/100_
 
-## CERTIFICATIONS & COURSES
+---
 
-**Unreal Engine Fellowship 2024** - _Epic Games_
-_Selected for the prestigious intensive training program by Epic Games, mastering advanced Unreal Engine workflows, rendering pipelines, and production standards._
+## Certifications & Courses
 
-**Other Certifications:**
-
+- **Unreal Engine Fellowship 2024** - _Epic Games_  
+  Selected for the prestigious intensive training program by Epic Games, mastering advanced Unreal Engine workflows, rendering pipelines, and production standards.
 - [Certification Name 1] - [Issuer]
 - [Certification Name 2] - [Issuer]
 - [Certification Name 3] - [Issuer]
   _(See my full badge collection on [Credly/YourLink])_
 
-## TECH SKILLS
+---
 
-- **Languages:** C#, C++, Python, JavaScript (WebGL Interop), HLSL/Shader Graph.
-- **Engines:** Unity (Expert), Unreal Engine 5 (Fellowship Graduate).
-- **Networking:** Mirror, Netcode for GameObjects, PlayFab, Photon, LiveKit, Prediction/Reconciliation.
-- **Architecture:** Strategy Pattern, State Machines, Behavior Trees, MVC, ScriptableObject Architecture.
-- **Gameplay:** Custom Character Controllers, 3C (Character/Camera/Control), A\* Pathfinding, Inverse Kinematics.
-- **Graphics/VR:** URP Render Features, Niagara VFX, Oculus/Meta SDK, OpenXR, VR Optimization, Linear Algebra.
-- **Tools:** Git, Visual Studio, RenderDoc, PlasticSCM.
+## Tech Skills
 
-## SOFT SKILLS
+- **Languages:**
+  - C#, C++, Python, JavaScript (WebGL Interop), HLSL/Shader Graph
+- **Engines:**
+  - Unity (Expert), Unreal Engine 5 (Fellowship Graduate)
+- **Networking:**
+  - Mirror, Netcode for GameObjects, PlayFab, Photon, LiveKit, Prediction/Reconciliation
+- **Architecture:**
+  - Strategy Pattern, State Machines, Behavior Trees, MVC, ScriptableObject Architecture
+- **Gameplay:**
+  - Custom Character Controllers, 3C (Character/Camera/Control), A* Pathfinding, Inverse Kinematics
+- **Graphics/VR:**
+  - URP Render Features, Niagara VFX, Oculus/Meta SDK, OpenXR, VR Optimization, Linear Algebra
+- **Tools:**
+  - Git, Visual Studio, RenderDoc, PlasticSCM
 
-- **Technical Leadership:** Proven ability to take ownership of complex projects and lead architecture decisions.
-- **Communication:** Expert in communicating complex technical concepts to Designers and Artists (Teaching experience).
-- **Creative Problem Solving:** Expertise in finding technical solutions to ambitious design requirements (Technical Game Design).
-- **Console Development:** Experience with Sony TRC and certification processes.
+---
 
-## PORTFOLIO
+## Soft Skills
+
+- Technical Leadership: Ownership of complex projects and architecture decisions
+- Communication: Able to explain technical concepts to Designers and Artists (teaching experience)
+- Creative Problem Solving: Technical solutions for ambitious design requirements
+- Console Development: Experience with Sony TRC and certification processes
+
+---
+
+## Portfolio
 
 See my projects in detail on [this page](/projects).
