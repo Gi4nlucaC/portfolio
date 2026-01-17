@@ -389,19 +389,18 @@ body.disable-hor-scroll {
     margin: 2em 0 !important;
 }
 
-
-
-.post-content ul li:before {
-    content: ' ' !important;
-    color: var(--vscode-keyword) !important;
-    font-weight: bold !important;
-    display: inline-block !important;
-    width: 1em !important;
-    margin-left: 0 !important;
+/* Project names in resume (italic text) - VS Code orange */
+.post-content em {
+    font-size: 1.15em !important;
+    color: #ce9178 !important;
+    font-style: italic !important;
 }
 
-.post-content em {
-    color: var(--vscode-comment) !important;
+/* Better spacing between list items for readability */
+.post-content ul li,
+.post-content ol li {
+    margin-bottom: 0.8em !important;
+    line-height: 1.6 !important;
 }
 
 .post-content strong {

@@ -1,12 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Web3 on Gianluca Camarca</title><link>https://gi4nlucac.github.io/portfolio/tags/web3/</link><description>Recent content in Web3 on Gianluca Camarca</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://gi4nlucac.github.io/portfolio/tags/web3/index.xml" rel="self" type="application/rss+xml"/><item><title>Polyverse</title><link>https://gi4nlucac.github.io/portfolio/projects/polyverse/</link><pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate><guid>https://gi4nlucac.github.io/portfolio/projects/polyverse/</guid><description>&lt;h2 id="role"&gt;Role&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Engine architecture&lt;/li&gt;
-&lt;li&gt;Procedural systems&lt;/li&gt;
-&lt;li&gt;Performance optimization&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="key-features"&gt;Key Features&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Dynamic streaming&lt;/li&gt;
-&lt;li&gt;Procedural content pipelines&lt;/li&gt;
-&lt;li&gt;Cross-platform serialization&lt;/li&gt;
-&lt;/ul&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web3 on Gianluca Camarca</title>
+    <link>https://gi4nlucac.github.io/portfolio/tags/web3/</link>
+    <description>Recent content in Web3 on Gianluca Camarca</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gi4nlucac.github.io/portfolio/tags/web3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Polyverse</title>
+      <link>https://gi4nlucac.github.io/portfolio/projects/polyverse/</link>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://gi4nlucac.github.io/portfolio/projects/polyverse/</guid>
+      <description>&lt;h2 id=&#34;role&#34;&gt;Role&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Engine architecture&lt;/li&gt;&#xA;&lt;li&gt;Procedural systems&lt;/li&gt;&#xA;&lt;li&gt;Performance optimization&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;key-features&#34;&gt;Key Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Dynamic streaming&lt;/li&gt;&#xA;&lt;li&gt;Procedural content pipelines&lt;/li&gt;&#xA;&lt;li&gt;Cross-platform serialization&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

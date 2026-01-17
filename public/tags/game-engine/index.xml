@@ -1,22 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Game Engine on Gianluca Camarca</title><link>https://gi4nlucac.github.io/portfolio/tags/game-engine/</link><description>Recent content in Game Engine on Gianluca Camarca</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 07 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://gi4nlucac.github.io/portfolio/tags/game-engine/index.xml" rel="self" type="application/rss+xml"/><item><title>Project Title</title><link>https://gi4nlucac.github.io/portfolio/projects/my-first-project/</link><pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate><guid>https://gi4nlucac.github.io/portfolio/projects/my-first-project/</guid><description>&lt;p&gt;Brief one-line description of the project.&lt;/p&gt;
-&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
-&lt;p&gt;Detailed project description. What is the game about? What genre? What platform?&lt;/p&gt;
-&lt;p&gt;Example:
-A third-person action-adventure game set in a sci-fi world. The game features advanced combat mechanics, parkour movement, and AI-driven enemies.&lt;/p&gt;
-&lt;h2 id="my-role"&gt;My Role&lt;/h2&gt;
-&lt;p&gt;Your specific contributions to the project:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Implemented core gameplay mechanics&lt;/li&gt;
-&lt;li&gt;Developed AI systems&lt;/li&gt;
-&lt;li&gt;Created animation systems&lt;/li&gt;
-&lt;li&gt;Optimized performance&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="technologies"&gt;Technologies&lt;/h2&gt;
-&lt;p&gt;List of technologies, engines, and tools used:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Engine:&lt;/strong&gt; Unreal Engine 5 / Unity&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Language:&lt;/strong&gt; C++ / C#&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Tools:&lt;/strong&gt; Git, Perforce, Visual Studio&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="key-features"&gt;Key Features&lt;/h2&gt;
-&lt;p&gt;Main features you worked on:&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Game Engine on Gianluca Camarca</title>
+    <link>https://gi4nlucac.github.io/portfolio/tags/game-engine/</link>
+    <description>Recent content in Game Engine on Gianluca Camarca</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gi4nlucac.github.io/portfolio/tags/game-engine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project Title</title>
+      <link>https://gi4nlucac.github.io/portfolio/projects/my-first-project/</link>
+      <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://gi4nlucac.github.io/portfolio/projects/my-first-project/</guid>
+      <description>&lt;p&gt;Brief one-line description of the project.&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Detailed project description. What is the game about? What genre? What platform?&lt;/p&gt;&#xA;&lt;p&gt;Example:&#xA;A third-person action-adventure game set in a sci-fi world. The game features advanced combat mechanics, parkour movement, and AI-driven enemies.&lt;/p&gt;&#xA;&lt;h2 id=&#34;my-role&#34;&gt;My Role&lt;/h2&gt;&#xA;&lt;p&gt;Your specific contributions to the project:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Implemented core gameplay mechanics&lt;/li&gt;&#xA;&lt;li&gt;Developed AI systems&lt;/li&gt;&#xA;&lt;li&gt;Created animation systems&lt;/li&gt;&#xA;&lt;li&gt;Optimized performance&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;technologies&#34;&gt;Technologies&lt;/h2&gt;&#xA;&lt;p&gt;List of technologies, engines, and tools used:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Engine:&lt;/strong&gt; Unreal Engine 5 / Unity&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Language:&lt;/strong&gt; C++ / C#&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tools:&lt;/strong&gt; Git, Perforce, Visual Studio&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;key-features&#34;&gt;Key Features&lt;/h2&gt;&#xA;&lt;p&gt;Main features you worked on:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
