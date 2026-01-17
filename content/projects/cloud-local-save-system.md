@@ -18,8 +18,6 @@ platforms = 'PC, Cloud'
 links = []
 +++
 
-A flexible and extensible multiple save system for Unity, designed to manage local and cloud-based save files, with support for multiple slots, custom data structures, and MongoDB cloud synchronization.
-
 ## Key Features
 
 - Save and load game state using multiple save slots

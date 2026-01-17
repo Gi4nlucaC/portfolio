@@ -48,7 +48,21 @@
       <link>https://gi4nlucac.github.io/portfolio/projects/cloud-local-save-system/</link>
       <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://gi4nlucac.github.io/portfolio/projects/cloud-local-save-system/</guid>
-      <description>&lt;p&gt;A flexible and extensible multiple save system for Unity, designed to manage local and cloud-based save files, with support for multiple slots, custom data structures, and MongoDB cloud synchronization.&lt;/p&gt;&#xA;&lt;h2 id=&#34;key-features&#34;&gt;Key Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Save and load game state using multiple save slots&lt;/li&gt;&#xA;&lt;li&gt;Organize local save files inside a dedicated Saves folder&lt;/li&gt;&#xA;&lt;li&gt;Serialize and deserialize custom data structures (JSON / Binary)&lt;/li&gt;&#xA;&lt;li&gt;Manage saves across multiple scenes and game profiles&lt;/li&gt;&#xA;&lt;li&gt;Optionally store and retrieve saves from the cloud using MongoDB&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;technologies&#34;&gt;Technologies&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Engine:&lt;/strong&gt; Unity&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Language:&lt;/strong&gt; C#&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Cloud:&lt;/strong&gt; MongoDB&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;status&#34;&gt;Status&lt;/h2&gt;&#xA;&lt;p&gt;This is a stub entry. More details and documentation coming soon.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;key-features&#34;&gt;Key Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Save and load game state using multiple save slots&lt;/li&gt;&#xA;&lt;li&gt;Organize local save files inside a dedicated Saves folder&lt;/li&gt;&#xA;&lt;li&gt;Serialize and deserialize custom data structures (JSON / Binary)&lt;/li&gt;&#xA;&lt;li&gt;Manage saves across multiple scenes and game profiles&lt;/li&gt;&#xA;&lt;li&gt;Optionally store and retrieve saves from the cloud using MongoDB&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;technologies&#34;&gt;Technologies&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Engine:&lt;/strong&gt; Unity&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Language:&lt;/strong&gt; C#&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Cloud:&lt;/strong&gt; MongoDB&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;status&#34;&gt;Status&lt;/h2&gt;&#xA;&lt;p&gt;This is a stub entry. More details and documentation coming soon.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gi4nlucac.github.io/portfolio/projects/my-first-project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gi4nlucac.github.io/portfolio/projects/my-first-project/</guid>
+      <description>&lt;p&gt;List of technologies, engines, and tools used:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Engine:&lt;/strong&gt; Unreal Engine 5 / Unity&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Language:&lt;/strong&gt; C++ / C#&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tools:&lt;/strong&gt; Git, Perforce, Visual Studio&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;key-features&#34;&gt;Key Features&lt;/h2&gt;&#xA;&lt;p&gt;Main features you worked on:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Feature 1&lt;/li&gt;&#xA;&lt;li&gt;Feature 2&lt;/li&gt;&#xA;&lt;li&gt;Feature 3&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;challenges--solutions&#34;&gt;Challenges &amp;amp; Solutions&lt;/h2&gt;&#xA;&lt;p&gt;Notable technical challenges you solved during development.&lt;/p&gt;&#xA;&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#&#34;&gt;Project Website&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#&#34;&gt;Steam Page&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=example&#34;&gt;Trailer&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gi4nlucac.github.io/portfolio/projects/personal-project-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gi4nlucac.github.io/portfolio/projects/personal-project-1/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>
