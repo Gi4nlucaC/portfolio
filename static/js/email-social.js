@@ -1,32 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('Email script loaded');
-  
-  // Cerca link che contengono #email-protected (anche con baseURL)
+  // Cerca link che contengono email-protected (anche con baseURL)
   var socialLinks = document.querySelectorAll('a[href*="email-protected"]');
-  console.log('Found links:', socialLinks.length);
   
   socialLinks.forEach(function(link) {
-    console.log('Setting up email link:', link.href);
+    link.setAttribute('title', 'Click to copy email');
     
     link.addEventListener('click', function(e) {
-      console.log('Email link clicked');
       e.preventDefault();
       e.stopPropagation();
       
       var email = 'camarca.gianluca@gmail.com';
       
-      // Prova a copiare negli appunti
+      // Copia negli appunti
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(email).then(function() {
-          console.log('Email copied:', email);
-          alert('Email copied to clipboard: ' + email);
+          // Feedback visivo: cambio colore e tooltip
+          var originalColor = link.style.color;
+          link.style.color = '#4CAF50';
+          link.setAttribute('title', '✓ Email copied!');
+          
+          setTimeout(function() {
+            link.style.color = originalColor;
+            link.setAttribute('title', 'Click to copy email');
+          }, 2000);
         }).catch(function(err) {
-          console.error('Clipboard failed:', err);
+          // Fallback: prompt per copiare manualmente
           prompt('Copy this email:', email);
         });
       } else {
-        // Fallback per browser che non supportano clipboard API
-        console.log('Clipboard API not available, using prompt');
+        // Fallback per browser senza clipboard API
         prompt('Copy this email:', email);
       }
       
