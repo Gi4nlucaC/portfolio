@@ -54,11 +54,11 @@ theme = 'hello-friend-ng'
 # Social links
 [[params.social]]
   name = "linkedin"
-  url  = "https://www.linkedin.com/in/your-profile"
+  url  = "https://www.linkedin.com/in/gianluca-camarca/"
 
 [[params.social]]
   name = "github"
-  url  = "https://github.com/your-username"
+  url  = "https://github.com/Gi4nlucaC"
 
 [[params.social]]
   name = "email"
