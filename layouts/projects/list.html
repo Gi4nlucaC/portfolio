@@ -10,12 +10,24 @@
             {{ $pages := .Pages.ByWeight }}
             {{ $professionalPages := where $pages "Params.category" "eq" "professional" }}
             {{ $personalPages := where $pages "Params.category" "eq" "personal" }}
+            {{ $freelancePages := where $pages "Params.category" "eq" "freelance" }}
 
             {{ if gt (len $professionalPages) 0 }}
                 <div class="projects-section">
                     <h2>Professional Projects</h2>
                     <div class="projects-grid">
                         {{ range $professionalPages }}
+                            {{ partial "project-card.html" . }}
+                        {{ end }}
+                    </div>
+                </div>
+            {{ end }}
+
+            {{ if gt (len $freelancePages) 0 }}
+                <div class="projects-section">
+                    <h2>Freelance Works</h2>
+                    <div class="projects-grid">
+                        {{ range $freelancePages }}
                             {{ partial "project-card.html" . }}
                         {{ end }}
                     </div>
