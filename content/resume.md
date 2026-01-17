@@ -72,17 +72,39 @@ _Metaverse - Regione Lombardia_ (XR/Metaverse Experience)
 **High School Diploma: Computer Science**
 ITIS Enrico Fermi, Rome | _Grade: 90/100_
 
-## CERTIFICATIONS & COURSES
+## CERTIFICATIONS
 
-**Unreal Engine Fellowship 2024** - _Epic Games_
-_Selected for the prestigious intensive training program by Epic Games, mastering advanced Unreal Engine workflows, rendering pipelines, and production standards._
+**Unreal Engine & C++**
 
-**Other Certifications:**
+- [Unreal Fellowship: Games](https://www.credential.net/e942f036-7e8b-4b1d-bb17-481ba3615a99) | _Epic Games_ (Ott 2024)
+- [C++ Programming for Unreal Game Development Specialization](https://www.coursera.org/account/accomplishments/specialization/GHGDY6A5YIZM) | _University of Colorado_ (Gen 2025)
+- [Blueprint Scripting](https://www.coursera.org/account/accomplishments/records/9YB64U63FO6D) | _Epic Games_ (Apr 2025)
+- [Fundamentals of Level Design with Unreal Engine](https://www.coursera.org/account/accomplishments/records/IUI975HS6511) | _Epic Games_ (Apr 2025)
+- [Unreal Engine Fundamentals](https://www.coursera.org/account/accomplishments/records/T0IPIYLI076W) | _Epic Games_ (Gen 2025)
+- [C++ Class Development](https://www.coursera.org/account/accomplishments/verify/LHOIGDBJVNWV) | _University of Colorado_ (Gen 2025)
+- [Intermediate Object-Oriented Programming for Unreal Games](https://www.coursera.org/account/accomplishments/records/5QJKXZSJLD75) | _University of Colorado_ (Gen 2025)
+- [Introduction to C++ Programming and Unreal](https://www.coursera.org/account/accomplishments/verify/OIHS4GUCUVQ0) | _University of Colorado_ (Gen 2025)
+- [More C++ Programming and Unreal](https://www.coursera.org/account/accomplishments/records/POXZ4K6OFRFG) | _University of Colorado_ (Gen 2025)
 
-- [Certification Name 1] - [Issuer]
-- [Certification Name 2] - [Issuer]
-- [Certification Name 3] - [Issuer]
-  _(See my full badge collection on [Credly/YourLink])_
+**Unity & C#**
+
+- [Unity Junior Programmer](https://www.youracclaim.com/badges/73db455c-f3d6-47bc-891e-ee0a1f1a0672?source=linked_in_profile) | _Unity Technologies_ (Feb 2021)
+- [C# Programming for Unity Game Development Specialization](https://www.coursera.org/account/accomplishments/specialization/certificate/TB9S6HVX4DV4) | _University of Colorado_ (Set 2020)
+- [Data Structures and Design Patterns for Game Developers](https://www.coursera.org/account/accomplishments/certificate/MZGD9WEDRA4F) | _University of Colorado_ (Set 2020)
+- [Intermediate Object-Oriented Programming for Unity Games](https://www.coursera.org/account/accomplishments/certificate/GH465PS7CX57) | _University of Colorado_ (Mag 2020)
+- [More C# Programming and Unity](https://www.coursera.org/account/accomplishments/certificate/4JTJR6FYVXY2) | _University of Colorado_ (Apr 2020)
+- [Introduction to C# Programming and Unity](https://coursera.org/share/7be4b7a4ab648a8ec636600ebb7a6e55) | _University of Colorado_ (Apr 2020)
+- [Unity Essentials Pathway](https://www.youracclaim.com/badges/4e8141a9-9dfd-4b33-8a73-6b0dcb40a28e?source=linked_in_profile) | _Unity Technologies_ (Dic 2020)
+
+**Game Design & Other**
+
+- [Epic Games Game Design Specialization](https://www.coursera.org/account/accomplishments/specialization/8GGKI4ZTY5O1) | _Epic Games_ (Apr 2025)
+- [Game Development and Prototyping](https://www.coursera.org/account/accomplishments/records/E3JY33CJR3N1) | _Epic Games_ (Apr 2025)
+- [User Experience in Game Design](https://www.coursera.org/account/accomplishments/records/JP1M2BZ8WXZ8) | _Epic Games_ (Apr 2025)
+- [User Interface in Game Design](https://www.coursera.org/account/accomplishments/records/CT652WWZAZ8X) | _Epic Games_ (Apr 2025)
+- [Visual Development and Audio Design in Games](https://www.coursera.org/account/accomplishments/records/XLJU02BOPCZO) | _Epic Games_ (Apr 2025)
+- [Unreal Engine 2D Game Development Course](https://udemy-certificate.s3.amazonaws.com/pdf/UC-e938e815-142a-497f-a038-49904cc06ecd.pdf) | _Udemy_ (Dic 2024)
+- [A Complete Guide to Game Design](https://courses.edx.org/certificates/bbcb6ae7cca244f8a308c7c35f0e52c2) | _HP_ (Apr 2024)
 
 ## TECH SKILLS
 
