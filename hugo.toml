@@ -1,3 +1,7 @@
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 baseURL = 'https://gi4nlucac.github.io/portfolio/'
 languageCode = 'en-us'
 title = 'Gianluca Camarca'

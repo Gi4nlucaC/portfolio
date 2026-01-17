@@ -17,7 +17,7 @@ _2022 - Present_
 
 Responsible for core gameplay implementation, networking architecture, and tool development across multiple shipping titles.
 
-**Project:** _Polyverse_ (Multiplayer Isometric Action RPG)
+<span class="resume-project-name">Project: Polyverse</span> (Multiplayer Isometric Action RPG)
 
 - **Engineered a Server-Authoritative Networking Architecture** using **Mirror** and **PlayFab**. Implemented advanced **Client-Side Prediction and Server Reconciliation** to ensure lag-free movement and prevent cheating in a token-based economy.
 - **Wrote a deterministic Custom A\* Pathfinding algorithm** and Behavior Tree system from scratch, bypassing Unity’s standard NavMesh to guarantee perfectly synchronized enemy movement across all clients.
@@ -25,14 +25,14 @@ Responsible for core gameplay implementation, networking architecture, and tool 
 - **Extended the Universal Render Pipeline (URP)** by writing a custom Render Feature/Pass to achieve an "X-Ray" silhouette effect for characters occluded by geometry.
 - **Created a Data-Driven Gameplay Framework** using ScriptableObjects, empowering designers to balance weapons and stats independently.
 
-**Project:** _Mars Kitchen_ (VR Cooking Simulation)
+<span class="resume-project-name">Project: Mars Kitchen</span> (VR Cooking Simulation)
 
 - **Architected a seamless "Endless Mode"** by implementing a custom **Runtime Lightmap Swapping** system, allowing instant environment changes without scene reloading.
 - **Engineered an AI Virtualization System** to simulate off-screen customer behavior and orders, maintaining game state consistency with minimal performance cost.
 - **Owned the PlayStation VR porting and certification pipeline**, successfully navigating Sony's TRC requirements to launch on the PlayStation Store.
 - **Acted as Technical Designer**, prototyping and implementing complex mechanics (e.g., "Black Hole" physics, gesture-based minigames) and a robust localization system for 5 languages.
 
-**Project:** _Acryptia_ (Web3 Roguelite Card Game)
+<span class="resume-project-name">Project: Acryptia</span> (Web3 Roguelite Card Game)
 
 - **Implemented the Strategy Design Pattern** to handle complex card logic and execution flow, ensuring code scalability and maintainability.
 - **Developed a Server-Authoritative Logic layer** on PlayFab/Mirror, managing deck population, shuffling, and match validation server-side to ensure security.
@@ -47,7 +47,7 @@ Responsible for core gameplay implementation, networking architecture, and tool 
 _2023 - Present_
 **Elite Division**
 
-**Project:** _Metaverse - Regione Lombardia_ (XR/Metaverse Experience)
+<span class="resume-project-name">Project: Metaverse - Regione Lombardia</span> (XR/Metaverse Experience)
 _Lead Engineer responsible for the full-cycle development of a large-scale metaverse infrastructure for a high-profile government client._
 
 - **Architected a Cross-Platform RTC system** integrating **LiveKit** with Unity. Successfully bridged native SDKs with WebGL-specific libraries (JavaScript interop) to enable seamless Voice, Video, and Screensharing across desktop and web clients.

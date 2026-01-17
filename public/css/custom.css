@@ -391,13 +391,12 @@ body.disable-hor-scroll {
 
 
 
-.post-content ul li:before {
-    content: ' ' !important;
-    color: var(--vscode-keyword) !important;
-    font-weight: bold !important;
-    display: inline-block !important;
-    width: 1em !important;
-    margin-left: 0 !important;
+
+
+/* Evidenzia il nome progetto nel resume con arancione VS Code */
+.resume-project-name {
+    color: var(--vscode-string) !important;
+    font-weight: bold;
 }
 
 .post-content em {
