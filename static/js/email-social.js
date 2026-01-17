@@ -14,13 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
       // Copia negli appunti
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(email).then(function() {
-          // Feedback visivo: cambio colore e tooltip
-          var originalColor = link.style.color;
-          link.style.color = '#4CAF50';
-          link.setAttribute('title', '✓ Email copied!');
-          
+          // Feedback visivo: aggiungi classe CSS
+          link.classList.add('email-copied');
+          link.setAttribute('title', '\u2713 Email copied!');
           setTimeout(function() {
-            link.style.color = originalColor;
+            link.classList.remove('email-copied');
             link.setAttribute('title', 'Click to copy email');
           }, 2000);
         }).catch(function(err) {
