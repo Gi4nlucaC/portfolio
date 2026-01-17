@@ -1,28 +1,28 @@
 +++
-date = '2020-09-01'
+date = "2020-09-01"
 draft = false
-title = 'Acryptia'
-description = 'Acryptia is a strategic dungeon card game, in which players have to beat Rug'O the card dealer to complete floors, climb the leaderboard, and win exclusive prizes.'
-card_summary = 'A strategic dungeon card game with 150K+ matches per season'
+title = "Acryptia"
+description = "Acryptia is a strategic dungeon card game, in which players have to beat Rug'O the card dealer to complete floors, climb the leaderboard, and win exclusive prizes."
+card_summary = "A strategic dungeon card game with 150K+ matches per season"
 weight = 4
-category = 'professional'
-tags = ['Unity', 'WebGL']
-featured_image = 'assets/acryptia/acrytpia_cover.png'
+category = "professional"
+tags = ["Unity", "WebGL"]
+featured_image = "assets/acryptia/acrytpia_cover.png"
 gallery = [
-  'assets/acryptia/acryptia0.gif',
-  'assets/acryptia/acryptia1.webp',
-  'assets/acryptia/acryptia2.webp',
-  'assets/acryptia/acryptia3.webp',
-  'assets/acryptia/acryptia4.webp',
-  'assets/acryptia/acryptia5.webp'
+  "assets/acryptia/acryptia0.gif",
+  "assets/acryptia/acryptia1.webp",
+  "assets/acryptia/acryptia2.webp",
+  "assets/acryptia/acryptia3.webp",
+  "assets/acryptia/acryptia4.webp",
+  "assets/acryptia/acryptia5.webp"
 ]
-video = 'assets/acryptia/Acryptia_video.mp4'
-role = 'Gameplay Programmer & Technical Game Designer'
-engine = 'Unity'
-language = 'C#'
-company = 'Taco Studios'
-status = 'Released'
-platforms = 'WebGL'
+video = "assets/acryptia/Acryptia_video.mp4"
+role = "Gameplay Programmer & Technical Game Designer"
+engine = "Unity"
+language = "C#"
+company = "Taco Studios"
+status = "Released"
+platforms = "WebGL"
 links = [
   { label = "Play Game", url = "https://play.acryptia.io/" }
 ]
