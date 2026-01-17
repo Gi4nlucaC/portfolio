@@ -1,13 +1,12 @@
++++
 date = '2026-01-07T18:55:18+01:00'
 draft = false
 title = 'Resume'
-++
++++
 
-++
 I am Gianluca Camarca, a Gameplay Programmer and Technical Game Designer with over 4 years of experience in the industry. Currently serving as a Lead XR Developer and Lecturer, I specialize in architecting scalable gameplay systems, authoritative networking, and VR interactions. I combine a strong engineering background with design sensibility to bridge the gap between complex code and engaging player experiences.
 
 [Download Resume as PDF](#) | [Linkedin](https://www.linkedin.com/in/your-profile) | [Github](https://github.com/your-username) | [Email](mailto:your.email@example.com)
-++
 
 ## WORK HISTORY
 
