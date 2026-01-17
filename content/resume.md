@@ -79,10 +79,9 @@ _Selected for the prestigious intensive training program by Epic Games, masterin
 
 **Other Certifications:**
 
-- [Certification Name 1] - [Issuer]
-- [Certification Name 2] - [Issuer]
-- [Certification Name 3] - [Issuer]
   _(See my full badge collection on [Credly/YourLink])_
+
+{{ partial "certification-badges.html" . }}
 
 ## TECH SKILLS
 

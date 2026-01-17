@@ -1,0 +1,68 @@
+<!-- BadgeSlider Component: layouts/partials/badge-slider.html -->
+<div class="badge-slider">
+  <div class="badge-track">
+    <a href="https://www.coursera.org/account/accomplishments/records/9YB64U63FO6D" target="_blank">
+      <img src="https://media.licdn.com/dms/image/v2/C4E0BAQEXIMAQALTuog/company-logo_100_100/company-logo_100_100/0/1630572192594/epic_games_logo?e=1770249600&v=beta&t=wt-leXfneapmpNDefpbOu4IEKOsqygJuD8N3UmImmlY" alt="Epic Games Blueprint Scripting" />
+    </a>
+    <a href="https://www.coursera.org/account/accomplishments/specialization/8GGKI4ZTY5O1" target="_blank">
+      <img src="https://media.licdn.com/dms/image/v2/C4E0BAQEXIMAQALTuog/company-logo_100_100/company-logo_100_100/0/1630572192594/epic_games_logo?e=1770249600&v=beta&t=wt-leXfneapmpNDefpbOu4IEKOsqygJuD8N3UmImmlY" alt="Epic Games Game Design Specialization" />
+    </a>
+    <a href="https://www.coursera.org/account/accomplishments/records/IUI975HS6511" target="_blank">
+      <img src="https://media.licdn.com/dms/image/v2/C4E0BAQEXIMAQALTuog/company-logo_100_100/company-logo_100_100/0/1630572192594/epic_games_logo?e=1770249600&v=beta&t=wt-leXfneapmpNDefpbOu4IEKOsqygJuD8N3UmImmlY" alt="Fundamentals of Level Design with Unreal Engine" />
+    </a>
+    <a href="https://www.coursera.org/account/accomplishments/records/E3JY33CJR3N1" target="_blank">
+      <img src="https://media.licdn.com/dms/image/v2/C4E0BAQEXIMAQALTuog/company-logo_100_100/company-logo_100_100/0/1630572192594/epic_games_logo?e=1770249600&v=beta&t=wt-leXfneapmpNDefpbOu4IEKOsqygJuD8N3UmImmlY" alt="Game Development and Prototyping" />
+    </a>
+    <a href="https://www.coursera.org/account/accomplishments/records/JP1M2BZ8WXZ8" target="_blank">
+      <img src="https://media.licdn.com/dms/image/v2/C4E0BAQEXIMAQALTuog/company-logo_100_100/company-logo_100_100/0/1630572192594/epic_games_logo?e=1770249600&v=beta&t=wt-leXfneapmpNDefpbOu4IEKOsqygJuD8N3UmImmlY" alt="User Experience in Game Design" />
+    </a>
+    <a href="https://www.coursera.org/account/accomplishments/records/CT652WWZAZ8X" target="_blank">
+      <img src="https://media.licdn.com/dms/image/v2/C4E0BAQEXIMAQALTuog/company-logo_100_100/company-logo_100_100/0/1630572192594/epic_games_logo?e=1770249600&v=beta&t=wt-leXfneapmpNDefpbOu4IEKOsqygJuD8N3UmImmlY" alt="User Interface in Game Design" />
+    </a>
+    <a href="https://www.coursera.org/account/accomplishments/records/XLJU02BOPCZO" target="_blank">
+      <img src="https://media.licdn.com/dms/image/v2/C4E0BAQEXIMAQALTuog/company-logo_100_100/company-logo_100_100/0/1630572192594/epic_games_logo?e=1770249600&v=beta&t=wt-leXfneapmpNDefpbOu4IEKOsqygJuD8N3UmImmlY" alt="Visual Development and Audio Design in Games" />
+    </a>
+    <a href="https://www.coursera.org/account/accomplishments/verify/LHOIGDBJVNWV" target="_blank">
+      <img src="https://media.licdn.com/dms/image/v2/D560BAQHZUN-zYUIWIw/company-logo_100_100/company-logo_100_100/0/1722543771239/university_of_colorado_logo?e=1770249600&v=beta&t=Aw88qr4i0n6yJ1OCsGBIDu1Zt25FLcigQvi26O335zs" alt="C++ Class Development" />
+    </a>
+    <a href="https://www.youracclaim.com/badges/73db455c-f3d6-47bc-891e-ee0a1f1a0672?source=linked_in_profile" target="_blank">
+      <img src="https://media.licdn.com/dms/image/v2/D4D0BAQFoRUR2DxPJiw/company-logo_100_100/company-logo_100_100/0/1682010178745/unity_logo?e=1770249600&v=beta&t=JIOGSsILhE0Xb0FzRzohgBFmdPEPjTK2S3nA1m4j5-E" alt="Unity Junior Programmer" />
+    </a>
+    <!-- Add more badges as needed -->
+  </div>
+</div>
+
+<style>
+.badge-slider {
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 10px 0;
+}
+.badge-track {
+  display: flex;
+  gap: 32px;
+  animation: scroll-badges 40s linear infinite;
+}
+.badge-track a {
+  display: flex;
+  align-items: center;
+}
+.badge-track img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+.badge-track img:hover {
+  transform: scale(1.1);
+}
+@keyframes scroll-badges {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+</style>
