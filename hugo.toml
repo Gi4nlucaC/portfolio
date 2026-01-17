@@ -58,11 +58,11 @@ theme = 'hello-friend-ng'
 
 [[params.social]]
   name = "github"
-  url  = "https://github.com/Gi4nlucaC"
+  url  = "https://gitlab.com/g.camarca"
 
 [[params.social]]
   name = "email"
-  url  = "mailto:camarca.gianluca@gmail.com"
+  url  = "#email-protected"
 
 [params.footer]
   trademark = true
