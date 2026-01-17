@@ -62,7 +62,7 @@ theme = 'hello-friend-ng'
 
 [[params.social]]
   name = "email"
-  url  = "mailto:your.email@example.com"
+  url  = "mailto:camarca.gianluca@gmail.com"
 
 [params.footer]
   trademark = true

@@ -2,9 +2,8 @@
     <div class="footer-custom-bg">
         <div class="footer-custom">
             <p style="text-align: center;font-size: 1em;margin-bottom: 5px;">Contact me:</p>
-            <div id="footer-email" style="text-align: center; margin-bottom: 10px;"></div>
             {{- with .Site.Params.social }}
-            <div>
+            <div style="text-align: center; margin-bottom: 10px;">
                 {{ partial "social-icons.html" . }}
             </div>
             {{- end }}
@@ -14,4 +13,3 @@
     </div>
 </footer>
 <script src="{{ "js/carousel.js" | relURL }}"></script>
-<script src="{{ "js/email.js" | relURL }}"></script>
