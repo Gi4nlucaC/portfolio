@@ -2,8 +2,8 @@
 date = '2020-09-01'
 draft = false
 title = 'Acryptia'
-description = 'A WebGL game developed in Unity for Taco Studios.'
-card_summary = 'A WebGL game experience'
+description = 'Acryptia is a strategic dungeon card game, in which players have to beat Rug'O the card dealer to complete floors, climb the leaderboard, and win exclusive prizes.'
+card_summary = 'A strategic dungeon card game with 150K+ matches per season'
 weight = 4
 category = 'professional'
 tags = ['Unity', 'WebGL']
@@ -17,25 +17,33 @@ gallery = [
   'assets/acryptia/acryptia5.webp'
 ]
 video = 'assets/acryptia/Acryptia_video.mp4'
-role = 'Game Developer'
+role = 'Gameplay Programmer & Technical Game Designer'
 engine = 'Unity'
 language = 'C#'
 company = 'Taco Studios'
 status = 'Released'
 platforms = 'WebGL'
 links = [
-  { label = "Play Game", url = "#" }
+  { label = "Play Game", url = "https://play.acryptia.io/" }
 ]
 +++
 
+Acryptia is a dungeon card game in which players have to beat Rug'O, our hatable card dealer, to advance to new levels, climb the leaderboard, and win prizes.
+
+The game is playable both on desktop and mobile. Thanks to more than 150,000 matches played per Season, Acryptia is one of the most popular games in all Web3.
+
 ## My Role
 
-- Developed core gameplay mechanics
-- Implemented game systems
-- Optimized for WebGL platform
+- Designed and implemented core gameplay mechanics
+- Developed card game systems and logic
+- Created technical game design documentation
+- Optimized for WebGL platform (desktop and mobile)
+- Integrated leaderboard and prize systems
 
 ## Key Features
 
-- Browser-based gameplay
-- Optimized for web performance
-- Unity WebGL integration
+- Strategic dungeon card gameplay
+- Cross-platform (desktop and mobile browsers)
+- Competitive leaderboard system
+- 150,000+ matches per season
+- Web3 integration
