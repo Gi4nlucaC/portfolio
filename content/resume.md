@@ -47,8 +47,9 @@ _Acryptia_ (Web3 Roguelite Card Game)
 <p class="job-company">@ Elite Division</p>
 </div>
 
+responsible for the full-cycle development of a large-scale metaverse infrastructure for a high-profile government client.
+
 _Metaverse - Regione Lombardia_ (XR/Metaverse Experience)
-_Lead Engineer responsible for the full-cycle development of a large-scale metaverse infrastructure for a high-profile government client._
 
 - **Architected a Cross-Platform RTC system** integrating **LiveKit** with Unity. Successfully bridged native SDKs with WebGL-specific libraries (JavaScript interop) to enable seamless Voice, Video, and Screensharing across desktop and web clients.
 - **Engineered the core networking architecture** using **Netcode for GameObjects**, managing avatar synchronization and state replication for a multi-user environment.
@@ -58,7 +59,7 @@ _Lead Engineer responsible for the full-cycle development of a large-scale metav
 ---
 
 <div class="job-header">
-<h4 class="job-title">Lecturer (Interactive Systems - Unreal Engine) <span class="job-date">2025 - Present</span></h4>
+<h4 class="job-title">Lecturer (Unreal Engine) <span class="job-date">2025 - Present</span></h4>
 <p class="job-company">@ RUFA - Rome University of Fine Arts</p>
 </div>
 
@@ -68,7 +69,7 @@ _Lead Engineer responsible for the full-cycle development of a large-scale metav
 
 ## EDUCATION
 
-**High School Diploma: Computer Science (Perito Informatico)**
+**High School Diploma: Computer Science**
 ITIS Enrico Fermi, Rome | _Grade: 90/100_
 
 ## CERTIFICATIONS & COURSES
