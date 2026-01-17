@@ -7,9 +7,14 @@ card_summary = "AI-powered dialogue and lip sync for Metahuman in Unreal Engine 
 weight = 1
 category = "freelance"
 tags = ["Unreal Engine", "C++", "AI", "Metahuman", "ACF U"]
-featured_image = ""
-gallery = []
-video = ""
+featured_image = "assets/ai-dialogue-metahuman/cover.jpg"
+gallery = [
+  "assets/ai-dialogue-metahuman/screenshot1.jpg",
+  "assets/ai-dialogue-metahuman/screenshot2.gif",
+  "assets/ai-dialogue-metahuman/screenshot3.jpg",
+  "assets/ai-dialogue-metahuman/screenshot4.png"
+]
+video = "assets/ai-dialogue-metahuman/demo.mp4"
 role = "C++ Developer"
 engine = "Unreal Engine"
 language = "C++"
