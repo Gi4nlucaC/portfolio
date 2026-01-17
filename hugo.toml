@@ -30,7 +30,7 @@ theme = 'hello-friend-ng'
 
 # Logo configuration
 [params.logo]
-  logoText = "hello world!"
+  logoText = "Gianluca Camarca"
   logoMark = ">"
   logoCursorColor = "#FFFFFF"
   logoCursorAnimate = "2s"
