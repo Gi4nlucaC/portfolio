@@ -389,10 +389,7 @@ body.disable-hor-scroll {
     margin: 2em 0 !important;
 }
 
-.post-content ul {
-    list-style-type: none !important;
-    padding-left: 0 !important;
-}
+
 
 .post-content ul li:before {
     content: ' ' !important;
@@ -429,7 +426,6 @@ body.disable-hor-scroll {
     display: grid !important;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
     gap: 2em !important;
-    list-style: none !important;
     padding: 0 !important;
 }
 
