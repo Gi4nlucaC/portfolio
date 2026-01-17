@@ -9,7 +9,14 @@
                 <div class="project-video-hero">
                     {{ if (in .Params.video "youtu") }}
                         <div class="video-embed-responsive">
-                            <iframe width="100%" height="400" src="{{ replace .Params.video "watch?v=" "embed/" }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            {{ $yt := .Params.video }}
+                            {{ if (in $yt "youtu.be/") }}
+                                {{ $ytid := replace $yt "https://youtu.be/" "" }}
+                                <iframe width="100%" height="400" src="https://www.youtube.com/embed/{{ $ytid }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            {{ else if (in $yt "watch?v=") }}
+                                {{ $ytid := index (split $yt "watch?v=") 1 }}
+                                <iframe width="100%" height="400" src="https://www.youtube.com/embed/{{ $ytid }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            {{ end }}
                         </div>
                     {{ else }}
                         <video controls width="100%" poster="{{ if .Params.featured_image }}{{ .Params.featured_image | relURL }}{{ end }}" preload="metadata" autoplay muted playsinline loop>
