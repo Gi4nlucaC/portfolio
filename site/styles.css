@@ -537,7 +537,7 @@ h3 {
 }
 
 .tags {
-  list-style: none;
+  /* list-style removed to restore bullets */
   padding: 0;
   margin: 0;
   display: flex;
@@ -878,7 +878,7 @@ h3 {
 
 
 .project-detail__summary {
-  list-style: none;
+  /* list-style removed to restore bullets */
   cursor: pointer;
   padding: 14px;
 }

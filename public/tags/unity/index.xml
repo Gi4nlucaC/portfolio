@@ -1,33 +1,56 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Unity on Gianluca Camarca</title>
-    <link>https://gi4nlucac.github.io/portfolio/tags/unity/</link>
-    <description>Recent content in Unity on Gianluca Camarca</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://gi4nlucac.github.io/portfolio/tags/unity/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Mars Kitchen</title>
-      <link>https://gi4nlucac.github.io/portfolio/projects/mars-kitchen/</link>
-      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>https://gi4nlucac.github.io/portfolio/projects/mars-kitchen/</guid>
-      <description>&lt;h2 id=&#34;my-role&#34;&gt;My Role&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Implemented core VR interaction systems&lt;/li&gt;&#xA;&lt;li&gt;Developed physics-based cooking mechanics&lt;/li&gt;&#xA;&lt;li&gt;Created grabbing and manipulation systems&lt;/li&gt;&#xA;&lt;li&gt;Optimized performance for VR platforms&lt;/li&gt;&#xA;&lt;li&gt;Integrated audio and haptic feedback&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;key-features&#34;&gt;Key Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;VR cooking mechanics and interactions&lt;/li&gt;&#xA;&lt;li&gt;Retro-futuristic Martian environment&lt;/li&gt;&#xA;&lt;li&gt;Physics-based object manipulation&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>Metaverse — Regione Lombardia</title>
-      <link>https://gi4nlucac.github.io/portfolio/projects/metaverse-regione-lombardia/</link>
-      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://gi4nlucac.github.io/portfolio/projects/metaverse-regione-lombardia/</guid>
-      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Metaverse — Regione Lombardia is an accessible, city-scale metaverse prototype designed to host cultural exhibitions, live events, and civic services. The project focuses on performance, progressive enhancement for WebGL, and accessible interaction patterns.&lt;/p&gt;&#xA;&lt;h2 id=&#34;my-role&#34;&gt;My Role&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Technical direction and architecture&lt;/li&gt;&#xA;&lt;li&gt;Networked scenes and streaming&lt;/li&gt;&#xA;&lt;li&gt;Accessibility and UX for public audiences&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;key-features&#34;&gt;Key Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lightweight streaming and scene LOD&lt;/li&gt;&#xA;&lt;li&gt;Multi-user events and moderation tools&lt;/li&gt;&#xA;&lt;li&gt;Integration with regional content and services&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>Personal Project Name</title>
-      <link>https://gi4nlucac.github.io/portfolio/projects/personal-project-1/</link>
-      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://gi4nlucac.github.io/portfolio/projects/personal-project-1/</guid>
-      <description>&lt;p&gt;A personal project I&amp;rsquo;m working on in my spare time.&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;[Describe your personal project, what you&amp;rsquo;re learning, and your goals]&lt;/p&gt;&#xA;&lt;h2 id=&#34;technologies&#34;&gt;Technologies&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Engine:&lt;/strong&gt; Unity&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Language:&lt;/strong&gt; C#&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Focus:&lt;/strong&gt; Gameplay Programming&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;what-im-learning&#34;&gt;What I&amp;rsquo;m Learning&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;New techniques&lt;/li&gt;&#xA;&lt;li&gt;Advanced systems&lt;/li&gt;&#xA;&lt;li&gt;Best practices&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Unity on Gianluca Camarca</title><link>https://gi4nlucac.github.io/portfolio/tags/unity/</link><description>Recent content in Unity on Gianluca Camarca</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://gi4nlucac.github.io/portfolio/tags/unity/index.xml" rel="self" type="application/rss+xml"/><item><title>Mars Kitchen</title><link>https://gi4nlucac.github.io/portfolio/projects/mars-kitchen/</link><pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><guid>https://gi4nlucac.github.io/portfolio/projects/mars-kitchen/</guid><description>&lt;h2 id="my-role"&gt;My Role&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Implemented core VR interaction systems&lt;/li&gt;
+&lt;li&gt;Developed physics-based cooking mechanics&lt;/li&gt;
+&lt;li&gt;Created grabbing and manipulation systems&lt;/li&gt;
+&lt;li&gt;Optimized performance for VR platforms&lt;/li&gt;
+&lt;li&gt;Integrated audio and haptic feedback&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="key-features"&gt;Key Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;VR cooking mechanics and interactions&lt;/li&gt;
+&lt;li&gt;Retro-futuristic Martian environment&lt;/li&gt;
+&lt;li&gt;Physics-based object manipulation&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Polyverse</title><link>https://gi4nlucac.github.io/portfolio/projects/polyverse/</link><pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate><guid>https://gi4nlucac.github.io/portfolio/projects/polyverse/</guid><description>&lt;h2 id="role"&gt;Role&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Engine architecture&lt;/li&gt;
+&lt;li&gt;Procedural systems&lt;/li&gt;
+&lt;li&gt;Performance optimization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="key-features"&gt;Key Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Dynamic streaming&lt;/li&gt;
+&lt;li&gt;Procedural content pipelines&lt;/li&gt;
+&lt;li&gt;Cross-platform serialization&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Metaverse — Regione Lombardia</title><link>https://gi4nlucac.github.io/portfolio/projects/metaverse-regione-lombardia/</link><pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate><guid>https://gi4nlucac.github.io/portfolio/projects/metaverse-regione-lombardia/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
+&lt;p&gt;Metaverse — Regione Lombardia is a pioneering digital initiative by the Lombardy Region, designed to bring citizens closer to public institutions through immersive technology. This virtual environment allows users to explore interactive digital spaces, participate in events, and discover Lombardy&amp;rsquo;s rich cultural heritage—breaking down physical barriers and enabling new forms of engagement.&lt;/p&gt;
+&lt;p&gt;Within the Metaverse, users can create personalized avatars, meet others, visit virtual exhibitions, and attend public events. Notably, the platform features a digital recreation of Piazza Città di Lombardia, offering a safe and privacy-respecting space for shared experiences. The debut exhibition, &amp;ldquo;Incontri nel Metaverso – Tradizioni e saperi lombardi,&amp;rdquo; developed in collaboration with the Archive of Ethnography and Social History (AESS), celebrates the region&amp;rsquo;s traditions and roots through objects and stories.&lt;/p&gt;</description></item><item><title>Acryptia</title><link>https://gi4nlucac.github.io/portfolio/projects/acryptia/</link><pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><guid>https://gi4nlucac.github.io/portfolio/projects/acryptia/</guid><description>&lt;h2 id="my-role"&gt;My Role&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Designed and implemented core gameplay mechanics&lt;/li&gt;
+&lt;li&gt;Developed card game systems and logic&lt;/li&gt;
+&lt;li&gt;Created technical game design documentation&lt;/li&gt;
+&lt;li&gt;Optimized for WebGL platform (desktop and mobile)&lt;/li&gt;
+&lt;li&gt;Integrated leaderboard and prize systems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="key-features"&gt;Key Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Strategic dungeon card gameplay&lt;/li&gt;
+&lt;li&gt;Cross-platform (desktop and mobile browsers)&lt;/li&gt;
+&lt;li&gt;Competitive leaderboard system&lt;/li&gt;
+&lt;li&gt;150,000+ matches per season&lt;/li&gt;
+&lt;li&gt;Web3 integration&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Personal Project Name</title><link>https://gi4nlucac.github.io/portfolio/projects/personal-project-1/</link><pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate><guid>https://gi4nlucac.github.io/portfolio/projects/personal-project-1/</guid><description>&lt;p&gt;A personal project I&amp;rsquo;m working on in my spare time.&lt;/p&gt;
+&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
+&lt;p&gt;[Describe your personal project, what you&amp;rsquo;re learning, and your goals]&lt;/p&gt;
+&lt;h2 id="technologies"&gt;Technologies&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Engine:&lt;/strong&gt; Unity&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Language:&lt;/strong&gt; C#&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Focus:&lt;/strong&gt; Gameplay Programming&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="what-im-learning"&gt;What I&amp;rsquo;m Learning&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;New techniques&lt;/li&gt;
+&lt;li&gt;Advanced systems&lt;/li&gt;
+&lt;li&gt;Best practices&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

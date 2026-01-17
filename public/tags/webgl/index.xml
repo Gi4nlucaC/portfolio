@@ -1,19 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>WebGL on Gianluca Camarca</title>
-    <link>https://gi4nlucac.github.io/portfolio/tags/webgl/</link>
-    <description>Recent content in WebGL on Gianluca Camarca</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://gi4nlucac.github.io/portfolio/tags/webgl/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Metaverse — Regione Lombardia</title>
-      <link>https://gi4nlucac.github.io/portfolio/projects/metaverse-regione-lombardia/</link>
-      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://gi4nlucac.github.io/portfolio/projects/metaverse-regione-lombardia/</guid>
-      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Metaverse — Regione Lombardia is an accessible, city-scale metaverse prototype designed to host cultural exhibitions, live events, and civic services. The project focuses on performance, progressive enhancement for WebGL, and accessible interaction patterns.&lt;/p&gt;&#xA;&lt;h2 id=&#34;my-role&#34;&gt;My Role&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Technical direction and architecture&lt;/li&gt;&#xA;&lt;li&gt;Networked scenes and streaming&lt;/li&gt;&#xA;&lt;li&gt;Accessibility and UX for public audiences&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;key-features&#34;&gt;Key Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lightweight streaming and scene LOD&lt;/li&gt;&#xA;&lt;li&gt;Multi-user events and moderation tools&lt;/li&gt;&#xA;&lt;li&gt;Integration with regional content and services&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WebGL on Gianluca Camarca</title><link>https://gi4nlucac.github.io/portfolio/tags/webgl/</link><description>Recent content in WebGL on Gianluca Camarca</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://gi4nlucac.github.io/portfolio/tags/webgl/index.xml" rel="self" type="application/rss+xml"/><item><title>Acryptia</title><link>https://gi4nlucac.github.io/portfolio/projects/acryptia/</link><pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><guid>https://gi4nlucac.github.io/portfolio/projects/acryptia/</guid><description>&lt;h2 id="my-role"&gt;My Role&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Designed and implemented core gameplay mechanics&lt;/li&gt;
+&lt;li&gt;Developed card game systems and logic&lt;/li&gt;
+&lt;li&gt;Created technical game design documentation&lt;/li&gt;
+&lt;li&gt;Optimized for WebGL platform (desktop and mobile)&lt;/li&gt;
+&lt;li&gt;Integrated leaderboard and prize systems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="key-features"&gt;Key Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Strategic dungeon card gameplay&lt;/li&gt;
+&lt;li&gt;Cross-platform (desktop and mobile browsers)&lt;/li&gt;
+&lt;li&gt;Competitive leaderboard system&lt;/li&gt;
+&lt;li&gt;150,000+ matches per season&lt;/li&gt;
+&lt;li&gt;Web3 integration&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

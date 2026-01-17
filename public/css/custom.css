@@ -389,10 +389,7 @@ body.disable-hor-scroll {
     margin: 2em 0 !important;
 }
 
-.post-content ul {
-    list-style-type: none !important;
-    padding-left: 0 !important;
-}
+
 
 .post-content ul li:before {
     content: ' ' !important;
@@ -429,7 +426,6 @@ body.disable-hor-scroll {
     display: grid !important;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
     gap: 2em !important;
-    list-style: none !important;
     padding: 0 !important;
 }
 
@@ -972,4 +968,11 @@ body.disable-hor-scroll {
 .project-description-item .info-value {
     line-height: 1.6;
     margin-top: 0.5em;
+}
+
+/* Evidenzia il social email quando copiato */
+.email-copied {
+  color: #4CAF50 !important;
+  filter: drop-shadow(0 0 4px #4CAF50);
+  transition: color 0.2s, filter 0.2s;
 }
