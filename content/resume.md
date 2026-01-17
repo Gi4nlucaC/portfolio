@@ -115,8 +115,6 @@ ITIS Enrico Fermi, Rome | _Grade: 90/100_
 - **Strong debugging and profiling skills**, experienced in optimizing performance for constrained platforms (VR, Mobile).
 - **Proficient with Version Control Systems**, specifically **Git** and **Diversion**.
 
----
-
 ## SOFT SKILLS
 
 - **Positive Team Culture:** Naturally inclined to foster a supportive and friendly work environment, building strong interpersonal connections that enhance collaboration and team morale.
@@ -126,8 +124,6 @@ ITIS Enrico Fermi, Rome | _Grade: 90/100_
 - **Comfortable working autonomously** on complex vertical slices or collaborating within cross-functional teams.
 - **Systems Thinking approach:** My passion for complex board games and immersive sims translates into a deep understanding of game loops and economy balance.
 - **Selective & Analytical Gamer:** As a parent with limited time, I focus on analyzing high-value design experiences—from intricate RPGs to creative Indie gems.
-
----
 
 ## PORTFOLIO
 
