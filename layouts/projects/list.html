@@ -44,18 +44,6 @@
                     </div>
                 </div>
             {{ end }}
-
-            {{ $otherPages := $pages | complement $professionalPages | complement $personalPages }}
-            {{ if gt (len $otherPages) 0 }}
-                <div class="projects-section">
-                    <h2>Other Projects</h2>
-                    <div class="projects-grid">
-                        {{ range $otherPages }}
-                            {{ partial "project-card.html" . }}
-                        {{ end }}
-                    </div>
-                </div>
-            {{ end }}
         </main>
     </div>
 {{ end }}

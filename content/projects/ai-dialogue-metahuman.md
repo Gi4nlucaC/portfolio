@@ -11,7 +11,7 @@ featured_image = "assets/ai-dialogue-metahuman/cover.jpg"
 gallery = [
   "assets/ai-dialogue-metahuman/screenshot1.jpg",
   "assets/ai-dialogue-metahuman/screenshot2.gif",
-  "assets/ai-dialogue-metahuman/screenshot3.jpg",
+  "assets/ai-dialogue-metahuman/screenshot3.png",
   "assets/ai-dialogue-metahuman/screenshot4.png"
 ]
 video = "assets/ai-dialogue-metahuman/demo.mp4"
