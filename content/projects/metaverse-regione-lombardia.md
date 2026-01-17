@@ -24,8 +24,7 @@ platforms = 'Crossplatform: WebGL, Standalone, VR, Mobile'
 links = [
   { label = "Website", url = "https://eventi.regione.lombardia.it/it/metaverso" }
 ]
-]
-+++
+++
 
 ## Overview
 
