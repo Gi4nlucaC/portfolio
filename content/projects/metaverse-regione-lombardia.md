@@ -12,7 +12,8 @@ gallery = [
   'assets/metaverse-lombardia/space1.jpg',
   'assets/metaverse-lombardia/space2.jpg',
   'assets/metaverse-lombardia/space3.jpg',
-  'assets/metaverse-lombardia/space4.png'
+  'assets/metaverse-lombardia/space4.png',
+  'assets/metaverse-lombardia/space5.jpg'
 ]
 video = ''
 role = 'Lead XR Developer'
