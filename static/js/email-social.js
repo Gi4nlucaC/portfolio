@@ -3,17 +3,19 @@ document.addEventListener('DOMContentLoaded', function() {
   socialLinks.forEach(function(link) {
     link.addEventListener('click', function(e) {
       e.preventDefault();
+      e.stopImmediatePropagation();
       var user = 'camarca.gianluca';
       var domain = 'gmail.com';
       var email = user + '@' + domain;
-      // Forza il mailto anche se clicchi su svg o span
+      // Rimuovi target per evitare nuova scheda
+      link.removeAttribute('target');
       window.location.href = 'mailto:' + email;
-      // Mostra tooltip temporaneo con la mail
       link.setAttribute('title', email);
       setTimeout(function() {
         link.setAttribute('title', 'Click to reveal email');
       }, 2000);
-    }, false);
+      return false;
+    }, true);
     link.setAttribute('title', 'Click to reveal email');
   });
 });
