@@ -14,7 +14,7 @@ gallery = [
 	'assets/polyverse/poly3.png',
 	'assets/polyverse/poly4.jpg'
 ]
-video = 'assets/polyverse/polyverse_trailer_v2.mp4'
+video = 'https://youtu.be/-iuIlTpDrng'
 role = 'Gameplay Programmer'
 engine = 'Unity'
 language = 'C#'

@@ -16,7 +16,7 @@ gallery = [
   "assets/acryptia/acryptia4.webp",
   "assets/acryptia/acryptia5.webp"
 ]
-video = "assets/acryptia/Acryptia_video.mp4"
+video = "https://youtu.be/GmP9efkaQUc"
 role = "Gameplay Programmer & Technical Game Designer"
 engine = "Unity"
 language = "C#"

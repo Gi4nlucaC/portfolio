@@ -20,7 +20,7 @@ gallery = [
   'assets/marskitchen/MK_Screenshot (9).jpg',
   'assets/marskitchen/MK_Screenshot (10).jpg'
 ]
-video = 'assets/marskitchen/marskitchen.MP4'
+video = 'https://youtu.be/q2LjSp-4rNg'
 role = 'Gameplay Programmer'
 engine = 'Unity'
 language = 'C#'

@@ -14,7 +14,7 @@ gallery = [
   "assets/ai-dialogue-metahuman/screenshot3.png",
   "assets/ai-dialogue-metahuman/screenshot4.png"
 ]
-video = "assets/ai-dialogue-metahuman/demo.mp4"
+video = "https://youtu.be/gT3fj0IkByA"
 role = "C++ Developer"
 engine = "Unreal Engine"
 language = "C++"
