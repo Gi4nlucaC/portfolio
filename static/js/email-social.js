@@ -9,15 +9,28 @@ document.addEventListener('DOMContentLoaded', function() {
       var user = 'camarca.gianluca';
       var domain = 'gmail.com';
       var email = user + '@' + domain;
-      // Rimuovi target per evitare nuova scheda
-      link.removeAttribute('target');
-      window.location.href = 'mailto:' + email;
-      link.setAttribute('title', email);
-      setTimeout(function() {
-        link.setAttribute('title', 'Click to reveal email');
-      }, 2000);
+      
+      // Copia la mail negli appunti
+      navigator.clipboard.writeText(email).then(function() {
+        // Mostra feedback visivo
+        var originalTitle = link.getAttribute('title');
+        link.setAttribute('title', '✓ Email copied: ' + email);
+        
+        // Cambia temporaneamente lo stile per feedback
+        var originalColor = link.style.color;
+        link.style.color = '#4CAF50';
+        
+        setTimeout(function() {
+          link.setAttribute('title', 'Click to copy email');
+          link.style.color = originalColor;
+        }, 2000);
+      }).catch(function(err) {
+        // Fallback: mostra la mail in un alert se clipboard non funziona
+        alert('Email: ' + email);
+      });
+      
       return false;
     }, true);
-    link.setAttribute('title', 'Click to reveal email');
+    link.setAttribute('title', 'Click to copy email');
   });
 });
