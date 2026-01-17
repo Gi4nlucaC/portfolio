@@ -1,19 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>PS5 on Gianluca Camarca</title>
-    <link>https://gi4nlucac.github.io/portfolio/tags/ps5/</link>
-    <description>Recent content in PS5 on Gianluca Camarca</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://gi4nlucac.github.io/portfolio/tags/ps5/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Mars Kitchen</title>
-      <link>https://gi4nlucac.github.io/portfolio/projects/mars-kitchen/</link>
-      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>https://gi4nlucac.github.io/portfolio/projects/mars-kitchen/</guid>
-      <description>&lt;h2 id=&#34;my-role&#34;&gt;My Role&lt;/h2&gt;&#xA;&lt;p&gt;Served as a &lt;strong&gt;Gameplay Programmer&lt;/strong&gt; and &lt;strong&gt;Technical Designer&lt;/strong&gt;, acting as the bridge between creative vision and technical implementation. I owned critical parts of the optimization pipeline and led the console certification process.&lt;/p&gt;&#xA;&lt;h2 id=&#34;key-technical-contributions&#34;&gt;Key Technical Contributions&lt;/h2&gt;&#xA;&lt;h3 id=&#34;systems-architecture--optimization&#34;&gt;Systems Architecture &amp;amp; Optimization&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Runtime Lightmap Swapping:&lt;/strong&gt; Architected a custom system to enable a seamless &amp;ldquo;Endless Mode&amp;rdquo;. This allowed for instant environment changes without scene reloading, maintaining player immersion while managing memory constraints.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;AI Virtualization:&lt;/strong&gt; Engineered an AI Virtualization System to simulate off-screen customer behavior and order generation. This maintained complex game state consistency with minimal CPU overhead.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;gameplay--physics&#34;&gt;Gameplay &amp;amp; Physics&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Complex Mechanics Prototyping:&lt;/strong&gt; Acted as Technical Designer to implement advanced physics interactions, minigames and hand tracking gestures.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Localization System:&lt;/strong&gt; Built a robust, scalable localization system supporting 5 languages.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;platform-engineering&#34;&gt;Platform Engineering&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;PlayStation VR Porting:&lt;/strong&gt; Owned the full porting and certification pipeline for PlayStation.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Certification Success:&lt;/strong&gt; Successfully navigated strict &lt;strong&gt;Sony TRC (Technical Requirements Checklist)&lt;/strong&gt; standards to ensure a smooth launch on the PlayStation Store.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PS5 on Gianluca Camarca</title><link>https://gi4nlucac.github.io/portfolio/tags/ps5/</link><description>Recent content in PS5 on Gianluca Camarca</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://gi4nlucac.github.io/portfolio/tags/ps5/index.xml" rel="self" type="application/rss+xml"/><item><title>Mars Kitchen</title><link>https://gi4nlucac.github.io/portfolio/projects/mars-kitchen/</link><pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><guid>https://gi4nlucac.github.io/portfolio/projects/mars-kitchen/</guid><description>&lt;h2 id="my-role"&gt;My Role&lt;/h2&gt;
+&lt;p&gt;Served as a &lt;strong&gt;Gameplay Programmer&lt;/strong&gt; and &lt;strong&gt;Technical Designer&lt;/strong&gt;, acting as the bridge between creative vision and technical implementation. I owned critical parts of the optimization pipeline and led the console certification process.&lt;/p&gt;
+&lt;h2 id="key-technical-contributions"&gt;Key Technical Contributions&lt;/h2&gt;
+&lt;h3 id="systems-architecture--optimization"&gt;Systems Architecture &amp;amp; Optimization&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Runtime Lightmap Swapping:&lt;/strong&gt; Architected a custom system to enable a seamless &amp;ldquo;Endless Mode&amp;rdquo;. This allowed for instant environment changes without scene reloading, maintaining player immersion while managing memory constraints.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI Virtualization:&lt;/strong&gt; Engineered an AI Virtualization System to simulate off-screen customer behavior and order generation. This maintained complex game state consistency with minimal CPU overhead.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="gameplay--physics"&gt;Gameplay &amp;amp; Physics&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Complex Mechanics Prototyping:&lt;/strong&gt; Acted as Technical Designer to implement advanced physics interactions, minigames and hand tracking gestures.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Localization System:&lt;/strong&gt; Built a robust, scalable localization system supporting 5 languages.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="platform-engineering"&gt;Platform Engineering&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PlayStation VR Porting:&lt;/strong&gt; Owned the full porting and certification pipeline for PlayStation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Certification Success:&lt;/strong&gt; Successfully navigated strict &lt;strong&gt;Sony TRC (Technical Requirements Checklist)&lt;/strong&gt; standards to ensure a smooth launch on the PlayStation Store.&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

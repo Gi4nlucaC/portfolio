@@ -1,19 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>AI on Gianluca Camarca</title>
-    <link>https://gi4nlucac.github.io/portfolio/tags/ai/</link>
-    <description>Recent content in AI on Gianluca Camarca</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 17 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://gi4nlucac.github.io/portfolio/tags/ai/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>AI Dialogue with Metahuman</title>
-      <link>https://gi4nlucac.github.io/portfolio/projects/ai-dialogue-metahuman/</link>
-      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://gi4nlucac.github.io/portfolio/projects/ai-dialogue-metahuman/</guid>
-      <description>&lt;h2 id=&#34;my-role&#34;&gt;My Role&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Developed all C++ scripts to connect API keys for all available AI providers&lt;/li&gt;&#xA;&lt;li&gt;Enabled in-game AI-powered dialogue with Metahuman characters&lt;/li&gt;&#xA;&lt;li&gt;Implemented real-time audio generation for AI responses&lt;/li&gt;&#xA;&lt;li&gt;Created runtime phoneme extraction for accurate Metahuman mouth animation&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;key-features&#34;&gt;Key Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Seamless integration with Ascent Combat Framework Ultimate V4 (ACF U)&lt;/li&gt;&#xA;&lt;li&gt;Supports multiple AI providers for dialogue&lt;/li&gt;&#xA;&lt;li&gt;Real-time audio generation and playback&lt;/li&gt;&#xA;&lt;li&gt;Automatic phoneme extraction for Metahuman lip sync&lt;/li&gt;&#xA;&lt;li&gt;Fully written in C++ for Unreal Engine&lt;/li&gt;&#xA;&lt;li&gt;Released as a feature for a top-selling Unreal Engine framework&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on Gianluca Camarca</title><link>https://gi4nlucac.github.io/portfolio/tags/ai/</link><description>Recent content in AI on Gianluca Camarca</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 17 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://gi4nlucac.github.io/portfolio/tags/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>AI Dialogue with Metahuman</title><link>https://gi4nlucac.github.io/portfolio/projects/ai-dialogue-metahuman/</link><pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate><guid>https://gi4nlucac.github.io/portfolio/projects/ai-dialogue-metahuman/</guid><description>&lt;h2 id="my-role"&gt;My Role&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Developed all C++ scripts to connect API keys for all available AI providers&lt;/li&gt;
+&lt;li&gt;Enabled in-game AI-powered dialogue with Metahuman characters&lt;/li&gt;
+&lt;li&gt;Implemented real-time audio generation for AI responses&lt;/li&gt;
+&lt;li&gt;Created runtime phoneme extraction for accurate Metahuman mouth animation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="key-features"&gt;Key Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Seamless integration with Ascent Combat Framework Ultimate V4 (ACF U)&lt;/li&gt;
+&lt;li&gt;Supports multiple AI providers for dialogue&lt;/li&gt;
+&lt;li&gt;Real-time audio generation and playback&lt;/li&gt;
+&lt;li&gt;Automatic phoneme extraction for Metahuman lip sync&lt;/li&gt;
+&lt;li&gt;Fully written in C++ for Unreal Engine&lt;/li&gt;
+&lt;li&gt;Released as a feature for a top-selling Unreal Engine framework&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

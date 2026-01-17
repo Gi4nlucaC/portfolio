@@ -1,19 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>WebGL on Gianluca Camarca</title>
-    <link>https://gi4nlucac.github.io/portfolio/tags/webgl/</link>
-    <description>Recent content in WebGL on Gianluca Camarca</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://gi4nlucac.github.io/portfolio/tags/webgl/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Acryptia</title>
-      <link>https://gi4nlucac.github.io/portfolio/projects/acryptia/</link>
-      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>https://gi4nlucac.github.io/portfolio/projects/acryptia/</guid>
-      <description>&lt;h2 id=&#34;my-role&#34;&gt;My Role&lt;/h2&gt;&#xA;&lt;p&gt;As a Core Gameplay Programmer, I was responsible for the architectural design of the card battle system and the backend integration. My focus was on creating a secure, server-authoritative environment while pushing the visual boundaries of WebGL through custom shader work and particle integration.&lt;/p&gt;&#xA;&lt;h2 id=&#34;key-technical-contributions&#34;&gt;Key Technical Contributions&lt;/h2&gt;&#xA;&lt;h3 id=&#34;core-architecture--design-patterns&#34;&gt;Core Architecture &amp;amp; Design Patterns&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Scalable Card Logic:&lt;/strong&gt; Implemented the Strategy Design Pattern to decouple card behaviors from execution flow. This ensured code maintainability and allowed for the easy addition of new card mechanics without refactoring core systems.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Backend Security:&lt;/strong&gt; Developed a Server-Authoritative Logic layer utilizing PlayFab and Mirror. Managed critical operations—including deck population, shuffling, and match validation—strictly server-side to prevent client-side manipulation and ensure competitive integrity.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;graphics--optimization&#34;&gt;Graphics &amp;amp; Optimization&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Dynamic Skinning System:&lt;/strong&gt; Created a custom RGB-mask Shader solution to handle UI customization. This allowed UI elements to be recolored at runtime via ScriptableObjects, drastically reducing the build size by eliminating the need for duplicate textures for different skins.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;UI VFX Integration:&lt;/strong&gt; Overcame standard UI limitations by implementing particle systems directly within the Unity 2D Canvas hierarchy, enhancing the &amp;ldquo;game feel&amp;rdquo; and visual feedback without sacrificing sorting layer control.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;tooling--pipeline&#34;&gt;Tooling &amp;amp; Pipeline&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Designer Workflow:&lt;/strong&gt; Built custom Editor Tools, including a Deck Configurator and balancing utilities. These tools accelerated the content iteration loop, allowing designers to tweak meta-game values without engineering dependency.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WebGL on Gianluca Camarca</title><link>https://gi4nlucac.github.io/portfolio/tags/webgl/</link><description>Recent content in WebGL on Gianluca Camarca</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://gi4nlucac.github.io/portfolio/tags/webgl/index.xml" rel="self" type="application/rss+xml"/><item><title>Acryptia</title><link>https://gi4nlucac.github.io/portfolio/projects/acryptia/</link><pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><guid>https://gi4nlucac.github.io/portfolio/projects/acryptia/</guid><description>&lt;h2 id="my-role"&gt;My Role&lt;/h2&gt;
+&lt;p&gt;As a Core Gameplay Programmer, I was responsible for the architectural design of the card battle system and the backend integration. My focus was on creating a secure, server-authoritative environment while pushing the visual boundaries of WebGL through custom shader work and particle integration.&lt;/p&gt;
+&lt;h2 id="key-technical-contributions"&gt;Key Technical Contributions&lt;/h2&gt;
+&lt;h3 id="core-architecture--design-patterns"&gt;Core Architecture &amp;amp; Design Patterns&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Scalable Card Logic:&lt;/strong&gt; Implemented the Strategy Design Pattern to decouple card behaviors from execution flow. This ensured code maintainability and allowed for the easy addition of new card mechanics without refactoring core systems.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Backend Security:&lt;/strong&gt; Developed a Server-Authoritative Logic layer utilizing PlayFab and Mirror. Managed critical operations—including deck population, shuffling, and match validation—strictly server-side to prevent client-side manipulation and ensure competitive integrity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="graphics--optimization"&gt;Graphics &amp;amp; Optimization&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Dynamic Skinning System:&lt;/strong&gt; Created a custom RGB-mask Shader solution to handle UI customization. This allowed UI elements to be recolored at runtime via ScriptableObjects, drastically reducing the build size by eliminating the need for duplicate textures for different skins.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;UI VFX Integration:&lt;/strong&gt; Overcame standard UI limitations by implementing particle systems directly within the Unity 2D Canvas hierarchy, enhancing the &amp;ldquo;game feel&amp;rdquo; and visual feedback without sacrificing sorting layer control.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="tooling--pipeline"&gt;Tooling &amp;amp; Pipeline&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Designer Workflow:&lt;/strong&gt; Built custom Editor Tools, including a Deck Configurator and balancing utilities. These tools accelerated the content iteration loop, allowing designers to tweak meta-game values without engineering dependency.&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

@@ -1,19 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>MongoDB on Gianluca Camarca</title>
-    <link>https://gi4nlucac.github.io/portfolio/tags/mongodb/</link>
-    <description>Recent content in MongoDB on Gianluca Camarca</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 17 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://gi4nlucac.github.io/portfolio/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Cloud &amp; Local Save System</title>
-      <link>https://gi4nlucac.github.io/portfolio/projects/cloud-local-save-system/</link>
-      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://gi4nlucac.github.io/portfolio/projects/cloud-local-save-system/</guid>
-      <description>&lt;h2 id=&#34;key-features&#34;&gt;Key Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Save and load game state using multiple save slots&lt;/li&gt;&#xA;&lt;li&gt;Organize local save files inside a dedicated Saves folder&lt;/li&gt;&#xA;&lt;li&gt;Serialize and deserialize custom data structures (JSON / Binary)&lt;/li&gt;&#xA;&lt;li&gt;Manage saves across multiple scenes and game profiles&lt;/li&gt;&#xA;&lt;li&gt;Optionally store and retrieve saves from the cloud using MongoDB&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;technologies&#34;&gt;Technologies&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Engine:&lt;/strong&gt; Unity&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Language:&lt;/strong&gt; C#&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Cloud:&lt;/strong&gt; MongoDB&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MongoDB on Gianluca Camarca</title><link>https://gi4nlucac.github.io/portfolio/tags/mongodb/</link><description>Recent content in MongoDB on Gianluca Camarca</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 17 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://gi4nlucac.github.io/portfolio/tags/mongodb/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloud &amp; Local Save System</title><link>https://gi4nlucac.github.io/portfolio/projects/cloud-local-save-system/</link><pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate><guid>https://gi4nlucac.github.io/portfolio/projects/cloud-local-save-system/</guid><description>&lt;h2 id="key-features"&gt;Key Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Save and load game state using multiple save slots&lt;/li&gt;
+&lt;li&gt;Organize local save files inside a dedicated Saves folder&lt;/li&gt;
+&lt;li&gt;Serialize and deserialize custom data structures (JSON / Binary)&lt;/li&gt;
+&lt;li&gt;Manage saves across multiple scenes and game profiles&lt;/li&gt;
+&lt;li&gt;Optionally store and retrieve saves from the cloud using MongoDB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="technologies"&gt;Technologies&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Engine:&lt;/strong&gt; Unity&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Language:&lt;/strong&gt; C#&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cloud:&lt;/strong&gt; MongoDB&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
