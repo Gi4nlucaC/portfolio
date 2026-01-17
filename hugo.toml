@@ -72,3 +72,6 @@ theme = 'hello-friend-ng'
 
   topText = []
   bottomText = []
+
+[markup.goldmark.renderer]
+  unsafe = true

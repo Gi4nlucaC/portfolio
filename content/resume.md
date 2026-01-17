@@ -10,14 +10,14 @@ I am Gianluca Camarca, a Gameplay Programmer and Technical Game Designer with ov
 
 ## WORK HISTORY
 
-#### Gameplay Programmer & Technical Designer
-
-_2022 - Present_
-**Taco Studios**
+<div class="job-header">
+<h4 class="job-title">Gameplay Programmer & Technical Designer <span class="job-date">2022 - Present</span></h4>
+<p class="job-company">@ Taco Studios</p>
+</div>
 
 Responsible for core gameplay implementation, networking architecture, and tool development across multiple shipping titles.
 
-**Project:** _Polyverse_ (Multiplayer Isometric Action RPG)
+_Polyverse_ (Multiplayer Isometric Action RPG)
 
 - **Engineered a Server-Authoritative Networking Architecture** using **Mirror** and **PlayFab**. Implemented advanced **Client-Side Prediction and Server Reconciliation** to ensure lag-free movement and prevent cheating in a token-based economy.
 - **Wrote a deterministic Custom A\* Pathfinding algorithm** and Behavior Tree system from scratch, bypassing Unity’s standard NavMesh to guarantee perfectly synchronized enemy movement across all clients.
@@ -25,14 +25,14 @@ Responsible for core gameplay implementation, networking architecture, and tool 
 - **Extended the Universal Render Pipeline (URP)** by writing a custom Render Feature/Pass to achieve an "X-Ray" silhouette effect for characters occluded by geometry.
 - **Created a Data-Driven Gameplay Framework** using ScriptableObjects, empowering designers to balance weapons and stats independently.
 
-**Project:** _Mars Kitchen_ (VR Cooking Simulation)
+_Mars Kitchen_ (VR Cooking Simulation)
 
 - **Architected a seamless "Endless Mode"** by implementing a custom **Runtime Lightmap Swapping** system, allowing instant environment changes without scene reloading.
 - **Engineered an AI Virtualization System** to simulate off-screen customer behavior and orders, maintaining game state consistency with minimal performance cost.
 - **Owned the PlayStation VR porting and certification pipeline**, successfully navigating Sony's TRC requirements to launch on the PlayStation Store.
 - **Acted as Technical Designer**, prototyping and implementing complex mechanics (e.g., "Black Hole" physics, gesture-based minigames) and a robust localization system for 5 languages.
 
-**Project:** _Acryptia_ (Web3 Roguelite Card Game)
+_Acryptia_ (Web3 Roguelite Card Game)
 
 - **Implemented the Strategy Design Pattern** to handle complex card logic and execution flow, ensuring code scalability and maintainability.
 - **Developed a Server-Authoritative Logic layer** on PlayFab/Mirror, managing deck population, shuffling, and match validation server-side to ensure security.
@@ -42,12 +42,12 @@ Responsible for core gameplay implementation, networking architecture, and tool 
 
 ---
 
-#### Lead XR Developer
+<div class="job-header">
+<h4 class="job-title">Lead XR Developer <span class="job-date">2023 - Present</span></h4>
+<p class="job-company">@ Elite Division</p>
+</div>
 
-_2023 - Present_
-**Elite Division**
-
-**Project:** _Metaverse - Regione Lombardia_ (XR/Metaverse Experience)
+_Metaverse - Regione Lombardia_ (XR/Metaverse Experience)
 _Lead Engineer responsible for the full-cycle development of a large-scale metaverse infrastructure for a high-profile government client._
 
 - **Architected a Cross-Platform RTC system** integrating **LiveKit** with Unity. Successfully bridged native SDKs with WebGL-specific libraries (JavaScript interop) to enable seamless Voice, Video, and Screensharing across desktop and web clients.
@@ -57,10 +57,10 @@ _Lead Engineer responsible for the full-cycle development of a large-scale metav
 
 ---
 
-#### Lecturer (Interactive Systems - Unreal Engine)
-
-_2025 - Present_
-**RUFA - Rome University of Fine Arts**
+<div class="job-header">
+<h4 class="job-title">Lecturer (Interactive Systems - Unreal Engine) <span class="job-date">2025 - Present</span></h4>
+<p class="job-company">@ RUFA - Rome University of Fine Arts</p>
+</div>
 
 - **Designed and delivered an intensive Unreal Engine 5 bootcamp** for the "Interactive Systems 2" course (3rd Year Digital Arts program).
 - **Bridged the gap between Art and Engineering**, teaching complex technical architectures—including **Behavior Trees**, **Animation Blueprints**, and **Niagara Systems**—to a design-focused audience.

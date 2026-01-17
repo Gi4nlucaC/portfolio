@@ -43,6 +43,34 @@ a:hover {
     color: var(--vscode-function) !important;
 }
 
+/* Resume job entries styling */
+.job-header {
+    margin-bottom: 1em !important;
+}
+
+.job-title {
+    color: var(--vscode-keyword) !important;
+    font-size: 1.4em !important;
+    margin-bottom: 0.3em !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+}
+
+.job-date {
+    color: var(--vscode-comment) !important;
+    font-size: 0.85em !important;
+    font-weight: normal !important;
+    margin-left: auto !important;
+}
+
+.job-company {
+    color: var(--vscode-text) !important;
+    font-size: 1.1em !important;
+    margin: 0 0 1em 0 !important;
+    font-weight: normal !important;
+}
+
 /* Header with VS Code styling */
 .header {
     background: var(--vscode-bg-lighter) !important;
