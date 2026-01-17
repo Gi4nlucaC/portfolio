@@ -24,14 +24,26 @@ platforms = 'WebGL'
 links = []
 +++
 
-## Role
+## My Role
 
-- Engine architecture
-- Procedural systems
-- Performance optimization
+I acted as the Core Systems Architect, responsible for designing the fundamental multiplayer infrastructure and custom physics implementations. My primary focus was on ensuring deterministic simulation for networked gameplay and extending Unity's rendering pipeline to meet specific visual requirements.
 
-## Key Features
+## Key Technical Contributions
 
-- Dynamic streaming
-- Procedural content pipelines
-- Cross-platform serialization
+### Multiplayer Architecture & Security
+
+- **Server-Authoritative Networking:** Engineered a robust architecture using Mirror and PlayFab. Implemented advanced Client-Side Prediction and Server Reconciliation techniques to ensure lag-free movement while maintaining strict server authority to prevent cheating in the game's token-based economy.
+- **Deterministic Simulation:** Wrote a custom deterministic A\* Pathfinding algorithm and Behavior Tree system from scratch. By bypassing Unity’s standard non-deterministic NavMesh, I guaranteed perfectly synchronized enemy movement across all clients, eliminating desync issues common in networked PvE games.
+
+### Physics & Controls
+
+- **Custom Kinematic Controller:** Developed a bespoke Kinematic Character Controller to handle non-standard gravity logic and complex stair traversal, areas where the default physics engine often struggles.
+- **Procedural Animation:** Integrated the controller with an animation state machine featuring Inverse Kinematics (IK) for grounded foot placement and realistic interactions.
+
+### Graphics Programming
+
+- **URP Extension:** Extended the Universal Render Pipeline (URP) by writing a custom Render Feature and Render Pass. This achieved an "X-Ray" silhouette effect for characters occluded by geometry, enhancing gameplay clarity without sacrificing visual fidelity.
+
+### Gameplay Framework
+
+- **Data-Driven Design:** Created a modular framework using ScriptableObjects, allowing game designers to balance weapon stats and gameplay variables independently, decoupling content creation from engineering tasks.

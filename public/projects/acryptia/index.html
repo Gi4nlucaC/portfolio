@@ -47,7 +47,7 @@
   <meta itemprop="description" content="Acryptia is a strategic dungeon card game, in which players have to beat Rug&#39;O the card dealer to complete floors, climb the leaderboard, and win exclusive prizes.">
   <meta itemprop="datePublished" content="2020-09-01T00:00:00+00:00">
   <meta itemprop="dateModified" content="2020-09-01T00:00:00+00:00">
-  <meta itemprop="wordCount" content="51">
+  <meta itemprop="wordCount" content="220">
   <meta itemprop="image" content="https://gi4nlucac.github.io/portfolio/">
   <meta itemprop="keywords" content="Unity,Card Game,WebGL,Mobile">
 
@@ -200,20 +200,21 @@
 
             <div class="post-content">
                 <h2 id="my-role">My Role</h2>
+<p>As a Core Gameplay Programmer, I was responsible for the architectural design of the card battle system and the backend integration. My focus was on creating a secure, server-authoritative environment while pushing the visual boundaries of WebGL through custom shader work and particle integration.</p>
+<h2 id="key-technical-contributions">Key Technical Contributions</h2>
+<h3 id="core-architecture--design-patterns">Core Architecture &amp; Design Patterns</h3>
 <ul>
-<li>Designed and implemented core gameplay mechanics</li>
-<li>Developed card game systems and logic</li>
-<li>Created technical game design documentation</li>
-<li>Optimized for WebGL platform (desktop and mobile)</li>
-<li>Integrated leaderboard and prize systems</li>
+<li><strong>Scalable Card Logic:</strong> Implemented the Strategy Design Pattern to decouple card behaviors from execution flow. This ensured code maintainability and allowed for the easy addition of new card mechanics without refactoring core systems.</li>
+<li><strong>Backend Security:</strong> Developed a Server-Authoritative Logic layer utilizing PlayFab and Mirror. Managed critical operations—including deck population, shuffling, and match validation—strictly server-side to prevent client-side manipulation and ensure competitive integrity.</li>
 </ul>
-<h2 id="key-features">Key Features</h2>
+<h3 id="graphics--optimization">Graphics &amp; Optimization</h3>
 <ul>
-<li>Strategic dungeon card gameplay</li>
-<li>Cross-platform (desktop and mobile browsers)</li>
-<li>Competitive leaderboard system</li>
-<li>150,000+ matches per season</li>
-<li>Web3 integration</li>
+<li><strong>Dynamic Skinning System:</strong> Created a custom RGB-mask Shader solution to handle UI customization. This allowed UI elements to be recolored at runtime via ScriptableObjects, drastically reducing the build size by eliminating the need for duplicate textures for different skins.</li>
+<li><strong>UI VFX Integration:</strong> Overcame standard UI limitations by implementing particle systems directly within the Unity 2D Canvas hierarchy, enhancing the &ldquo;game feel&rdquo; and visual feedback without sacrificing sorting layer control.</li>
+</ul>
+<h3 id="tooling--pipeline">Tooling &amp; Pipeline</h3>
+<ul>
+<li><strong>Designer Workflow:</strong> Built custom Editor Tools, including a Deck Configurator and balancing utilities. These tools accelerated the content iteration loop, allowing designers to tweak meta-game values without engineering dependency.</li>
 </ul>
 
 

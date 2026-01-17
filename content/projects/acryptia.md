@@ -30,16 +30,20 @@ links = [
 
 ## My Role
 
-- Designed and implemented core gameplay mechanics
-- Developed card game systems and logic
-- Created technical game design documentation
-- Optimized for WebGL platform (desktop and mobile)
-- Integrated leaderboard and prize systems
+As a Core Gameplay Programmer, I was responsible for the architectural design of the card battle system and the backend integration. My focus was on creating a secure, server-authoritative environment while pushing the visual boundaries of WebGL through custom shader work and particle integration.
 
-## Key Features
+## Key Technical Contributions
 
-- Strategic dungeon card gameplay
-- Cross-platform (desktop and mobile browsers)
-- Competitive leaderboard system
-- 150,000+ matches per season
-- Web3 integration
+### Core Architecture & Design Patterns
+
+- **Scalable Card Logic:** Implemented the Strategy Design Pattern to decouple card behaviors from execution flow. This ensured code maintainability and allowed for the easy addition of new card mechanics without refactoring core systems.
+- **Backend Security:** Developed a Server-Authoritative Logic layer utilizing PlayFab and Mirror. Managed critical operations—including deck population, shuffling, and match validation—strictly server-side to prevent client-side manipulation and ensure competitive integrity.
+
+### Graphics & Optimization
+
+- **Dynamic Skinning System:** Created a custom RGB-mask Shader solution to handle UI customization. This allowed UI elements to be recolored at runtime via ScriptableObjects, drastically reducing the build size by eliminating the need for duplicate textures for different skins.
+- **UI VFX Integration:** Overcame standard UI limitations by implementing particle systems directly within the Unity 2D Canvas hierarchy, enhancing the "game feel" and visual feedback without sacrificing sorting layer control.
+
+### Tooling & Pipeline
+
+- **Designer Workflow:** Built custom Editor Tools, including a Deck Configurator and balancing utilities. These tools accelerated the content iteration loop, allowing designers to tweak meta-game values without engineering dependency.

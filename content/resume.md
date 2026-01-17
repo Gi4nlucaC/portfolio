@@ -7,7 +7,7 @@ title = 'Resume'
 ++
 I am Gianluca Camarca, a Gameplay Programmer and Technical Game Designer with over 4 years of experience in the industry. Currently serving as a Lead XR Developer and Lecturer, I specialize in architecting scalable gameplay systems, authoritative networking, and VR interactions. I combine a strong engineering background with design sensibility to bridge the gap between complex code and engaging player experiences.
 
-[Download Resume as PDF](/assets/cv/cv.pdf) | [LinkedIn](https://www.linkedin.com/in/gianlucacamarca/) | [GitLab](https://gitlab.com/g.camarca) | [Email](#email-protected)
+[Download Resume as PDF](/assets/cv/cv.pdf) | [LinkedIn](https://www.linkedin.com/in/gianluca-camarca/) | [GitLab](https://gitlab.com/g.camarca) | [Email](#email-protected)
 
 ## WORK HISTORY
 

@@ -47,7 +47,7 @@
   <meta itemprop="description" content="A public-facing metaverse experience for Regione Lombardia enabling cultural showcases, civic engagement, and immersive events across virtual civic spaces. Built for accessibility and extensibility.">
   <meta itemprop="datePublished" content="2026-01-15T00:00:00+00:00">
   <meta itemprop="dateModified" content="2026-01-15T00:00:00+00:00">
-  <meta itemprop="wordCount" content="234">
+  <meta itemprop="wordCount" content="382">
   <meta itemprop="image" content="https://gi4nlucac.github.io/portfolio/">
   <meta itemprop="keywords" content="Unity,Crossplatform,Metaverse">
 
@@ -196,16 +196,22 @@
 <p>Within the Metaverse, users can create personalized avatars, meet others, visit virtual exhibitions, and attend public events. Notably, the platform features a digital recreation of Piazza Città di Lombardia, offering a safe and privacy-respecting space for shared experiences. The debut exhibition, &ldquo;Incontri nel Metaverso – Tradizioni e saperi lombardi,&rdquo; developed in collaboration with the Archive of Ethnography and Social History (AESS), celebrates the region&rsquo;s traditions and roots through objects and stories.</p>
 <p>Launched in December 2024, the Metaverse is accessible via PC, VR headsets, and mobile devices. Participation requires online registration, avatar creation, and time slot selection, ensuring a unique and engaging experience for all. This project marks a new channel of communication between citizens and institutions, leveraging the Metaverse as an innovative tool for cultural and institutional content sharing. Ongoing development aims to further enhance features and performance, making the experience even more engaging in the future.</p>
 <h2 id="my-role">My Role</h2>
+<p>I held full ownership of the technical lifecycle for this high-profile government project, operating as the Lead Architect and Developer. I managed the project from concept to deployment, ensuring the infrastructure met the scalability and accessibility standards required for a public sector metaverse application.</p>
+<h2 id="key-technical-contributions">Key Technical Contributions</h2>
+<h3 id="cross-platform-rtc-architecture">Cross-Platform RTC Architecture</h3>
 <ul>
-<li>Technical direction and architecture</li>
-<li>Networked scenes and streaming</li>
-<li>Accessibility and UX for public audiences</li>
+<li><strong>LiveKit Integration:</strong> Architected a custom Real-Time Communication (RTC) system integrating LiveKit with Unity.</li>
+<li><strong>WebGL Interoperability:</strong> Successfully bridged native SDKs with WebGL-specific libraries using low-level JavaScript interop. This enabled seamless Voice, Video, and Screensharing capabilities across both desktop applications and browser-based clients without relying on external plugins.</li>
 </ul>
-<h2 id="key-features">Key Features</h2>
+<h3 id="multiplayer-infrastructure">Multiplayer Infrastructure</h3>
 <ul>
-<li>Lightweight streaming and scene LOD</li>
-<li>Multi-user events and moderation tools</li>
-<li>Integration with regional content and services</li>
+<li><strong>Netcode Implementation:</strong> Engineered the core networking architecture using Unity&rsquo;s Netcode for GameObjects.</li>
+<li><strong>State Management:</strong> Managed complex avatar synchronization and state replication logic to maintain consistency in a multi-user environment, ensuring smooth interactions even under varying network conditions.</li>
+</ul>
+<h3 id="optimization-strategy">Optimization Strategy</h3>
+<ul>
+<li><strong>WebGL &amp; Mobile Performance:</strong> Executed an aggressive optimization strategy to guarantee high framerates on constrained devices.</li>
+<li><strong>Rendering Pipeline:</strong> Implemented strict asset pipelines, utilized extensive static/dynamic batching, and configured occlusion culling to minimize draw calls and manage memory usage effectively in a browser environment.</li>
 </ul>
 
 

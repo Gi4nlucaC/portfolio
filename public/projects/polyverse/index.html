@@ -47,7 +47,7 @@
   <meta itemprop="description" content="After an alien invasion and an attempt to defend with AI and military cyborgs, the AI turns hostile causing a nuclear apocalypse. The mutated world hosts five races (Alien, Human, Cyborg, Ape, Mutant) fighting for resources and survival; initially living in shelters as society rebuilds.">
   <meta itemprop="datePublished" content="2019-06-01T00:00:00+00:00">
   <meta itemprop="dateModified" content="2019-06-01T00:00:00+00:00">
-  <meta itemprop="wordCount" content="16">
+  <meta itemprop="wordCount" content="235">
   <meta itemprop="image" content="https://gi4nlucac.github.io/portfolio/">
   <meta itemprop="keywords" content="Unity,ARPG,Web3,Beta Release">
 
@@ -199,17 +199,26 @@
             </div>
 
             <div class="post-content">
-                <h2 id="role">Role</h2>
+                <h2 id="my-role">My Role</h2>
+<p>I acted as the Core Systems Architect, responsible for designing the fundamental multiplayer infrastructure and custom physics implementations. My primary focus was on ensuring deterministic simulation for networked gameplay and extending Unity&rsquo;s rendering pipeline to meet specific visual requirements.</p>
+<h2 id="key-technical-contributions">Key Technical Contributions</h2>
+<h3 id="multiplayer-architecture--security">Multiplayer Architecture &amp; Security</h3>
 <ul>
-<li>Engine architecture</li>
-<li>Procedural systems</li>
-<li>Performance optimization</li>
+<li><strong>Server-Authoritative Networking:</strong> Engineered a robust architecture using Mirror and PlayFab. Implemented advanced Client-Side Prediction and Server Reconciliation techniques to ensure lag-free movement while maintaining strict server authority to prevent cheating in the game&rsquo;s token-based economy.</li>
+<li><strong>Deterministic Simulation:</strong> Wrote a custom deterministic A* Pathfinding algorithm and Behavior Tree system from scratch. By bypassing Unity’s standard non-deterministic NavMesh, I guaranteed perfectly synchronized enemy movement across all clients, eliminating desync issues common in networked PvE games.</li>
 </ul>
-<h2 id="key-features">Key Features</h2>
+<h3 id="physics--controls">Physics &amp; Controls</h3>
 <ul>
-<li>Dynamic streaming</li>
-<li>Procedural content pipelines</li>
-<li>Cross-platform serialization</li>
+<li><strong>Custom Kinematic Controller:</strong> Developed a bespoke Kinematic Character Controller to handle non-standard gravity logic and complex stair traversal, areas where the default physics engine often struggles.</li>
+<li><strong>Procedural Animation:</strong> Integrated the controller with an animation state machine featuring Inverse Kinematics (IK) for grounded foot placement and realistic interactions.</li>
+</ul>
+<h3 id="graphics-programming">Graphics Programming</h3>
+<ul>
+<li><strong>URP Extension:</strong> Extended the Universal Render Pipeline (URP) by writing a custom Render Feature and Render Pass. This achieved an &ldquo;X-Ray&rdquo; silhouette effect for characters occluded by geometry, enhancing gameplay clarity without sacrificing visual fidelity.</li>
+</ul>
+<h3 id="gameplay-framework">Gameplay Framework</h3>
+<ul>
+<li><strong>Data-Driven Design:</strong> Created a modular framework using ScriptableObjects, allowing game designers to balance weapon stats and gameplay variables independently, decoupling content creation from engineering tasks.</li>
 </ul>
 
 

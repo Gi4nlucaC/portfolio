@@ -37,12 +37,21 @@ Launched in December 2024, the Metaverse is accessible via PC, VR headsets, and 
 
 ## My Role
 
-- Technical direction and architecture
-- Networked scenes and streaming
-- Accessibility and UX for public audiences
+I held full ownership of the technical lifecycle for this high-profile government project, operating as the Lead Architect and Developer. I managed the project from concept to deployment, ensuring the infrastructure met the scalability and accessibility standards required for a public sector metaverse application.
 
-## Key Features
+## Key Technical Contributions
 
-- Lightweight streaming and scene LOD
-- Multi-user events and moderation tools
-- Integration with regional content and services
+### Cross-Platform RTC Architecture
+
+- **LiveKit Integration:** Architected a custom Real-Time Communication (RTC) system integrating LiveKit with Unity.
+- **WebGL Interoperability:** Successfully bridged native SDKs with WebGL-specific libraries using low-level JavaScript interop. This enabled seamless Voice, Video, and Screensharing capabilities across both desktop applications and browser-based clients without relying on external plugins.
+
+### Multiplayer Infrastructure
+
+- **Netcode Implementation:** Engineered the core networking architecture using Unity's Netcode for GameObjects.
+- **State Management:** Managed complex avatar synchronization and state replication logic to maintain consistency in a multi-user environment, ensuring smooth interactions even under varying network conditions.
+
+### Optimization Strategy
+
+- **WebGL & Mobile Performance:** Executed an aggressive optimization strategy to guarantee high framerates on constrained devices.
+- **Rendering Pipeline:** Implemented strict asset pipelines, utilized extensive static/dynamic batching, and configured occlusion culling to minimize draw calls and manage memory usage effectively in a browser environment.

@@ -36,14 +36,21 @@ links = [
 
 ## My Role
 
-- Implemented core VR interaction systems
-- Developed physics-based cooking mechanics
-- Created grabbing and manipulation systems
-- Optimized performance for VR platforms
-- Integrated audio and haptic feedback
+Served as a **Gameplay Programmer** and **Technical Designer**, acting as the bridge between creative vision and technical implementation. I owned critical parts of the optimization pipeline and led the console certification process.
 
-## Key Features
+## Key Technical Contributions
 
-- VR cooking mechanics and interactions
-- Retro-futuristic Martian environment
-- Physics-based object manipulation
+### Systems Architecture & Optimization
+
+- **Runtime Lightmap Swapping:** Architected a custom system to enable a seamless "Endless Mode". This allowed for instant environment changes without scene reloading, maintaining player immersion while managing memory constraints.
+- **AI Virtualization:** Engineered an AI Virtualization System to simulate off-screen customer behavior and order generation. This maintained complex game state consistency with minimal CPU overhead.
+
+### Gameplay & Physics
+
+- **Complex Mechanics Prototyping:** Acted as Technical Designer to implement advanced physics interactions, minigames and hand tracking gestures.
+- **Localization System:** Built a robust, scalable localization system supporting 5 languages.
+
+### Platform Engineering
+
+- **PlayStation VR Porting:** Owned the full porting and certification pipeline for PlayStation.
+- **Certification Success:** Successfully navigated strict **Sony TRC (Technical Requirements Checklist)** standards to ensure a smooth launch on the PlayStation Store.

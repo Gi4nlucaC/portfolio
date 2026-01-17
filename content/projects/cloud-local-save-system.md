@@ -31,7 +31,3 @@ links = []
 - **Engine:** Unity
 - **Language:** C#
 - **Cloud:** MongoDB
-
-## Status
-
-This is a stub entry. More details and documentation coming soon.
