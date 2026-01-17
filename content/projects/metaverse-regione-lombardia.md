@@ -9,9 +9,11 @@ category = 'professional'
 tags = ['Unity', 'WebGL', 'Metaverse']
 featured_image = 'assets/metaverse-lombardia/cover.jpg'
 gallery = [
-  'assets/metaverse-lombardia/cover.jpg',
   'assets/metaverse-lombardia/space1.jpg',
-  'assets/metaverse-lombardia/space2.jpg'
+  'assets/metaverse-lombardia/space2.jpg',
+  'assets/metaverse-lombardia/space3.jpg',
+  'assets/metaverse-lombardia/space4.jpg',
+  'assets/metaverse-lombardia/space5.jpg'
 ]
 video = ''
 role = 'Lead Developer / Technical Director'
@@ -40,4 +42,3 @@ Metaverse — Regione Lombardia is an accessible, city-scale metaverse prototype
 - Lightweight streaming and scene LOD
 - Multi-user events and moderation tools
 - Integration with regional content and services
-
