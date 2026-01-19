@@ -1,3 +1,31 @@
+/* Evidenzia il link email che copia */
+.email-copy-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: rgba(255, 168, 106, 0.10);
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  font-weight: 500;
+}
+.email-copy-link:hover, .email-copy-link:focus {
+  background: rgba(255, 168, 106, 0.22);
+  color: var(--accent);
+}
+.email-copy-link.email-copied {
+  background: #ffa86a;
+  color: #fff;
+  font-weight: 700;
+}
+.email-copy-label {
+  font-size: 1em;
+}
+.email-copy-icon {
+  font-size: 1.1em;
+  margin-left: 2px;
+}
 :root {
   --light-background: #fff;
   --light-background-secondary: #eaeaea;
