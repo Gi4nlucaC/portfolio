@@ -1,3 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Metaverse on Gianluca Camarca</title><link>https://gi4nlucac.github.io/portfolio/tags/metaverse/</link><description>Recent content in Metaverse on Gianluca Camarca</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://gi4nlucac.github.io/portfolio/tags/metaverse/index.xml" rel="self" type="application/rss+xml"/><item><title>Metaverse — Regione Lombardia</title><link>https://gi4nlucac.github.io/portfolio/projects/metaverse-regione-lombardia/</link><pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate><guid>https://gi4nlucac.github.io/portfolio/projects/metaverse-regione-lombardia/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
-&lt;p&gt;Metaverse — Regione Lombardia is a pioneering digital initiative by the Lombardy Region, designed to bring citizens closer to public institutions through immersive technology. This virtual environment allows users to explore interactive digital spaces, participate in events, and discover Lombardy&amp;rsquo;s rich cultural heritage—breaking down physical barriers and enabling new forms of engagement.&lt;/p&gt;
-&lt;p&gt;Within the Metaverse, users can create personalized avatars, meet others, visit virtual exhibitions, and attend public events. Notably, the platform features a digital recreation of Piazza Città di Lombardia, offering a safe and privacy-respecting space for shared experiences. The debut exhibition, &amp;ldquo;Incontri nel Metaverso – Tradizioni e saperi lombardi,&amp;rdquo; developed in collaboration with the Archive of Ethnography and Social History (AESS), celebrates the region&amp;rsquo;s traditions and roots through objects and stories.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Metaverse on Gianluca Camarca</title>
+    <link>https://gi4nlucac.github.io/portfolio/tags/metaverse/</link>
+    <description>Recent content in Metaverse on Gianluca Camarca</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gi4nlucac.github.io/portfolio/tags/metaverse/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Metaverse — Regione Lombardia</title>
+      <link>https://gi4nlucac.github.io/portfolio/projects/metaverse-regione-lombardia/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://gi4nlucac.github.io/portfolio/projects/metaverse-regione-lombardia/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Metaverse — Regione Lombardia is a pioneering digital initiative by the Lombardy Region, designed to bring citizens closer to public institutions through immersive technology. This virtual environment allows users to explore interactive digital spaces, participate in events, and discover Lombardy&amp;rsquo;s rich cultural heritage—breaking down physical barriers and enabling new forms of engagement.&lt;/p&gt;&#xA;&lt;p&gt;Within the Metaverse, users can create personalized avatars, meet others, visit virtual exhibitions, and attend public events. Notably, the platform features a digital recreation of Piazza Città di Lombardia, offering a safe and privacy-respecting space for shared experiences. The debut exhibition, &amp;ldquo;Incontri nel Metaverso – Tradizioni e saperi lombardi,&amp;rdquo; developed in collaboration with the Archive of Ethnography and Social History (AESS), celebrates the region&amp;rsquo;s traditions and roots through objects and stories.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

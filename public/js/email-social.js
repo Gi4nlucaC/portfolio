@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Cerca link che contengono email-protected (anche con baseURL)
-  var socialLinks = document.querySelectorAll('a[href*="email-protected"], a.email-copy-link');
+  var socialLinks = document.querySelectorAll('a[href*="email-protected"]');
   
   socialLinks.forEach(function(link) {
-    link.setAttribute('title', 'Copia la mail negli appunti');
+    link.setAttribute('title', 'Click to copy email');
     
     link.addEventListener('click', function(e) {
       e.preventDefault();
@@ -14,10 +14,16 @@ document.addEventListener('DOMContentLoaded', function() {
       // Copia negli appunti
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(email).then(function() {
-          alert('Email copiata negli appunti!');
+          // Feedback visivo: aggiungi classe CSS
+          link.classList.add('email-copied');
+          link.setAttribute('title', '\u2713 Email copied!');
+          setTimeout(function() {
+            link.classList.remove('email-copied');
+            link.setAttribute('title', 'Click to copy email');
+          }, 2000);
         }).catch(function(err) {
           // Fallback: prompt per copiare manualmente
-          prompt('Copia questa email:', email);
+          prompt('Copy this email:', email);
         });
       } else {
         // Fallback per browser senza clipboard API
