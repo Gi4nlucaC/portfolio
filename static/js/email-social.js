@@ -1,47 +1,46 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Cerca link che contengono email-protected
+  // Find links containing email-protected
   var socialLinks = document.querySelectorAll('a[href*="email-protected"]');
 
   socialLinks.forEach(function(link) {
-    // 1. Rendiamo il tooltip iniziale molto esplicito
-    link.setAttribute('title', 'Clicca per copiare la mail');
+    // 1. Clear English tooltip
+    link.setAttribute('title', 'Click to copy email');
     
-    // Aggiungiamo uno stile cursore per far capire che è cliccabile
+    // Ensure it looks clickable
     link.style.cursor = 'pointer';
 
     link.addEventListener('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
 
-      // 2. OFFUSCAMENTO DELLA MAIL
-      // La stringa sotto è "camarca.gianluca@gmail.com" codificata in Base64.
-      // In questo modo non appare in chiaro nel codice sorgente.
+      // 2. EMAIL OBFUSCATION
+      // "c****a.g******a@gmail.com" encoded in Base64.
       var encodedEmail = 'Y2FtYXJjYS5naWFubHVjYUBnbWFpbC5jb20=';
       var email = atob(encodedEmail);
 
-      // Copia negli appunti
+      // Copy to clipboard
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(email).then(function() {
           
-          // 3. FEEDBACK CHIARO E UNIVOCO (ALERT)
-          // L'alert blocca l'interfaccia finché l'utente non preme OK.
-          alert('✅ Email copiata negli appunti:\n\n' + email + '\n\nOra puoi incollarla dove preferisci.');
+          // 3. CLEAR FEEDBACK (ALERT)
+          // English text, no icons.
+          alert('Email copied to clipboard:\n\n' + email + '\n\nYou can now paste it anywhere.');
 
-          // Feedback visivo secondario (opzionale, ma carino)
+          // Optional visual feedback on the link
           link.classList.add('email-copied');
-          link.setAttribute('title', 'Email copiata!');
+          link.setAttribute('title', 'Email copied!');
           setTimeout(function() {
             link.classList.remove('email-copied');
-            link.setAttribute('title', 'Clicca per copiare la mail');
+            link.setAttribute('title', 'Click to copy email');
           }, 2000);
 
         }).catch(function(err) {
-          // Fallback in caso di errore
-          prompt('Impossibile copiare automaticamente. Copia la mail da qui:', email);
+          // Fallback
+          prompt('Manual copy required:', email);
         });
       } else {
-        // Fallback per browser vecchi
-        prompt('Copia la mail da qui:', email);
+        // Fallback for older browsers
+        prompt('Manual copy required:', email);
       }
 
       return false;
