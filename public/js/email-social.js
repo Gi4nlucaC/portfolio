@@ -14,20 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
       // Copia negli appunti
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(email).then(function() {
-          // Feedback visivo: aggiungi classe CSS
-          link.classList.add('email-copied');
-          link.setAttribute('title', '\u2713 Copiata!');
-          // Cambia testo label se presente
-          var label = link.querySelector('.email-copy-label');
-          if(label) label.textContent = 'Copiata!';
-          setTimeout(function() {
-            link.classList.remove('email-copied');
-            link.setAttribute('title', 'Copia la mail negli appunti');
-            if(label) label.textContent = 'Copy Email';
-          }, 2000);
+          alert('Email copiata negli appunti!');
         }).catch(function(err) {
           // Fallback: prompt per copiare manualmente
-          prompt('Copy this email:', email);
+          prompt('Copia questa email:', email);
         });
       } else {
         // Fallback per browser senza clipboard API

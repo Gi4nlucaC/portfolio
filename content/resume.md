@@ -6,7 +6,7 @@ title = 'Resume'
 
 I am Gianluca Camarca, a Gameplay Programmer and Technical Game Designer with over 4 years of experience in the industry. Currently serving as a Lead XR Developer and Lecturer, I specialize in architecting scalable gameplay systems, authoritative networking, and VR interactions. I combine a strong engineering background with design sensibility to bridge the gap between complex code and engaging player experiences.
 
-<a href="/portfolio/assets/cv/gianluca_camarca_resume.pdf" download>Download Resume as PDF</a> | [LinkedIn](https://www.linkedin.com/in/gianluca-camarca/) | [GitLab](https://gitlab.com/g.camarca) | <a href="#email-protected" class="email-copy-link"><span class="email-copy-label">Copy Email</span> <span class="email-copy-icon" aria-label="Copy email">📋</span></a>
+<a href="/portfolio/assets/cv/gianluca_camarca_resume.pdf" download>Download Resume as PDF</a> | [LinkedIn](https://www.linkedin.com/in/gianluca-camarca/) | [GitLab](https://gitlab.com/g.camarca) | [Email](#email-protected)
 
 ## WORK HISTORY
 
@@ -17,7 +17,7 @@ I am Gianluca Camarca, a Gameplay Programmer and Technical Game Designer with ov
 
 Responsible for core gameplay implementation, networking architecture, and tool development across multiple shipping titles.
 
-[_Polyverse_ (Multiplayer Isometric Action RPG)](/projects/polyverse/index.html)
+[_Polyverse_ (Multiplayer Isometric Action RPG)](/portfolio/projects/polyverse/)
 
 - **Engineered a Server-Authoritative Networking Architecture** using **Mirror** and **PlayFab**. Implemented advanced **Client-Side Prediction and Server Reconciliation** to ensure lag-free movement and prevent cheating in a token-based economy.
 - **Wrote a deterministic Custom A\* Pathfinding algorithm** and Behavior Tree system from scratch, bypassing Unity’s standard NavMesh to guarantee perfectly synchronized enemy movement across all clients.
@@ -25,14 +25,14 @@ Responsible for core gameplay implementation, networking architecture, and tool 
 - **Extended the Universal Render Pipeline (URP)** by writing a custom Render Feature/Pass to achieve an "X-Ray" silhouette effect for characters occluded by geometry.
 - **Created a Data-Driven Gameplay Framework** using ScriptableObjects, empowering designers to balance weapons and stats independently.
 
-[_Mars Kitchen_ (VR Cooking Simulation)](/projects/mars-kitchen/index.html)
+[_Mars Kitchen_ (VR Cooking Simulation)](/portfolio/projects/mars-kitchen/)
 
 - **Architected a seamless "Endless Mode"** by implementing a custom **Runtime Lightmap Swapping** system, allowing instant environment changes without scene reloading.
 - **Engineered an AI Virtualization System** to simulate off-screen customer behavior and orders, maintaining game state consistency with minimal performance cost.
 - **Owned the PlayStation VR porting and certification pipeline**, successfully navigating Sony's TRC requirements to launch on the PlayStation Store.
 - **Acted as Technical Designer**, prototyping and implementing complex mechanics (e.g., "Black Hole" physics, gesture-based minigames) and a robust localization system for 5 languages.
 
-[_Acryptia_ (Web3 Roguelite Card Game)](/projects/acryptia/index.html)
+[_Acryptia_ (Web3 Roguelite Card Game)](/portfolio/projects/acryptia/)
 
 - **Implemented the Strategy Design Pattern** to handle complex card logic and execution flow, ensuring code scalability and maintainability.
 - **Developed a Server-Authoritative Logic layer** on PlayFab/Mirror, managing deck population, shuffling, and match validation server-side to ensure security.
@@ -49,7 +49,7 @@ Responsible for core gameplay implementation, networking architecture, and tool 
 
 responsible for the full-cycle development of a large-scale metaverse infrastructure for a high-profile government client.
 
-[_Metaverse - Regione Lombardia_ (XR/Metaverse Experience)](/projects/metaverse-regione-lombardia/index.html)
+[_Metaverse - Regione Lombardia_ (XR/Metaverse Experience)](/portfolio/projects/metaverse-regione-lombardia/)
 
 - **Architected a Cross-Platform RTC system** integrating **LiveKit** with Unity. Successfully bridged native SDKs with WebGL-specific libraries (JavaScript interop) to enable seamless Voice, Video, and Screensharing across desktop and web clients.
 - **Engineered the core networking architecture** using **Netcode for GameObjects**, managing avatar synchronization and state replication for a multi-user environment.
